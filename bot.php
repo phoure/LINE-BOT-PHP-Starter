@@ -1,6 +1,52 @@
 <?php
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
+
+error_reporting(0); 
+function mat ($matches) {
+	return mb_convert_encoding(pack('H*',$matches[1]),'UTF-8','UTF-16');
+}
+function u_decode($input){
+	return preg_replace_callback( '/\\\\u([0-9a-zA-Z]{4})/', mat , $input );
+}
+
+
+function debug($var){	
+     // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
+     $trace = reset(debug_backtrace());	
+     $trace['file'] = str_replace(str_replace('/','\\',$_SERVER['DOCUMENT_ROOT']).'\\','',$trace['file']);	
+
+     // แสดงค่าที่เก็บในตัวแปร
+     echo "<pre>";
+     print_r($var);
+     echo "</pre>";
+     return $var;	
+}
+
+
+$aa = u_decode(file_get_contents('https://www.trackingmore.com/gettracedetail.php?lang=th&tracknumber=RL001247734TH&express=thailand-post'));
+
+$aa = str_replace("(","",$aa);
+$aa = str_replace(")","",$aa);
+$aa = str_replace('"',"",$aa);
+$aa = str_replace('{originCountryData:{trackinfo:[{',"",$aa);
+
+$aa = explode('],',$aa);
+$ss = explode('},{',$aa[0]);
+
+$ss = str_replace(',,',",",$ss);
+$ss = str_replace('Date:','',$ss);
+$ss = str_replace('StatusDescription:','',$ss);
+$ss = str_replace('Details:','',$ss);
+
+//debug($ss);
+
+$last =  $ss[0];
+
+$vv = explode(',',$aa[1]);
+
+//debug($vv);
+
 echo $last;
 
 
