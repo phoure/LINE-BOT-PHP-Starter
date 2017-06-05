@@ -50,7 +50,7 @@ $vv = explode(',',$aa[1]);
 
 //debug($vv);
 
-
+echo $last;
 
 
 // Get POST body content
