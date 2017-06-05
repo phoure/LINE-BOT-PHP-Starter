@@ -73,7 +73,7 @@ if($text == 'g'){
 	$text = 'สวัสดี';
 }
 else{
-	$text = $last.'dd';
+	$text = 'dd';
 }
 
 
