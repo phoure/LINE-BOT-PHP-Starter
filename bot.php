@@ -74,7 +74,7 @@ $vv = explode(',',$aa[1]);
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $last
+				'text' => $last.'dd'
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
