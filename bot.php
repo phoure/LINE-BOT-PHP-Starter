@@ -16,6 +16,14 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
+
+
+if($text == 'g'){
+	$text = 'สวัสดี';
+}
+else{
+	$text = 'แปลว่าไรอะ';
+}
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
