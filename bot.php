@@ -18,16 +18,63 @@ if (!is_null($events['events'])) {
 
 
 
-if($text == 'g'){
-	$text = 'สวัสดี';
+
+
+error_reporting(0); 
+function mat ($matches) {
+	return mb_convert_encoding(pack('H*',$matches[1]),'UTF-8','UTF-16');
 }
-else{
-	$text = 'แปลว่าไรอะ';
+function u_decode($input){
+	return preg_replace_callback( '/\\\\u([0-9a-zA-Z]{4})/', mat , $input );
 }
+function raw_json_encode($input) {
+// convert 2 utf8 json encode 
+	return u_decode( json_encode($input) );
+}
+
+function debug($var){	
+     // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
+     $trace = reset(debug_backtrace());	
+     $trace['file'] = str_replace(str_replace('/','\\',$_SERVER['DOCUMENT_ROOT']).'\\','',$trace['file']);	
+
+     // แสดงค่าที่เก็บในตัวแปร
+     echo "<pre>";
+     print_r($var);
+     echo "</pre>";
+     return $var;	
+}
+
+
+$aa = u_decode(file_get_contents('https://www.trackingmore.com/gettracedetail.php?lang=th&tracknumber=RL001247734TH&express=thailand-post'));
+
+$aa = str_replace("(","",$aa);
+$aa = str_replace(")","",$aa);
+$aa = str_replace('"',"",$aa);
+$aa = str_replace('{originCountryData:{trackinfo:[{',"",$aa);
+
+$aa = explode('],',$aa);
+$ss = explode('},{',$aa[0]);
+
+$ss = str_replace(',,',",",$ss);
+$ss = str_replace('Date:','',$ss);
+$ss = str_replace('StatusDescription:','',$ss);
+$ss = str_replace('Details:','',$ss);
+
+//debug($ss);
+
+$last =  $ss[0];
+
+$vv = explode(',',$aa[1]);
+
+//debug($vv);
+
+
+
+
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $last
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
