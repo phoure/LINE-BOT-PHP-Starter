@@ -2,7 +2,7 @@
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
 
-echo 'หกดฟดหกดหกด';
+echo 'sdfsasdf';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -40,7 +40,7 @@ $vvv =  array($a1, $a2);
 		$oo =[
 		'type' => 'confirm',
 			'text' => 'Are you sure?',
-			'actions' => $vvv
+			'actions' => [$vvv]
 			];
 			
 			
