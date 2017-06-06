@@ -7,10 +7,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-if (!is_null($events['events'])) {
-	// Loop through each event
-	foreach ($events['events'] as $event) {
-		// Reply only when message sent is in 'text' format
+
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text_in = $event['message']['text'];
@@ -18,43 +15,6 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			$id = $event['source']['userId'];
 
-
-
-$aa = file_get_contents('http://prosabuy.com/bot/call_data.php?id='.$text_in);
-
-$aa = str_replace("(","",$aa);
-$aa = str_replace(")","",$aa);
-$aa = str_replace('"',"",$aa);
-$aa = str_replace('{originCountryData:{trackinfo:[{',"",$aa);
-
-$aa = explode('],',$aa);
-$ss = explode('},{',$aa[0]);
-
-$ss = str_replace(',,',",",$ss);
-$ss = str_replace('Date:','',$ss);
-$ss = str_replace('StatusDescription:','',$ss);
-$ss = str_replace('Details:','',$ss);
-
-
-$last =  $ss[0];
-
-$vv = explode(',',$aa[1]);
-
-$last = explode(',', $last);
-
-
-if($last[0] == ''){
-	$text = 'ไม่พบรหัสติดตามพัสดุ '.$text_in.' โปรดติดตามอีกครั้งภายหลัง ระบบอาจกำลังรอข้อมูลจากผู้รับส่งพัสดุ';
-}
-else if($last[1] == 'สถานะการนำจ่าย'){
-	$text = 'รหัสติดตามพัสดุ '.$text_in.' ได้รับเรียบร้อยแล้ว '.$last[2].' '.$last[2].' เมื่อ '.$last[0];
-}
-else if($last[1] == 'เตรียมการนำจ่าย'){
-	$text = 'รหัสติดตามพัสดุ '.$text_in.' กำลังเตรียมการนำจ่ายถึงผู้รับ ในพื้นที่ '.$last[2].' เมื่อ '.$last[0];
-}
-else{
-	$text = 'รหัสติดตามพัสดุ '.$text_in.' '.$last[1].' โดย '.$last[2].' เมื่อ '.$last[0];
-}
 
 
 
@@ -83,7 +43,5 @@ else{
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}
-	}
 }
 echo "OK";
