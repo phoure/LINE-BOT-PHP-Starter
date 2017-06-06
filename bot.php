@@ -2,7 +2,7 @@
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
 
-echo '55+++sdfvvvvs65';
+echo '55+++sdfsssvvvvs65';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -27,7 +27,7 @@ if (!is_null($events['events'])) {
 				'text' => $id
 			];
 
-					$sss = array(
+	$sss = array(
 	'replyToken' => $replyToken,
 	'messages' => array(
 		'type' => 'template',
@@ -36,18 +36,18 @@ if (!is_null($events['events'])) {
 			'type' => 'confirm',
 			'text' => 'Are you sure?',
 			'actions' => array(
-				array(
+				[
 					'type' => 'postback',
 					'label' => 'Yes',
 					'data' => 'btnyes',
 					'text' => 'yes'
-				),
-				array(
+				],
+				[
 					'type' => 'postback',
 					'label' => 'No',
 					'data' => 'btnno',
 					'text' => 'no'
-				)
+				]
 			)
 		)
 	)
