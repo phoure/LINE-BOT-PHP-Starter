@@ -8,7 +8,7 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+	
 			// Get text sent
 			$text_in = $event['message']['text'];
 			// Get replyToken
@@ -43,5 +43,5 @@ $events = json_decode($content, true);
 			curl_close($ch);
 
 			echo $result . "\r\n";
-}
+
 echo "OK";
