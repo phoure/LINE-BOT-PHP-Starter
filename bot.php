@@ -1,13 +1,8 @@
 <?php
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
-function unicodeString($str, $encoding=null) {
-    if (is_null($encoding)) $encoding = ini_get('mbstring.internal_encoding');
-    return preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/u', create_function('$match', 'return mb_convert_encoding(pack("H*", $match[1]), '.var_export($encoding, true).', "UTF-16BE");'), $str);
-}
 
-
-$aa = unicodeString(file_get_contents('https://www.trackingmore.com/gettracedetail.php?lang=th&tracknumber=RL001247734TH&express=thailand-post'), "UTF-8");;
+$aa = file_get_contents('http://prosabuy.com/bot/call_data.php');
 
 $aa = str_replace("(","",$aa);
 $aa = str_replace(")","",$aa);
