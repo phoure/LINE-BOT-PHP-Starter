@@ -28,16 +28,15 @@ $events = json_decode($content, true);
 			// Build message to reply back
 			$messages = ['type' => 'confirm', 'text' => 'Are you sure?', 'actions' => [$btn1]];
 			
+			$msg = ['type' => "template",
+				"altText" => "this is a confirm template",
+				'template' => [$messages]];
 		
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'to' => 'U158ee6ff2416863b3961d3a144d8a3c0',
-				'type' => "template",
-				"altText" => "this is a confirm template",
-				'template' => [$messages],
-				
-				
+				'replyToken' => $replyToken,
+				'messages' => [$msg],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
