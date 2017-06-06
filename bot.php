@@ -6,18 +6,6 @@ function unicodeString($str, $encoding=null) {
     return preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/u', create_function('$match', 'return mb_convert_encoding(pack("H*", $match[1]), '.var_export($encoding, true).', "UTF-16BE");'), $str);
 }
 
-function debug($var){	
-     // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
-     $trace = reset(debug_backtrace());	
-     $trace['file'] = str_replace(str_replace('/','\\',$_SERVER['DOCUMENT_ROOT']).'\\','',$trace['file']);	
-
-     // แสดงค่าที่เก็บในตัวแปร
-     echo "<pre>";
-     print_r($var);
-     echo "</pre>";
-     return $var;	
-}
-
 
 $aa = unicodeString(file_get_contents('https://www.trackingmore.com/gettracedetail.php?lang=th&tracknumber=RL001247734TH&express=thailand-post'), "UTF-8");;
 
