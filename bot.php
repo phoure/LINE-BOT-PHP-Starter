@@ -2,7 +2,24 @@
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
 
-$aa = file_get_contents('http://prosabuy.com/bot/call_data.php');
+// Get POST body content
+$content = file_get_contents('php://input');
+// Parse JSON
+$events = json_decode($content, true);
+// Validate parsed JSON data
+if (!is_null($events['events'])) {
+	// Loop through each event
+	foreach ($events['events'] as $event) {
+		// Reply only when message sent is in 'text' format
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+			// Get text sent
+			$text_in = $event['message']['text'];
+			// Get replyToken
+			$replyToken = $event['replyToken'];
+
+
+
+$aa = file_get_contents('http://prosabuy.com/bot/call_data.php?id='.$text_in);
 
 $aa = str_replace("(","",$aa);
 $aa = str_replace(")","",$aa);
@@ -22,34 +39,18 @@ $last =  $ss[0];
 
 $vv = explode(',',$aa[1]);
 
+$last = explode(',', $last);
 
-
-echo $last;
-
-
-// Get POST body content
-$content = file_get_contents('php://input');
-// Parse JSON
-$events = json_decode($content, true);
-// Validate parsed JSON data
-if (!is_null($events['events'])) {
-	// Loop through each event
-	foreach ($events['events'] as $event) {
-		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			// Get text sent
-			$text = $event['message']['text'];
-			// Get replyToken
-			$replyToken = $event['replyToken'];
-
-
-if($text == 'g'){
-	$text = 'สวัสดี';
+if($last[1] == 'สถานะการนำจ่าย'){
+	$text = 'รหัส '.$text_in.' ได้รับเรียบร้อยแล้ว '.$last[2].' '.$last[3].' เมื่อ '.$last[0];
+}
+if($last[1] == 'เตรียมการนำจ่าย'){
+	$text = 'รหัส '.$text_in.' กำลังเตรียมการนำจ่าย โดย '.$last[3].' เมื่อ '.$last[0];
 }
 else{
-	$text = $last.'dd';
-}
 
+	$text = 'รหัส '.$text_in.' '.$last[1].' โดย '.$last[3].' เมื่อ '.$last[0];
+}
 
 
 			// Build message to reply back
