@@ -61,13 +61,13 @@ else{
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $id
+				'text' => 'asdsss'
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
+			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'replyToken' => $replyToken,
+				'to' => 'U158ee6ff2416863b3961d3a144d8a3c0',
 				'messages' => [$messages],
 			];
 			$post = json_encode($data);
