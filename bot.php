@@ -22,6 +22,12 @@ $events = json_decode($content, true);
 				'text' => 'yes',
 				'label' => 'yes'
 			];
+			$btn2 	= [
+				'type' => 'message',
+				'text' => 'yes',
+				'label' => 'yes'
+			];
+			
 			
 			
 
@@ -32,12 +38,38 @@ $events = json_decode($content, true);
 				"altText" => "this is a confirm template",
 				'template' => [$messages]];
 		
+		
+		
+		$sss = array(
+	'replyToken' => $replyToken,
+	'messages' => array(
+		'type' => 'template',
+		'altText' => 'this is a confirm template',
+		'template' => array(
+			'type' => 'confirm',
+			'text' => 'Are you sure?',
+			'actions' => array(
+				array(
+					'type' => 'postback',
+					'label' => 'Yes',
+					'data' => 'btnyes',
+					'text' => 'yes'
+				),
+				array(
+					'type' => 'postback',
+					'label' => 'No',
+					'data' => 'btnno',
+					'text' => 'no'
+				)
+			)
+		)
+	)
+);
+
+
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/push';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$msg],
-			];
+			$data = [$sss];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
