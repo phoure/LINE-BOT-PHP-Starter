@@ -2,7 +2,7 @@
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
 
-echo '1111111';
+echo 'หกด';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -34,13 +34,11 @@ if (!is_null($events['events'])) {
 				[[
 					'type' => 'message',
 					'label' => 'Yes',
-					'data' => 'btnyes',
 					'text' => 'yes'
 				]],
 				[[
 					'type' => 'message',
 					'label' => 'No',
-					'data' => 'btnno',
 					'text' => 'no'
 				]]
 			)
