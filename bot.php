@@ -5,21 +5,10 @@ error_reporting(0);
 function mat ($matches) {
 	return mb_convert_encoding(pack('H*',$matches[1]),'UTF-8','UTF-16');
 }
+
 function raw_json_encode($input) {
 // convert 2 utf8 json encode 
 	return u_decode( json_encode($input) );
-}
-
-function debug($var){	
-     // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
-     $trace = reset(debug_backtrace());	
-     $trace['file'] = str_replace(str_replace('/','\\',$_SERVER['DOCUMENT_ROOT']).'\\','',$trace['file']);	
-
-     // แสดงค่าที่เก็บในตัวแปร
-     echo "<pre>";
-     print_r($var);
-     echo "</pre>";
-     return $var;	
 }
 
 
