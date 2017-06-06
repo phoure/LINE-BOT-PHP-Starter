@@ -3,12 +3,7 @@ $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mg
 
 error_reporting(0); 
 function mat ($matches) {
-	return mb_convert_encoding(pack('H*',$matches[1]),'UTF-8','UTF-16');
-}
-
-function raw_json_encode($input) {
-// convert 2 utf8 json encode 
-	return u_decode( json_encode($input) );
+$aaa = 'ddd';
 }
 
 
