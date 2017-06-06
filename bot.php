@@ -42,28 +42,7 @@ $events = json_decode($content, true);
 		
 		$sss = array(
 	'replyToken' => $replyToken,
-	'messages' => array(
-		'type' => 'template',
-		'altText' => 'this is a confirm template',
-		'template' => array(
-			'type' => 'confirm',
-			'text' => 'Are you sure?',
-			'actions' => array(
-				array(
-					'type' => 'postback',
-					'label' => 'Yes',
-					'data' => 'btnyes',
-					'text' => 'yes'
-				),
-				array(
-					'type' => 'postback',
-					'label' => 'No',
-					'data' => 'btnno',
-					'text' => 'no'
-				)
-			)
-		)
-	)
+	'message' => 'sdf'
 );
 
 
