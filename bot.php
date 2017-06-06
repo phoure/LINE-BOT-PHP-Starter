@@ -2,7 +2,7 @@
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
 
-echo '555555555';
+echo '555asdfsadf555555';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -21,6 +21,29 @@ if (!is_null($events['events'])) {
 			$id = $event['source']['userId'];
 
 
+$ee = array(
+				[
+					'type' => 'message',
+					'label' => 'Yes',
+					'text' => 'yes'
+				],
+				[
+					'type' => 'message',
+					'label' => 'No',
+					'text' => 'no'
+				]
+			);
+
+
+
+
+$oo =  array(
+			'type' => 'confirm',
+			'text' => 'Are you sure?',
+			'actions' => $ee
+		);
+		
+		
 $aa = array([
 		'type' => 'text',
 		'text' => 'Are you sure?',
@@ -40,11 +63,9 @@ $aa = array([
 		'stickerId' => '1',
 	],
 	[
-		'type' => 'location',
-    "title"=> "my location",
-    "address"=> "〒150-0002 東京都渋谷区渋谷２丁目２１−１",
-    "latitude"=> 35.65910807942215,
-    "longitude"=> 139.70372892916203,
+		'type' => 'template',
+	    "altText" => "this is a confirm template",
+ 		"template" => $oo
 	]
 	);
 
