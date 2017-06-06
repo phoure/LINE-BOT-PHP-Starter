@@ -2,7 +2,7 @@
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
 
-echo '555asdfsadกกกกกกกกf555555';
+echo '555asdfsadกกกกกกกกf555กดฟหกด555';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -26,16 +26,6 @@ $ee = array(
 					'type' => 'message',
 					'label' => 'Yes',
 					'text' => 'yes'
-				],
-				[
-					'type' => 'message',
-					'label' => 'No',
-					'text' => 'no'
-				],
-				[
-					'type' => 'message',
-					'label' => 'No',
-					'text' => 'no'
 				]
 			);
 
