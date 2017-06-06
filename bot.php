@@ -30,26 +30,8 @@ if (!is_null($events['events'])) {
 	$sss = array(
 	'replyToken' => $replyToken,
 	'messages' => [[
-		'type' => 'template',
-		'altText' => 'this is a confirm template',
-		'template' => [[
-			'type' => 'confirm',
-			'text' => 'Are you sure?',
-			'actions' => array(
-				[[
-					'type' => 'postback',
-					'label' => 'Yes',
-					'data' => 'btnyes',
-					'text' => 'yes'
-				]],
-				[[
-					'type' => 'postback',
-					'label' => 'No',
-					'data' => 'btnno',
-					'text' => 'no'
-				]]
-			)
-		]]
+		'type' => 'text',
+				'text' => $id
 	]]
 );
 					
