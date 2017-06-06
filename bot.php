@@ -1,13 +1,25 @@
 <?php
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
-error_reporting(0); 
-function mat ($matches) {
-$aaa = 'ddd';
+function unicodeString($str, $encoding=null) {
+    if (is_null($encoding)) $encoding = ini_get('mbstring.internal_encoding');
+    return preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/u', create_function('$match', 'return mb_convert_encoding(pack("H*", $match[1]), '.var_export($encoding, true).', "UTF-16BE");'), $str);
+}
+
+function debug($var){	
+     // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
+     $trace = reset(debug_backtrace());	
+     $trace['file'] = str_replace(str_replace('/','\\',$_SERVER['DOCUMENT_ROOT']).'\\','',$trace['file']);	
+
+     // แสดงค่าที่เก็บในตัวแปร
+     echo "<pre>";
+     print_r($var);
+     echo "</pre>";
+     return $var;	
 }
 
 
-$aa = mat(file_get_contents('https://www.trackingmore.com/gettracedetail.php?lang=th&tracknumber=RL001247734TH&express=thailand-post'));
+$aa = unicodeString(file_get_contents('https://www.trackingmore.com/gettracedetail.php?lang=th&tracknumber=RL001247734TH&express=thailand-post'), "UTF-8");;
 
 $aa = str_replace("(","",$aa);
 $aa = str_replace(")","",$aa);
