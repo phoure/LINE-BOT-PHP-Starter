@@ -2,7 +2,7 @@
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
 
-echo 'ssvvveessssseewwvvv';
+echo '2222';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -29,10 +29,7 @@ if (!is_null($events['events'])) {
 
 					$sss = array(
 						'replyToken' => $replyToken,
-						'messages' => [
-				'type' => 'text',
-				'text' => $id
-			]
+						'messages' => [$messages]
 					);
 					
 			// Make a POST Request to Messaging API to reply to sender
