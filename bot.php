@@ -2,7 +2,7 @@
 $access_token = '1n4HF8OIC9v65ocWyJAtnzMOUSyiZf6rrP1/xLKQDtFK+nKupweT4dVMBFP79mgVgC35CsJzx3pYOgRFBp7kodhi2d8/tXR1Ked59ISLLlz4yLxNohKdBMuHKnN0odSaT0iZ0ie7ObmpjYh8+jjHUwdB04t89/1O/w1cDnyilFU=';
 
 
-echo 'dsfasdf';
+echo 'eeeeee';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -28,6 +28,11 @@ $aa = array([
 	[
 		'type' => 'text',
 		'text' => 'sdfsfasdf',
+	],
+	[
+		'type' => 'image',
+		'originalContentUrl' => 'https://image.ibb.co/dGC4Sa/booking_icon.jpg',
+		'previewImageUrl' => 'https://image.ibb.co/dGC4Sa/booking_icon.jpg',
 	]
 	);
 
