@@ -5,9 +5,6 @@ error_reporting(0);
 function mat ($matches) {
 	return mb_convert_encoding(pack('H*',$matches[1]),'UTF-8','UTF-16');
 }
-function u_decode($input){
-	return preg_replace_callback( '/\\\\u([0-9a-zA-Z]{4})/', mat , $input );
-}
 function raw_json_encode($input) {
 // convert 2 utf8 json encode 
 	return u_decode( json_encode($input) );
@@ -26,7 +23,7 @@ function debug($var){
 }
 
 
-$aa = u_decode(file_get_contents('https://www.trackingmore.com/gettracedetail.php?lang=th&tracknumber=RL001247734TH&express=thailand-post'));
+$aa = mat(file_get_contents('https://www.trackingmore.com/gettracedetail.php?lang=th&tracknumber=RL001247734TH&express=thailand-post'));
 
 $aa = str_replace("(","",$aa);
 $aa = str_replace(")","",$aa);
