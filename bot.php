@@ -39,7 +39,7 @@ $ee = array(
 
 $oo =  array(
 			'type' => 'confirm',
-			'text' => 'Are you sure?',
+		'text' => 'คุณแน่ใจว่าเลขติดตามคือ '.$text_in.' ?',
 			'actions' => $ee
 		);
 		
