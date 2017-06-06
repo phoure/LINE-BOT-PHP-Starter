@@ -22,42 +22,31 @@ if (!is_null($events['events'])) {
 
 
 
-		$a1 = [
+	$sss = array(
+	'replyToken' => $replyToken,
+	'messages' => [[
+		'type' => 'template',
+		'altText' => 'this is a confirm template',
+		'template' => [[
+			'type' => 'confirm',
+			'text' => 'Are you sure?',
+			'actions' => array(
+				[[
 					'type' => 'message',
 					'label' => 'Yes',
 					'data' => 'btnyes',
 					'text' => 'yes'
-				];
-	$a2 = [
+				]],
+				[[
 					'type' => 'message',
 					'label' => 'No',
 					'data' => 'btnno',
 					'text' => 'no'
-				];			
-				
-$vvv =  array($a1, $a2);
-
-
-
-		$oo =[
-		'type' => 'confirm',
-			'text' => 'Are you sure?',
-			'actions' => $vvv
-			];
-			
-			
-	$mes = [
-		'type' => 'template',
-		'altText' => 'this is a confirm template',
-		'template' => [$oo]
-		]
-		
-		;
-		
-	$sss = array(
-	'replyToken' => $replyToken,
-	'messages' => [$mes]
-	);
+				]]
+			)
+		]]
+	]]
+);
 					
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
