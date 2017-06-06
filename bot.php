@@ -23,16 +23,10 @@ $events = json_decode($content, true);
 				'label' => 'yes'
 			];
 			
-			$btn2 = [
-				'type' => 'message',
-				'text' => 'no',
-				'label' => 'no'
-			];
-
-			$btn = array($btn1,$btn2);
+			
 
 			// Build message to reply back
-			$messages = ['type' => 'confirm', 'text' => 'Are you sure?', 'actions' => [$btn]];
+			$messages = ['type' => 'confirm', 'text' => 'Are you sure?', 'actions' => [$btn1]];
 			
 		
 			// Make a POST Request to Messaging API to reply to sender
