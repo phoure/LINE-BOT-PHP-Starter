@@ -2,7 +2,7 @@
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
 
 
-echo 'dddd3';
+echo 'dd33dd3';
 
 
 	
@@ -26,9 +26,10 @@ $card = array(
 					),
 					'actions' =>  array(
 										[
-										'type' => 'message',
-										'label' => 'Yes',
-										'text' => 'ยืนยันเลข'
+										'type' => 'postback',
+										'label' => 'Buy',
+   										'data' => 'action=buy&itemid=111',
+										'text' => 'tecxttt'
 										],
 										[
 										'type' => 'message',
