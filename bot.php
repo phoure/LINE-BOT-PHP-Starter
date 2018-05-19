@@ -9,7 +9,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 
-	$sss = array(
+	$sss =
 	
 		{
   "type": "template",
@@ -31,8 +31,7 @@ $events = json_decode($content, true);
       ]
   }
 }
-		
-);
+
 
 
 					
