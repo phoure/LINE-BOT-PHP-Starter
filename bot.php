@@ -25,7 +25,7 @@ $card = array(
 					),
 					'actions' =>  array(['type' => 'uri',
 										'label' => 'ดูคลิปนี้',
-										'uri' => 'http://example.com/video/'.$_GET['id'].'&ref=group'
+										'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
 									])
 
 					)
