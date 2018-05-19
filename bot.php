@@ -4,7 +4,7 @@ $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvF
 
 $groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
 
-for ($x = 0; $x <= 0; $x++) 
+for ($x = 0; $x <= 0; $x++) {
 	
 $card = array(
 	[
