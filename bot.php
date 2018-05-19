@@ -4,15 +4,7 @@ $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvF
 
 echo 'dddd';
 
-// Get POST body content
-$card = array(
-	[
-	'type' => 'template',
-    "altText" => "this is a confirm template",
-	"template" => array(
-					'type' => 'confirm',
-					'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
-					'actions' =>  array(
+		$gg = array(
 										[
 										'type' => 'message',
 										'label' => 'Yes',
@@ -23,9 +15,19 @@ $card = array(
 										'label' => 'No',
 										'text' => 'โปรดกรอกเลขใหม่'
 										]
-									)
+									);
 
-					)
+		$oo = array(
+					'type' => 'confirm',
+					'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
+					'actions' =>  $gg
+
+					);
+$card = array(
+	[
+	'type' => 'template',
+    "altText" => "this is a confirm template",
+	"template" => $oo
 	]
 	);
 
