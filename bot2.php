@@ -1,64 +1,39 @@
 <?php
+
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
+echo 'dd33dd3';
+	
+$card = array(
+	'type' => 'template',
+    "altText" => "this is a confirm template",
+	"template" => array(
+					'type' => 'carousel',
+					'columns' => array([
+										'thumbnailImageUrl' => $_GET['thumb'],
+										'imageAspectRatio' => 'rectangle',
+										'imageSize' => 'cover',
+										'imageBackgroundColor' => '#000000',
+										'text' => $_GET['title'],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => 'ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+										),
+										'actions' =>  array(['type' => 'uri',
+															'label' => 'ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+														])
+										])
+					)
+	);
 
-
-echo 'DSFASDF';
-
-// Get POST body content
-$content = file_get_contents('php://input');
-// Parse JSON
-$events = json_decode($content, true);
-// Validate parsed JSON data
-if (!is_null($events['events'])) {
-	// Loop through each event
-	foreach ($events['events'] as $event) {
-		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			// Get text sent
-			$text_in = $event['message']['text'];
-			// Get replyToken
-			$replyToken = $event['replyToken'];
-			$id = $event['source']['userId'];
-
-
-			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => $id
-			];
-
-	$sss = array(
-	'replyToken' => $replyToken,
-	'messages' => [[
-		'type' => 'template',
-		'altText' => 'this is a confirm template',
-		'template' => [[
-			'type' => 'confirm',
-			'text' => 'Are you sure?',
-			'actions' => array(
-				[[
-					'type' => 'postback',
-					'label' => 'Yes',
-					'data' => 'btnyes',
-					'text' => 'yes'
-				]],
-				[[
-					'type' => 'postback',
-					'label' => 'No',
-					'data' => 'btnno',
-					'text' => 'no'
-				]]
-			)
-		]]
-	]]
+	$data = array('to' => 'C214e858f2c0e42285b5d56a12f0cfced', 'messages' => $card
 );
 					
 			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = $sss;
+			$url = 'https://api.line.me/v2/bot/message/push';
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -67,9 +42,6 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
 			echo $result . "\r\n";
-		}
-	}
-}
-echo "OK";
+
+?>
