@@ -2,9 +2,16 @@
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
 
 
-echo 'dddd';
+echo 'dddd1';
 
-		$gg = array(
+$card = array(
+	[
+	'type' => 'template',
+    "altText" => "this is a confirm template",
+	"template" => array(
+					'type' => 'confirm',
+					'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
+					'actions' =>  array(
 										[
 										'type' => 'message',
 										'label' => 'Yes',
@@ -15,26 +22,20 @@ echo 'dddd';
 										'label' => 'No',
 										'text' => 'โปรดกรอกเลขใหม่'
 										]
-									);
+									)
 
-		$oo = array(
-					'type' => 'confirm',
-					'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
-					'actions' =>  $gg
-
-					);
-$card = array(
-	[
-	'type' => 'template',
-    "altText" => "this is a confirm template",
-	"template" => $oo
+					)
 	]
 	);
+
+	$data = array(
+	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
+	'messages' => $card
+);
 
 					
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/push';
-			$data = $card;
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
