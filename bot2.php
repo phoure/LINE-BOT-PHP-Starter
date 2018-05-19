@@ -9,9 +9,8 @@ $card = array(
 					'type' => 'carousel',
 					'columns' => array([
 										'thumbnailImageUrl' => $_GET['thumb'],
-										'imageAspectRatio' => 'rectangle',
-										'imageSize' => 'cover',
 										'imageBackgroundColor' => '#000000',
+										'title' => $_GET['title'],
 										'text' => $_GET['title'],
 										'defaultAction' =>  array(
 															'type' => 'uri',
@@ -23,11 +22,10 @@ $card = array(
 															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
 														])
 										],
-									[
-										'thumbnailImageUrl' => $_GET['thumb'],
-										'imageAspectRatio' => 'rectangle',
-										'imageSize' => 'cover',
+										[
+											'thumbnailImageUrl' => $_GET['thumb'],
 										'imageBackgroundColor' => '#000000',
+										'title' => $_GET['title'],
 										'text' => $_GET['title'],
 										'defaultAction' =>  array(
 															'type' => 'uri',
