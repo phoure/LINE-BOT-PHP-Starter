@@ -12,7 +12,7 @@ $card = array(
     "altText" => "this is a confirm template",
 	"template" => array(
 					'type' => 'buttons',
-					'thumbnailImageUrl' => 'https://pbs.twimg.com/card_img/997795181180014592/8bUVab1T?format=jpg&name=600x314',
+					'thumbnailImageUrl' => $_GET['thumb'],
 					'imageAspectRatio' => 'rectangle',
 					'imageSize' => 'cover',
 					'imageBackgroundColor' => '#FFFF00',
