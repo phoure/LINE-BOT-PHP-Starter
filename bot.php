@@ -9,26 +9,25 @@ $card = array(
 	[
 	'type' => 'template',
     "altText" => "this is a confirm template",
-		"template" => array(
-						'type' => 'confirm',
-						'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
-						'actions' =>  array(
-											[
-											'type' => 'message',
-											'label' => 'Yes',
-											'text' => 'ยืนยันเลข'
-											],
-											[
-											'type' => 'message',
-											'label' => 'No',
-											'text' => 'โปรดกรอกเลขใหม่'
-											]
-										);
+	"template" => array(
+					'type' => 'confirm',
+					'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
+					'actions' =>  array(
+										[
+										'type' => 'message',
+										'label' => 'Yes',
+										'text' => 'ยืนยันเลข'
+										],
+										[
+										'type' => 'message',
+										'label' => 'No',
+										'text' => 'โปรดกรอกเลขใหม่'
+										]
+									)
 
-						);
+					)
 	]
 	);
-
 
 					
 			// Make a POST Request to Messaging API to reply to sender
