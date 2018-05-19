@@ -16,26 +16,23 @@ $card = array(
 					'imageAspectRatio' => 'rectangle',
 					'imageSize' => 'cover',
 					'imageBackgroundColor' => '#000000',
-					'title' => $_GET['title'],
-					'text' => 'มาดูเลย',
+					'text' => $_GET['title'],
 					'defaultAction' =>  array(
 										'type' => 'uri',
-										'label' => 'View detail',
-										'uri' => 'http://example.com/page/123'
+										'label' => 'ดูคลิปนี้',
+										'uri' => 'http://drivegay.com/video/'+$_GET['id']+'&ref=group'
 
 					),
 					'actions' =>  array(['type' => 'uri',
 										'label' => 'ดูคลิปนี้',
-										'uri' => 'http://example.com/page/123'
+										'uri' => 'http://example.com/video/'+$_GET['id']+'&ref=group'
 									])
 
 					)
 	]
 	);
 
-	$data = array(
-	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
-	'messages' => $card
+	$data = array('to' => 'C214e858f2c0e42285b5d56a12f0cfced', 'messages' => $card
 );
 
 
