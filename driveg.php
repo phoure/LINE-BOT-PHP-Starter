@@ -14,6 +14,13 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "join";
+
+
+  $arrPostData = array();
+ $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "group";
+
+
 /*
 
   $arrPostData = array();
