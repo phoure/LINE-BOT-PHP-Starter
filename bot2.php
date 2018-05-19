@@ -36,7 +36,10 @@ $card = array(
 															'label' => 'ดูคลิปนี้',
 															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
 														])
-										])
+										],
+
+										'imageAspectRatio' => 'rectangle',
+										'imageSize' => 'cover')
 					)
 	);
 
