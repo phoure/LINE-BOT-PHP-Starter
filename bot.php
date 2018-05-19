@@ -20,12 +20,12 @@ $card = array(
 					'defaultAction' =>  array(
 										'type' => 'uri',
 										'label' => 'ดูคลิปนี้',
-										'uri' => 'http://drivegay.com/video/'+$_GET['id']+'&ref=group'
+										'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
 
 					),
 					'actions' =>  array(['type' => 'uri',
 										'label' => 'ดูคลิปนี้',
-										'uri' => 'http://example.com/video/'+$_GET['id']+'&ref=group'
+										'uri' => 'http://example.com/video/'.$_GET['id'].'&ref=group'
 									])
 
 					)
