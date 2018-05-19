@@ -2,9 +2,10 @@
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
 
 
-echo 'dddd2';
+echo 'dddd3';
 
 
+	
 $card = array(
 	[
 	'type' => 'template',
@@ -19,8 +20,8 @@ $card = array(
 					'text' => 'Please select',
 					'defaultAction' =>  array(
 										'type' => 'uri',
-										'label' => 'Yes',
-										'uri' => 'ยืนยันเลข'
+										'label' => 'View detail',
+										'uri' => 'http://example.com/page/123'
 
 					),
 					'actions' =>  array(
@@ -44,6 +45,8 @@ $card = array(
 	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
 	'messages' => $card
 );
+
+
 
 
 					
