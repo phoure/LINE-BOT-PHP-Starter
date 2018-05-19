@@ -1,6 +1,6 @@
 <?php
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
-echo 'dd33deeed3';
+echo 'dd33eeeewwwwwwdd3';
 	
 $card = array(
 	'type' => 'template',
@@ -36,10 +36,10 @@ $card = array(
 															'label' => 'ดูคลิปนี้',
 															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
 														])
-										],
+										]),
 
 										'imageAspectRatio' => 'rectangle',
-										'imageSize' => 'cover')
+										'imageSize' => 'cover'
 					)
 	);
 
