@@ -2,9 +2,9 @@
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
 
 
-echo 'dd33dd3';
+$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
 
-
+for ($x = 0; $x <= 0; $x++) 
 	
 $card = array(
 	[
@@ -20,19 +20,19 @@ $card = array(
 					'defaultAction' =>  array(
 										'type' => 'uri',
 										'label' => 'ดูคลิปนี้',
-										'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+										'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
 
 					),
 					'actions' =>  array(['type' => 'uri',
 										'label' => 'ดูคลิปนี้',
-										'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+										'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
 									])
 
 					)
 	]
 	);
 
-	$data = array('to' => 'C214e858f2c0e42285b5d56a12f0cfced', 'messages' => $card
+	$data = array('to' => $groupid[$x][0], 'messages' => $card
 );
 
 
@@ -55,3 +55,5 @@ $card = array(
 
 			echo $result . "\r\n";
 
+
+} 
