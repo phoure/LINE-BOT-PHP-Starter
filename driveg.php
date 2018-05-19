@@ -10,23 +10,21 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-/*
-// join group
+
 $strUrl = "https://api.line.me/v2/bot/message/reply";
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "join";
 
-// get group id
+
 $strUrl = "https://api.line.me/v2/bot/message/reply";
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = 'text';
   $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['groupId'];
 
-*/
 
-
+/*
 
 $strUrl = "https://api.line.me/v2/bot/message/push";
 $arrPostData = array();
@@ -34,7 +32,7 @@ $arrPostData['to'] = "C214e858f2c0e42285b5d56a12f0cfced";
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "นี้คือการทดสอบ Push Message";
  
-
+*/
 
 /*
 
