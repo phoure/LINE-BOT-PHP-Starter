@@ -24,18 +24,9 @@ $card = array(
 										'uri' => 'http://example.com/page/123'
 
 					),
-					'actions' =>  array(
-										[
-										'type' => 'postback',
-										'label' => 'Buy',
-   										'data' => 'action=buy&itemid=111',
-										'text' => 'tecxttt'
-										],
-										[
-										'type' => 'message',
-										'label' => 'No',
-										'text' => 'โปรดกรอกเลขใหม่'
-										]
+					'actions' =>  array('type' => 'uri',
+										'label' => 'ดูคลิปนี้',
+										'uri' => 'http://example.com/page/123'
 									)
 
 					)
