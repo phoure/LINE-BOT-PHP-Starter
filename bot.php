@@ -9,45 +9,29 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 
-
-$dd = array(
-				[
-					'type' => 'message',
-					'label' => 'Buy',
-					'text' => 'yes'
-				]
-			);
-
-
-$ee = array([
-		'imageUrl' => 'https://image.ibb.co/dGC4Sa/booking_icon.jpg',
-		'action' => $dd
-		],
-	    [
-		'imageUrl' => 'https://image.ibb.co/dGC4Sa/booking_icon.jpg',
-		'action' => $dd
-		],
-			);
-
-
-
-
-$oo =  array(
-			'type' => 'image_carousel',
-			'columns' => $ee
-		);
-		
-$card = array(
-	[
-		'type' => 'template',
-	    "altText" => "this is a confirm template",
- 		"template" => $oo
-	]
-	);
-
 	$sss = array(
-	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
-	'messages' => $card
+	
+		{
+  "type": "template",
+  "altText": "this is a confirm template",
+  "template": {
+      "type": "confirm",
+      "text": "Are you sure?",
+      "actions": [
+          {
+            "type": "message",
+            "label": "Yes",
+            "text": "yes"
+          },
+          {
+            "type": "message",
+            "label": "No",
+            "text": "no"
+          }
+      ]
+  }
+}
+		
 );
 
 
