@@ -2,42 +2,38 @@
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
 
 
-echo '555asdfsadf55556655';
+echo 'dddd';
 
 // Get POST body content
-$content = file_get_contents('php://input');
-// Parse JSON
-$events = json_decode($content, true);
+$card = array(
+	[
+	'type' => 'template',
+    "altText" => "this is a confirm template",
+		"template" => array(
+						'type' => 'confirm',
+						'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
+						'actions' =>  array(
+											[
+											'type' => 'message',
+											'label' => 'Yes',
+											'text' => 'ยืนยันเลข'
+											],
+											[
+											'type' => 'message',
+											'label' => 'No',
+											'text' => 'โปรดกรอกเลขใหม่'
+											]
+										);
 
-	$sss =
-	
-		{
-  "type": "template",
-  "altText": "this is a confirm template",
-  "template": {
-      "type": "confirm",
-      "text": "Are you sure?",
-      "actions": [
-          {
-            "type": "message",
-            "label": "Yes",
-            "text": "yes"
-          },
-          {
-            "type": "message",
-            "label": "No",
-            "text": "no"
-          }
-      ]
-  }
-}
-
+						);
+	]
+	);
 
 
 					
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/push';
-			$data = $sss;
+			$data = $card;
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
@@ -51,4 +47,4 @@ $events = json_decode($content, true);
 			curl_close($ch);
 
 			echo $result . "\r\n";
-echo "OK";
+
