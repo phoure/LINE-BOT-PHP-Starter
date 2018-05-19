@@ -12,18 +12,21 @@ $events = json_decode($content, true);
 
 $dd = array(
 				[
-					'type' => 'postback',
+					'type' => 'message',
 					'label' => 'Buy',
-					'data' => 'action=buy&itemid=111'
+					'text' => 'yes'
 				]
 			);
 
 
-$ee = array(
-				[
-					'imageUrl' => 'https://image.ibb.co/dGC4Sa/booking_icon.jpg',
-					'action' => $dd
-				]
+$ee = array([
+		'imageUrl' => 'https://image.ibb.co/dGC4Sa/booking_icon.jpg',
+		'action' => $dd
+		],
+	    [
+		'imageUrl' => 'https://image.ibb.co/dGC4Sa/booking_icon.jpg',
+		'action' => $dd
+		],
 			);
 
 
