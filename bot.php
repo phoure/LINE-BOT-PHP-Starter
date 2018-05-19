@@ -2,7 +2,8 @@
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
 
 
-echo 'dddd1';
+echo 'dddd2';
+
 
 $card = array(
 	[
@@ -20,7 +21,6 @@ $card = array(
 										'type' => 'uri',
 										'label' => 'Yes',
 										'uri' => 'ยืนยันเลข'
-									)
 
 					),
 					'actions' =>  array(
@@ -44,6 +44,7 @@ $card = array(
 	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
 	'messages' => $card
 );
+
 
 					
 			// Make a POST Request to Messaging API to reply to sender
