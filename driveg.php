@@ -5,21 +5,35 @@ $strAccessToken = "qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbh
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
  
-$strUrl = "https://api.line.me/v2/bot/message/reply";
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+
 /*
+// join group
+$strUrl = "https://api.line.me/v2/bot/message/reply";
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "join";
-*/
 
+// get group id
+$strUrl = "https://api.line.me/v2/bot/message/reply";
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = 'text';
-  $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['userId'].'aaaaa'.$arrJson['events'][0]['source']['groupId'];
+  $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['groupId'];
+
+*/
+
+
+
+$strUrl = "https://api.line.me/v2/bot/message/push";
+$arrPostData = array();
+$arrPostData['to'] = "Ua526fbc34fe537e8405cc502d9b861cd";
+$arrPostData['messages'][0]['type'] = "text";
+$arrPostData['messages'][0]['text'] = "นี้คือการทดสอบ Push Message";
+ 
 
 
 /*
