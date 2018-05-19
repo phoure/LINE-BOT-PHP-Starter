@@ -24,10 +24,10 @@ $card = array(
 										'uri' => 'http://example.com/page/123'
 
 					),
-					'actions' =>  array('type' => 'uri',
+					'actions' =>  array(['type' => 'uri',
 										'label' => 'ดูคลิปนี้',
 										'uri' => 'http://example.com/page/123'
-									)
+									])
 
 					)
 	]
