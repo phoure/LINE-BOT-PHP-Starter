@@ -1,5 +1,4 @@
 <?php
-
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
 echo 'dd33dd3';
 	
@@ -9,6 +8,22 @@ $card = array(
 	"template" => array(
 					'type' => 'carousel',
 					'columns' => array([
+										'thumbnailImageUrl' => $_GET['thumb'],
+										'imageAspectRatio' => 'rectangle',
+										'imageSize' => 'cover',
+										'imageBackgroundColor' => '#000000',
+										'text' => $_GET['title'],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => 'ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+										),
+										'actions' =>  array(['type' => 'uri',
+															'label' => 'ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+														])
+										],
+									[
 										'thumbnailImageUrl' => $_GET['thumb'],
 										'imageAspectRatio' => 'rectangle',
 										'imageSize' => 'cover',
@@ -44,4 +59,4 @@ $card = array(
 			curl_close($ch);
 			echo $result . "\r\n";
 
-?>
+			?>
