@@ -10,15 +10,16 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-
+/*
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "join";
-
+*/
 
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "group";
+  $arrPostData['messages'][0]['type'] = 'text';
+  $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['userId'].'aaaaa'.$arrJson['events'][0]['source']['groupId'];
 
 
 /*
