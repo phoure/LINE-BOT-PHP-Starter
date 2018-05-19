@@ -9,8 +9,20 @@ $card = array(
 	'type' => 'template',
     "altText" => "this is a confirm template",
 	"template" => array(
-					'type' => 'confirm',
-					'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
+					'type' => 'buttons',
+					'thumbnailImageUrl' => 'https://image.ibb.co/dGC4Sa/booking_icon.jpg',
+					'imageAspectRatio' => 'rectangle',
+					'imageSize' => 'cover',
+					'imageBackgroundColor' => '#FFFF00',
+					'title' => 'Menu',
+					'text' => 'Please select',
+					'defaultAction' =>  array(
+										'type' => 'uri',
+										'label' => 'Yes',
+										'uri' => 'ยืนยันเลข'
+									)
+
+					),
 					'actions' =>  array(
 										[
 										'type' => 'message',
