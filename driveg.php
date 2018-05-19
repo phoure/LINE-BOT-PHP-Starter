@@ -30,7 +30,7 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 
 $strUrl = "https://api.line.me/v2/bot/message/push";
 $arrPostData = array();
-$arrPostData['to'] = "Ua526fbc34fe537e8405cc502d9b861cd";
+$arrPostData['to'] = "C214e858f2c0e42285b5d56a12f0cfced";
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "นี้คือการทดสอบ Push Message";
  
