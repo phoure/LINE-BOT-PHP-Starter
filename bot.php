@@ -138,7 +138,6 @@ if (strpos($textIn, 'twitter.com') !== false) {
 
   $response_data = json_decode($connection->response['response'],true);
 
-		  if ($response_code == 200) {
 		    $maxs = array_search(max($max), $max);
 
 			$data = array(
@@ -148,8 +147,6 @@ if (strpos($textIn, 'twitter.com') !== false) {
 					'type' => 'text',
 					'text' => '🎞 ดึงวีดีโอจากทวีตมาให้เพื่อนๆ แล้ว 😀',
 				]));
-
-		  }	//200
 } //video
   else{
 	  $data = array(
