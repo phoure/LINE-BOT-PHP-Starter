@@ -40,74 +40,91 @@ if (strpos($textIn, 'twitter.com') !== false) {
   $response_data = json_decode($connection->response['response'],true);
 
   // A response code of 200 is a success
+	if ($response_code == 200) {
+
+	if($response_data['extended_entities']['media'][0]['type'] == 'photo'){
+		if(count($response_data['extended_entities']['media'])-1 == 3){
+		$data = array(
+		'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+		'messages' => array([
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
+			],[
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][1]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
+			],[
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][2]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][2]['media_url_https'].':thumb',
+			],[
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][3]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][3]['media_url_https'].':thumb',
+			],
+				[
+					'type' => 'text',
+					'text' => 'ดึงภาพจากทวีต จำนวน 4 ภาพ 😀',
+				]));
+		 }
+		else if(count($response_data['extended_entities']['media'])-1 == 2){
+		$data = array(
+		'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+		'messages' => array([
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
+			],[
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][1]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
+			],[
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][2]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][2]['media_url_https'].':thumb',
+			],
+				[
+					'type' => 'text',
+					'text' => 'ดึงภาพจากทวีต จำนวน 3 ภาพ 😀',
+				]));
+		 }
+		else if(count($response_data['extended_entities']['media'])-1 == 1){
+		$data = array(
+		'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+		'messages' => array([
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
+			],[
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][1]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
+			],
+				[
+					'type' => 'text',
+					'text' => 'ดึงภาพจากทวีต จำนวน 2 ภาพ 😀',
+				]));
+		 }
+		else if(count($response_data['extended_entities']['media'])-1 == 0){
+		$data = array(
+		'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+		'messages' => array([
+				'type' => 'image',
+				'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
+				'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
+			],
+				[
+					'type' => 'text',
+					'text' => 'ดึงภาพจากทวีต จำนวน 1 ภาพ 😀',
+				]));
+		 }
+	    }/200
+	} //photo
 	
-	if(count($response_data['extended_entities']['media'])-1 == 3){
-	$data = array(
-	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-	'messages' => array([
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
-		],[
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][1]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
-		],[
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][2]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][2]['media_url_https'].':thumb',
-		],[
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][3]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][3]['media_url_https'].':thumb',
-		]));
-	 }
-	else if(count($response_data['extended_entities']['media'])-1 == 2){
-	$data = array(
-	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-	'messages' => array([
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
-		],[
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][1]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
-		],[
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][2]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][2]['media_url_https'].':thumb',
-		]));
-	 }
-	else if(count($response_data['extended_entities']['media'])-1 == 1){
-	$data = array(
-	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-	'messages' => array([
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
-		],[
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][1]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
-		]));
-	 }
-	else if(count($response_data['extended_entities']['media'])-1 == 0){
-	$data = array(
-	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-	'messages' => array([
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
-		]));
-	 }
+	else if($response_data['extended_entities']['media'][0]['type'] == 'photo'){
 	
 
-	
-
-	
-
-/*
        $max = array(intval($response_data['extended_entities']['media'][0]['video_info']['variants'][0][bitrate]),
        intval($response_data['extended_entities']['media'][0]['video_info']['variants'][1][bitrate]),
        intval($response_data['extended_entities']['media'][0]['video_info']['variants'][2][bitrate]),
@@ -121,28 +138,29 @@ if (strpos($textIn, 'twitter.com') !== false) {
 
   $response_data = json_decode($connection->response['response'],true);
 
-  if ($response_code == 200) {
-    $maxs = array_search(max($max), $max);
-	  
-	$data = array(
-	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-	'messages' => array([
-			'type' => 'video',
-			'originalContentUrl' => $response_data['extended_entities']['media'][0]['video_info']['variants'][$maxs]['url'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
-		],
-		[
-			'type' => 'text',
-			'text' => '🎞 ดึงวีดีโอจากทวิตเตอร์มาให้เพื่อนๆ ดูง่ายๆ แล้ว 😀',
-		]));
-	  
-  }	
+		  if ($response_code == 200) {
+		    $maxs = array_search(max($max), $max);
+
+			$data = array(
+			'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+			'messages' => array([
+					'type' => 'video',
+					'originalContentUrl' => $response_data['extended_entities']['media'][0]['video_info']['variants'][$maxs]['url'],
+					'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
+				],
+				[
+					'type' => 'text',
+					'text' => '🎞 ดึงวีดีโอจากทวีตมาให้เพื่อนๆ แล้ว 😀',
+				]));
+
+		  }	//200
+} //video
   else{
 	  $data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
 			'type' => 'text',
-			'text' => 'ไม่สามารถดึงวีดีโอจากทวิตเตอร์ได้ อาจด้วยเป็นบัญชีตั้งส่วนตัวไว้ หรือวีดีโออาจมีปัญหา',
+			'text' => 'ไม่สามารถดึงไฟล์จากทวิตเตอร์ได้ อาจด้วยเป็นบัญชีตั้งส่วนตัวไว้ หรือทวีตอาจมีปัญหา',
 		]));
 	  
 	  
