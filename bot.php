@@ -57,17 +57,20 @@ if (strpos($textIn, 'twitter.com') !== false) {
 
   if ($response_code == 200) {
     $maxs = array_search(max($max), $max);
-   
-    $data = array();
-    $data['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $data['messages'][0]['type'] = "video";
-    $data['messages'][0]['originalContentUrl'] = $response_data['extended_entities']['media'][0]['video_info']['variants'][$maxs]['url'];
-    $data['messages'][0]['previewImageUrl'] = $response_data['extended_entities']['media'][0]['media_url_https'];
 	  
-    $data = array();
-    $data['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $data['messages'][1]['type'] = "text";
-    $data['messages'][1]['text'] = 'กำลังดึงวี่ดีโอที่คุณ '.$nameIn.' แชร์จากทวิตเตอร์';
+	$data = array(
+	'replyToken' => $replyToken,
+	'messages' => array([
+			'type' => 'video',
+			'originalContentUrl' => $response_data['extended_entities']['media'][0]['video_info']['variants'][$maxs]['url'],
+			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
+		],
+		[
+			'type' => 'text',
+			'text' => 'กำลังดึงวี่ดีโอที่คุณ '.$nameIn.' แชร์จากทวิตเตอร์',
+		]
+		)
+		);
 	  
   }
 
