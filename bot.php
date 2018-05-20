@@ -158,6 +158,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 	  
 	  
   }
+	send($data, $strUrl, $arrHeader);
 }// tweet
 if($_GET['post'] == '1'){
 			$strUrl = 'https://api.line.me/v2/bot/message/push';
