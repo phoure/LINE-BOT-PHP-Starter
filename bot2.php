@@ -23,7 +23,7 @@ if($_GET['post'] == '1'){
 
 	$card = array([
 		'type' => 'template',
-	    "altText" => "this is a confirm template",
+	    "altText" => '🎬 แชร์วีดีโอ',
 		"template" => array(
 						'type' => 'carousel',
 						'columns' => array([
