@@ -60,7 +60,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
     $data['replyToken'] = $arrJson['events'][0]['replyToken'];
     $data['messages'][0]['type'] = "video";
     $data['messages'][0]['originalContentUrl'] = $response_data['extended_entities']['media'][0]['video_info']['variants'][$maxs]['url'];
-    $data['messages'][0]['previewImageUrl'] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg';
+    $data['messages'][0]['previewImageUrl'] = $response_data['extended_entities']['media'][0]['media_url_https'];
   }
 
 }
