@@ -28,7 +28,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 
 
   $connection->request('GET', $connection->url('1.1/statuses/show'), array(
-  'id' => '997998885665628160', 'tweet_mode' => 'extended'));
+  'id' => '997459988116398082', 'tweet_mode' => 'extended'));
           
                 
   // Get the HTTP response code for the API request
