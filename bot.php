@@ -214,7 +214,7 @@ curl_close($curl);
 			 echo 'upload 0';
 		} else {
 			
-		  $img_upload = $response['data']['link'];
+		  $img_upload = $response->data->link;
 
 			for ($x = 0; $x <= count($groupid)-1; $x++) {
 			    $card = array(
@@ -243,7 +243,7 @@ curl_close($curl);
 				$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				send($data, $strUrl, $arrHeader);
 			} // for
-			    echo '3'.$response['data']['link'];
+			    echo '3'.$response->data->link;
 			print_r($response);
 		}
 	}
