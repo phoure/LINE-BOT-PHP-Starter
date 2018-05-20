@@ -10,7 +10,10 @@ $card = array(
 					'text' => 'dsfsfsdf',
 					'actions' =>  array(['type' => 'message',
 								'label' => 'ดูคลิปนี้',
-								'text' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+								'text' => 'sdf'
+							    ],['type' => 'message',
+								'label' => 'ดูคลิปนี้',
+								'text' => 'sadfad'
 							    ])
 			)
 	);
