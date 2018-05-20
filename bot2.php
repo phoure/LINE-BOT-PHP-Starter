@@ -44,7 +44,7 @@ $card = array([
 							  [
 										'thumbnailImageUrl' => $thumb[1],
 										'imageBackgroundColor' => '#000000',
-										'text' => $title[0],
+										'text' => $title[1],
 										'defaultAction' =>  array(
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
@@ -54,6 +54,51 @@ $card = array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
 															'uri' => 'http://drivegay.com/video/'.$id[1].'&ref='.$groupid[$x][1]
+														])
+										],
+							  [
+										'thumbnailImageUrl' => $thumb[2],
+										'imageBackgroundColor' => '#000000',
+										'text' => $title[2],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[2].'&ref='.$groupid[$x][1]
+										),
+										'actions' =>  array([
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[2].'&ref='.$groupid[$x][1]
+														])
+										],
+							  [
+										'thumbnailImageUrl' => $thumb[3],
+										'imageBackgroundColor' => '#000000',
+										'text' => $title[3],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[3].'&ref='.$groupid[$x][1]
+										),
+										'actions' =>  array([
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[3].'&ref='.$groupid[$x][1]
+														])
+										],
+							  [
+										'thumbnailImageUrl' => $thumb[4],
+										'imageBackgroundColor' => '#000000',
+										'text' => $title[4],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[4].'&ref='.$groupid[$x][1]
+										),
+										'actions' =>  array([
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[4].'&ref='.$groupid[$x][1]
 														])
 										]),
 
