@@ -119,7 +119,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 					'text' => 'ดึงภาพจากทวีต จำนวน 1 ภาพ 😀',
 				]));
 		 }
-	    }/200
+	    } //200
 	} //photo
 	
 	else if($response_data['extended_entities']['media'][0]['type'] == 'photo'){
