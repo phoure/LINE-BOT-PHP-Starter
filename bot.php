@@ -92,8 +92,8 @@ if($_GET['post'] == '1'){
 			$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
 			$groupid[] = array('C5acee5a1fea67f1e79201ded58d1f91d','gkawanrak');
 			$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
-			$groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
-			$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
+			//$groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
+			//$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 	
 	if($_GET['target'] == 'text'){
 
