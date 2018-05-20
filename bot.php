@@ -137,7 +137,7 @@ if($_GET['post'] == '1'){
 			$data = array('to' => $groupid[$x][0], 'messages' => $card);
 		}
 	}
-		$url = 'https://api.line.me/v2/bot/message/push';
+		$strUrl = 'https://api.line.me/v2/bot/message/push';
 } 		
 
 
