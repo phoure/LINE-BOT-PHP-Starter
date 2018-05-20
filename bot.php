@@ -191,7 +191,7 @@ if($_GET['post'] == '1'){
 		curl_setopt($upload, CURLOPT_URL,"https://api.imgur.com/3/image");
 		curl_setopt($upload, CURLOPT_POST, 1);
 		curl_setopt($upload, CURLOPT_POSTFIELDS,
-			    'image='.str_replace('../','http://drivegay.com/'. str_replace('.png','_thumb.png', $_GET['thumb']));
+			    'image=https://pbs.twimg.com/profile_banners/829240084285243392/1526319378/1500x500';
 
 		$headers = [
 		    'Authorization: Client-ID 9247e4c204491c4',
