@@ -219,7 +219,7 @@ $data = array('to' => 'C214e858f2c0e42285b5d56a12f0cfced', 'messages' => array(
         [
           'type' => 'text',
           'text' => $textIn
-        ])));
+        ]));
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
