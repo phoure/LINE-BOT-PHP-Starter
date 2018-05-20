@@ -17,7 +17,7 @@ for ($x = 0; $x <= count($groupid)-1; $x++) {
 $card = array(
 	[
 	'type' => 'template',
-    "altText" => 'แชร์วีดีโอ',
+    "altText" => '🎬 แชร์วีดีโอ',
 	"template" => array(
 					'type' => 'buttons',
 					'thumbnailImageUrl' => $_GET['thumb'],
