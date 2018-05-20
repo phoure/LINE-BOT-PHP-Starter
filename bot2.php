@@ -40,6 +40,21 @@ $card = array([
 															'label' => '🎬 ดูคลิปนี้',
 															'uri' => 'http://drivegay.com/video/'.$id[0].'&ref='.$groupid[$x][1]
 														])
+										],
+							  [
+										'thumbnailImageUrl' => $thumb[1],
+										'imageBackgroundColor' => '#000000',
+										'text' => $title[0],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[1].'&ref='.$groupid[$x][1]
+										),
+										'actions' =>  array([
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[1].'&ref='.$groupid[$x][1]
+														])
 										]),
 
 										'imageAspectRatio' => 'rectangle',
