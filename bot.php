@@ -46,8 +46,20 @@ if (strpos($textIn, 'twitter.com') !== false) {
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
 			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'],
+			'originalContentUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
 			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
+		],[
+			'type' => 'image',
+			'originalContentUrl' => $response_data['extended_entities']['media'][1]['media_url_https'],
+			'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
+		],[
+			'type' => 'image',
+			'originalContentUrl' => $response_data['extended_entities']['media'][2]['media_url_https'],
+			'previewImageUrl' => $response_data['extended_entities']['media'][2]['media_url_https'].':thumb',
+		],[
+			'type' => 'image',
+			'originalContentUrl' => $response_data['extended_entities']['media'][3]['media_url_https'],
+			'previewImageUrl' => $response_data['extended_entities']['media'][3]['media_url_https'].':thumb',
 		]));
 	
 
