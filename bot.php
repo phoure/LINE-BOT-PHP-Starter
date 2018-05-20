@@ -98,6 +98,7 @@ if($_GET['post'] == '1'){
 	if($_GET['target'] == 'text'){
 		
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
+		echo 'sdfsadf';
 		$data = array('to' => $groupid[$x][0], 'messages' => array([
 			'type' => 'text',
 			'text' => $_GET['text'],
