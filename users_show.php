@@ -23,9 +23,7 @@ $response_code = $connection->response['code'];
 $response_data = json_decode($connection->response['response'],true);
 
 // A response code of 200 is a success
-if ($response_code <> 200) {
-  print "Error: $response_code\n";
-}
+
 
        $max = array(intval($response_data['extended_entities']['media'][0]['video_info']['variants'][0][bitrate]),
        intval($response_data['extended_entities']['media'][0]['video_info']['variants'][1][bitrate]),
@@ -34,20 +32,18 @@ if ($response_code <> 200) {
        intval($response_data['extended_entities']['media'][0]['video_info']['variants'][4][bitrate]),
        intval($response_data['extended_entities']['media'][0]['video_info']['variants'][5][bitrate]));
 
-echo $maxs = array_search(max($max), $max);
+
 
 $response_code = $connection->response['code'];
 
-// Convert the JSON response into an array
 $response_data = json_decode($connection->response['response'],true);
 
-//print_r( $response_data);
-// A response code of 200 is a success
-if ($response_code <> 200) {
-  print "Error: $response_code\n";
+if ($response_code == 200) {
+  $maxs = array_search(max($max), $max);
+  echo $response_data['extended_entities']['media'][0]['video_info']['variants'][0]['url'];
 }
 
 	
-								echo $response_data['extended_entities']['media'][0]['video_info']['variants'][0]['url'];
+						
 
 ?>
