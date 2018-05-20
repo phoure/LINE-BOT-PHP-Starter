@@ -1,8 +1,7 @@
 <?php
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
 echo 'dddd1';
-$card = array(
-	[
+$card = array([
 	'type' => 'template',
     "altText" => "this is a confirm template",
 	"template" => array(
@@ -21,13 +20,28 @@ $card = array(
 															'label' => 'ดูคลิปนี้',
 															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
 														])
+										],
+										[
+											'thumbnailImageUrl' => $_GET['thumb'],
+										'imageBackgroundColor' => '#000000',
+										'title' => $_GET['title'],
+										'text' => $_GET['title'],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => 'ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+										),
+										'actions' =>  array(['type' => 'uri',
+															'label' => 'ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+														])
 										]),
 
 										'imageAspectRatio' => 'rectangle',
 										'imageSize' => 'cover'
 					)
-	]
-	);
+	]);
+
 	$data = array(
 	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
 	'messages' => $card
