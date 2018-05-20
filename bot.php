@@ -93,20 +93,20 @@ if($_GET['post'] == '1'){
 			$groupid[] = array('C5acee5a1fea67f1e79201ded58d1f91d','gkawanrak');
 			$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
 			$groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
-			$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
+			//$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 	
 	if($_GET['target'] == 'text'){
-		
-	for ($x = 0; $x <= count($groupid)-1; $x++) {
-		$card = array([
-			'type' => 'text',
-			'text' => $_GET['text']
-			]);
-		
-		$data = array('to' => $groupid[$x][0], 'messages' => $card);
-		
-		echo 'ส่งแล้ว';
-	}
+
+		for ($x = 0; $x <= count($groupid)-1; $x++) {
+			$card = array([
+				'type' => 'text',
+				'text' => $_GET['text']
+				]);
+
+			$data = array('to' => $groupid[$x][0], 'messages' => $card);
+
+			echo 'ส่งแล้ว';
+		}
 		
 		
 	}
