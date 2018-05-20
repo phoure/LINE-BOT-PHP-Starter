@@ -41,7 +41,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 
   // A response code of 200 is a success
 	
-	if(count($response_data['extended_entities']['media']) == 3){
+	if(count($response_data['extended_entities']['media'])-1 == 3){
 	$data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
@@ -62,7 +62,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 			'previewImageUrl' => $response_data['extended_entities']['media'][3]['media_url_https'].':thumb',
 		]));
 	 }
-	else if(count($response_data['extended_entities']['media']) == 2){
+	else if(count($response_data['extended_entities']['media'])-1 == 2){
 	$data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
@@ -79,7 +79,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 			'previewImageUrl' => $response_data['extended_entities']['media'][2]['media_url_https'].':thumb',
 		]));
 	 }
-	else if(count($response_data['extended_entities']['media']) == 1){
+	else if(count($response_data['extended_entities']['media'])-1 == 1){
 	$data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
@@ -92,7 +92,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 			'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
 		]));
 	 }
-	else if(count($response_data['extended_entities']['media']) == 0){
+	else if(count($response_data['extended_entities']['media'])-1 == 0){
 	$data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
