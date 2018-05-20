@@ -12,15 +12,15 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
 if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+  $data = array();
+  $data['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $data['messages'][0]['type'] = "text";
+  $data['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 }
 
 
 if($_GET['post'] == '1'){
-
+	
 	$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
 	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
 	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
@@ -58,6 +58,8 @@ if($_GET['post'] == '1'){
 		);
 
 		$data = array('to' => $groupid[$x][0], 'messages' => $card
+			      
+		$url = 'https://api.line.me/v2/bot/message/push';
 	);
 
 }
@@ -65,7 +67,6 @@ if($_GET['post'] == '1'){
 
 } 				
 			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/push';
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
