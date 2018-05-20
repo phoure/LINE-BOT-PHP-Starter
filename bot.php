@@ -42,7 +42,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
   // A response code of 200 is a success
 	
 
-for ($x = 0; $x <= 3; $x++) {
+for ($x = 0; $x <= 1; $x++) {
 	$data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
