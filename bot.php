@@ -98,13 +98,14 @@ if($_GET['post'] == '1'){
 	if($_GET['target'] == 'text'){
 		
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
-		echo 'sdfsadf';
 		$card = array([
 			'type' => 'text',
-			'text' => 'd'
+			'text' => $_GET['text']
 			]);
 		
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
+		
+		echo 'ส่งแล้ว';
 	}
 		
 		
