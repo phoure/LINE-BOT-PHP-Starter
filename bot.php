@@ -214,7 +214,7 @@ curl_close($curl);
 			 echo 'upload 0';
 		} else {
 			
-		  $img_upload = $response->data->link;
+		  $response_upload = json_decode($response,true);
 
 			for ($x = 0; $x <= count($groupid)-1; $x++) {
 			    $card = array(
@@ -223,7 +223,7 @@ curl_close($curl);
 				"altText" => '🎬 แชร์วีดีโอ',
 				"template" => array(
 				    'type' => 'buttons',
-				    'thumbnailImageUrl' => $img_upload,
+				    'thumbnailImageUrl' => $response_upload['data']['link'],
 				    'imageAspectRatio' => 'rectangle',
 				    'imageSize' => 'cover',
 				    'imageBackgroundColor' => '#000000',
@@ -243,8 +243,7 @@ curl_close($curl);
 				$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				send($data, $strUrl, $arrHeader);
 			} // for
-			    echo '3'.$response->data->link;
-			print_r($response);
+			    echo 'posted'
 		}
 	}
 } 		
