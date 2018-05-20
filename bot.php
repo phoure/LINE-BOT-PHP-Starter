@@ -150,13 +150,16 @@ if (strpos($textIn, 'twitter.com') !== false) {
 }//200
 }// tweet
 if($_GET['post'] == '1'){
+			$strUrl = 'https://api.line.me/v2/bot/message/push';
+	
+			$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
+	/*
 			$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
 			$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
 			$groupid[] = array('C5acee5a1fea67f1e79201ded58d1f91d','gkawanrak');
 			$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
 			$groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
-			$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
-			$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
+			$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');*/
 	
 	if($_GET['target'] == 'text'){
 		for ($x = 0; $x <= count($groupid)-1; $x++) {
@@ -196,9 +199,9 @@ if($_GET['post'] == '1'){
 			]
 			);
 			$data = array('to' => $groupid[$x][0], 'messages' => $card);
+			send($data, $strUrl, $arrHeader);
 		}
 	}
-		$strUrl = 'https://api.line.me/v2/bot/message/push';
 } 		
 /*
 
@@ -211,17 +214,18 @@ if($_GET['post'] == '1'){
 			'text' =>  $arrJson['events'][0]['message']['id']
 		]));
 */
-
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,$strUrl);
-curl_setopt($ch, CURLOPT_HEADER, false);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-$result = curl_exec($ch);
-curl_close ($ch);
+function send($data, $strUrl, $arrHeader){
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL,$strUrl);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	$result = curl_exec($ch);
+	curl_close ($ch);
+}
  
 
 
