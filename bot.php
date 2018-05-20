@@ -12,6 +12,7 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 $textIn = $arrJson['events'][0]['message']['text'];
+$nameIn = $arrJson['events'][0]['source']['displayName'];
 
 if (strpos($textIn, 'twitter.com') !== false) {
  
@@ -62,6 +63,12 @@ if (strpos($textIn, 'twitter.com') !== false) {
     $data['messages'][0]['type'] = "video";
     $data['messages'][0]['originalContentUrl'] = $response_data['extended_entities']['media'][0]['video_info']['variants'][$maxs]['url'];
     $data['messages'][0]['previewImageUrl'] = $response_data['extended_entities']['media'][0]['media_url_https'];
+	  
+    $data = array();
+    $data['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $data['messages'][1]['type'] = "text";
+    $data['messages'][1]['text'] = 'กำลังดึงวี่ดีโอที่คุณ '.$nameIn.' แชร์จากทวิตเตอร์';
+	  
   }
 
 }
