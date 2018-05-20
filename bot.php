@@ -42,16 +42,27 @@ if (strpos($textIn, 'twitter.com') !== false) {
   // A response code of 200 is a success
 	
 
-for ($x = 0; $x <= 1; $x++) {
 	$data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
 			'type' => 'image',
 			'originalContentUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'].':thumb',
+			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':small',
+		],[
+			'type' => 'image',
+			'originalContentUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'],
+			'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':small',
+		],[
+			'type' => 'image',
+			'originalContentUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'],
+			'previewImageUrl' => $response_data['extended_entities']['media'][2]['media_url_https'].':small',
+		],[
+			'type' => 'image',
+			'originalContentUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'],
+			'previewImageUrl' => $response_data['extended_entities']['media'][3]['media_url_https'].':small',
 		]));
 	
-} 
+
 	
 
 	
