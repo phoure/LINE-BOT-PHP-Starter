@@ -12,12 +12,12 @@ $groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
 $groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 */
 
-	$id[] = 'a'; $title[] = 'sdf'; $thumb[] == 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'sdf'; $thumb[] == 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'sdf'; $thumb[] == 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'sdf'; $thumb[] == 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'dsf'; $thumb[] == 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'd'; $thumb[] == 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
+	$id[] = 'a'; $title[] = 'sdf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
+	$id[] = 'a'; $title[] = 'sdf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
+	$id[] = 'a'; $title[] = 'sdf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
+	$id[] = 'a'; $title[] = 'sdf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
+	$id[] = 'a'; $title[] = 'dsf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
+	$id[] = 'a'; $title[] = 'd'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
 
 for ($x = 0; $x <= count($groupid)-1; $x++) {
 	
