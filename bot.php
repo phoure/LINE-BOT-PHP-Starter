@@ -196,7 +196,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "image=https://pbs.twimg.com/profile_banners/829240084285243392/1526319378/1500x500",
+  CURLOPT_POSTFIELDS => "image=".str_replace('../','http://drivegay.com/', str_replace('.png','_thumb.png', $_GET['thumb']),
   CURLOPT_HTTPHEADER => array(
     "authorization: Client-ID 9247e4c204491c4",
     "cache-control: no-cache",
@@ -223,7 +223,7 @@ curl_close($curl);
 				"altText" => '🎬 แชร์วีดีโอ',
 				"template" => array(
 				    'type' => 'buttons',
-				    'thumbnailImageUrl' => 'https://i.imgur.com/FqXqAmk.jpg',
+				    'thumbnailImageUrl' => $response_upload['data']['link'],
 				    'imageAspectRatio' => 'rectangle',
 				    'imageSize' => 'cover',
 				    'imageBackgroundColor' => '#000000',
