@@ -122,7 +122,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 	    } //200
 	} //photo
 	
-	else if($response_data['extended_entities']['media'][0]['type'] == 'photo'){
+	else if($response_data['extended_entities']['media'][0]['type'] == 'video'){
 	
 
        $max = array(intval($response_data['extended_entities']['media'][0]['video_info']['variants'][0][bitrate]),
@@ -164,7 +164,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 		]));
 	  
 	  
-  }*/
+  }
 
 }
 
