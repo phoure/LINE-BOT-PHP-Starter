@@ -51,11 +51,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 		],[
 			'type' => 'image',
 			'originalContentUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][1]['media_url_https'].':thumb',
-		],[
-			'type' => 'image',
-			'originalContentUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'],
-			'previewImageUrl' => $response_data['extended_entities']['media'][2]['media_url_https'].':thumb',
+			'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'].':thumb',
 		]));
 	
 
