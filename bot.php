@@ -13,7 +13,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $textIn = $arrJson['events'][0]['message']['text'];
 $nameIn = $arrJson['events'][0]['source']['userId'];
 
-if (strpos($textIn, 'twitter') !== false && strpos($textIn, 'ดึง') == false && $arrJson['events'][0]['source']['groupId'] == 'C214e858f2c0e42285b5d56a12f0cfced') {
+if (strpos($textIn, 'twitter') !== false && $arrJson['events'][0]['source']['groupId'] == 'C214e858f2c0e42285b5d56a12f0cfced') {
 	
 	$data_vid = explode('http',$textIn);
 	$post_vid = file_get_contents('http://drivegay.com/docs/upload_file.php?action=upload_url&url=http'.$data_vid[1].'&caption='.str_replace(' ','-', $_GET['thumb']$data_vid[0]));
