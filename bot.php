@@ -13,13 +13,14 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $textIn = $arrJson['events'][0]['message']['text'];
 $nameIn = $arrJson['events'][0]['source']['userId'];
 
-if (strpos($textIn, 'aaa') !== false) {
+if (strpos($textIn, 'aaa') !== false && $arrJson['events'][0]['source']['groupId'] == 'C214e858f2c0e42285b5d56a12f0cfced') {
 	$data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
 			'type' => 'text',
 			'text' => 'dd'
 	]));
+	send($data, $strUrl, $arrHeader);
 }
 else if (strpos($textIn, 'twitter.com') !== false) {
  
