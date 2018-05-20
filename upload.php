@@ -27,13 +27,9 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response->data->link;
-  echo $response->link;
-  print_r($response);
-  print_r($response['data']);
   
 $response_data = json_decode($response,true);
-  print_r($response_data);
+  print_r($response_data['data']['link']);
   
 }
 ?>
