@@ -185,14 +185,41 @@ if($_GET['post'] == '1'){
 		
 	}
 	if($_GET['target'] == 'share'){
-			for ($x = 0; $x <= count($groupid)-1; $x++) {
+		
+		$upload = curl_init();
+
+		curl_setopt($upload, CURLOPT_URL,"https://api.imgur.com/3/image");
+		curl_setopt($upload, CURLOPT_POST, 1);
+		curl_setopt($upload, CURLOPT_POSTFIELDS,
+			    'image='.str_replace('../','http://drivegay.com/', str_replace('.png','_thumb.png', $_GET['thumb']));
+
+		$headers = [
+		    'Authorization: Client-ID 9247e4c204491c4',
+		    'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW',
+		    'Content-Type: application/x-www-form-urlencoded'
+		];
+
+		curl_setopt($upload, CURLOPT_HTTPHEADER, $headers);
+
+
+		// receive server response ...
+		curl_setopt($upload, CURLOPT_RETURNTRANSFER, true);
+
+		$server_output = curl_exec ($upload);
+
+	$img_upload = $server_output['data']['link'];
+	curl_close ($upload);
+			    
+
+		
+		for ($x = 0; $x <= count($groupid)-1; $x++) {
 		    $card = array(
 		     [
 		     'type' => 'template',
 			"altText" => '🎬 แชร์วีดีโอ',
 			"template" => array(
 			    'type' => 'buttons',
-			    'thumbnailImageUrl' => $_GET['thumb'],
+			    'thumbnailImageUrl' => $img_upload,
 			    'imageAspectRatio' => 'rectangle',
 			    'imageSize' => 'cover',
 			    'imageBackgroundColor' => '#000000',
@@ -212,6 +239,7 @@ if($_GET['post'] == '1'){
 			$data = array('to' => $groupid[$x][0], 'messages' => $card);
 			send($data, $strUrl, $arrHeader);
 		}
+			    echo '2';
 	}
 } 		
 /*
