@@ -58,8 +58,9 @@ if (strpos($textIn, 'twitter.com') !== false) {
    
     $data = array();
     $data['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $data['messages'][0]['type'] = "text";
-    $data['messages'][0]['text'] = $response_data['extended_entities']['media'][0]['video_info']['variants'][0]['url'];
+    $data['messages'][0]['type'] = "video";
+    $data['messages'][0]['originalContentUrl'] = 'https://video.twimg.com/ext_tw_video/997998117805948928/pu/vid/720x1280/_1r9hxN0y8VsjZDU.mp4?tag=3';
+    $data['messages'][0]['previewImageUrl'] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg';
   }
 
 }
