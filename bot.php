@@ -124,29 +124,12 @@ if (strpos($textIn, 'twitter.com') !== false) {
 	
 	else if($response_data['extended_entities']['media'][0]['type'] == 'video'){
 	
-
-       $max = array(intval($response_data['extended_entities']['media'][0]['video_info']['variants'][0][bitrate]),
-       intval($response_data['extended_entities']['media'][0]['video_info']['variants'][1][bitrate]),
-       intval($response_data['extended_entities']['media'][0]['video_info']['variants'][2][bitrate]),
-       intval($response_data['extended_entities']['media'][0]['video_info']['variants'][3][bitrate]),
-       intval($response_data['extended_entities']['media'][0]['video_info']['variants'][4][bitrate]),
-       intval($response_data['extended_entities']['media'][0]['video_info']['variants'][5][bitrate]));
-
-
-
-  $response_code = $connection->response['code'];
-
-  $response_data = json_decode($connection->response['response'],true);
-
-		    $maxs = array_search(max($max), $max);
-
-			$data = array(
-			'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-			'messages' => array(
-				[
-					'type' => 'text',
-					'text' => '🎞 ดึงวีดีโอจากทวีตมาให้เพื่อนๆ แล้ว 😀',
-				]));
+  $data = array(
+	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+	'messages' => array([
+			'type' => 'text',
+			'text' => 'ไม่สามารถดึงไฟล์จากทวิตเตอร์ได้ อาจด้วยเป็นบัญชีตั้งส่วนตัวไว้ หรือทวีตอาจมีปัญหา'
+		]));
 } //video
   else{
 	  $data = array(
