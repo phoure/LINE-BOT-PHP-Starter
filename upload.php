@@ -31,6 +31,10 @@ if ($err) {
   echo $response->link;
   print_r($response);
   print_r($response['data']);
+  
+$response_data = json_decode($response,true);
+  print_r($response_data);
+  
 }
 ?>
-d
+dwww
