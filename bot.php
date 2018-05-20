@@ -67,10 +67,18 @@ if (strpos($textIn, 'twitter.com') !== false) {
 		],
 		[
 			'type' => 'text',
-			'text' => 'กำลังดึงวี่ดีโอที่คุณ '.$nameIn.' แชร์จากทวิตเตอร์',
-		]
-		)
-		);
+			'text' => 'ดึงวีดีโอจากทวิตเตอร์ที่ '.$nameIn.' แชร์จากทวิตเตอร์เรียบร้อยแล้ว',
+		]));
+	  
+  }	
+  else{
+	  $data = array(
+	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+	'messages' => array([
+			'type' => 'text',
+			'text' => 'ไม่สามารถดึงวีดีโอจากทวิตเตอร์ได้ อาจด้วยเป็นบัญชีตั้งส่วนตัวไว้ หรือวีดีโออาจมีปัญหา',
+		]));
+	  
 	  
   }
 
