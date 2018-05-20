@@ -24,12 +24,12 @@ if (strpos($textIn, 'twitter.com') !== false) {
    'user_token'      => $user_token,
    'user_secret'     => $user_secret
  ));
-	
- 
-$tweetId = strpos($textIn, "status/") + strlen("status/");
+
+	 $startsAt = strpos($textIn, "status/") + strlen("status/");
+	$twitter_id_search = substr ($textIn , $startsAt, 18 );
 
   $connection->request('GET', $connection->url('1.1/statuses/show'), array(
-  'id' => $tweetId, 'tweet_mode' => 'extended'));
+  'id' => $twitter_id_search, 'tweet_mode' => 'extended'));
           
                 
   // Get the HTTP response code for the API request
