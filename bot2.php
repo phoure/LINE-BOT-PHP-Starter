@@ -1,36 +1,21 @@
 <?php
 $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvFnxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQGR6x5keAIp7+It88/ShT0XWC+QuAvBtzZpRlCWBvdcaAdB04t89/1O/w1cDnyilFU=';
-echo 'dd33eeeewwwwwwdd3';
+echo 'ddd';
 	
 $card = array(
 	'type' => 'template',
     "altText" => "this is a confirm template",
 	"template" => array(
-					'type' => 'image_carousel',
-					'columns' => array([
-										'imageUrl' => $_GET['thumb'],
-										'actions' =>  array(['type' => 'uri',
-															'label' => 'ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
-														])
-										],[
-										'imageUrl' => $_GET['thumb'],
-										'actions' =>  array(['type' => 'uri',
-															'label' => 'ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
-														])
-										],[
-										'imageUrl' => $_GET['thumb'],
-										'actions' =>  array(['type' => 'uri',
-															'label' => 'ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
-														])
-										])
-					)
+					'type' => 'confirm',
+					'text' => 'dsfsfsdf',
+					'actions' =>  array(['type' => 'message',
+								'label' => 'ดูคลิปนี้',
+								'text' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+							    ])
+			)
 	);
 
-	$data = array('to' => 'C214e858f2c0e42285b5d56a12f0cfced', 'messages' => $card
-);
+	$data = array('to' => 'C214e858f2c0e42285b5d56a12f0cfced', 'messages' => $card);
 					
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/push';
