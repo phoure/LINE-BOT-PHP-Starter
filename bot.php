@@ -5,7 +5,6 @@ $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvF
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
  
-$strUrl = "https://api.line.me/v2/bot/message/reply";
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
@@ -18,6 +17,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $data['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 }
 
+$strUrl = "https://api.line.me/v2/bot/message/reply";
 
 if($_GET['post'] == '1'){
 	
@@ -59,11 +59,11 @@ if($_GET['post'] == '1'){
 
 		$data = array('to' => $groupid[$x][0], 'messages' => $card
 			      
-		$url = 'https://api.line.me/v2/bot/message/push';
 	);
 
 }
 
+		$url = 'https://api.line.me/v2/bot/message/push';
 
 } 				
 			// Make a POST Request to Messaging API to reply to sender
