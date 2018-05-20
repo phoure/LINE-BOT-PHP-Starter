@@ -21,21 +21,6 @@ $card = array(
 															'label' => 'ดูคลิปนี้',
 															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
 														])
-										],
-										[
-											'thumbnailImageUrl' => $_GET['thumb'],
-										'imageBackgroundColor' => '#000000',
-										'title' => $_GET['title'],
-										'text' => $_GET['title'],
-										'defaultAction' =>  array(
-															'type' => 'uri',
-															'label' => 'ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
-										),
-										'actions' =>  array(['type' => 'uri',
-															'label' => 'ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
-														])
 										]),
 
 										'imageAspectRatio' => 'rectangle',
