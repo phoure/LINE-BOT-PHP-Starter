@@ -8,13 +8,13 @@ $card = array(
 	"template" => array(
 					'type' => 'confirm',
 					'text' => 'dsfsfsdf',
-					'actions' =>  array(['type' => 'message',
+					'actions' =>  [array('type' => 'message',
 								'label' => 'ดูคลิปนี้',
 								'text' => 'sdf'
 							    ],['type' => 'message',
 								'label' => 'ดูคลิปนี้',
 								'text' => 'sadfad'
-							    ])
+							    )]
 			)
 	);
 
