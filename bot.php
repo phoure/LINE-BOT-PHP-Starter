@@ -185,7 +185,7 @@ if($_GET['post'] == '1'){
 		
 	}
 	if($_GET['target'] == 'share'){
-		
+		/*
 		$upload = curl_init();
 
 		curl_setopt($upload, CURLOPT_URL,"https://api.imgur.com/3/image");
@@ -209,7 +209,7 @@ if($_GET['post'] == '1'){
 
 	$img_upload = $server_output['data']['link'];
 	curl_close ($upload);
-			    
+			*/    
 
 		
 		for ($x = 0; $x <= count($groupid)-1; $x++) {
