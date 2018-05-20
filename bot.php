@@ -13,7 +13,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $textIn = $arrJson['events'][0]['message']['text'];
 $nameIn = $arrJson['events'][0]['source']['userId'];
 
-if (strpos($textIn, 'ส่ง') !== false) {
+if (strpos($textIn, 'aaa') !== false) {
 	$data = array(
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
