@@ -13,18 +13,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $textIn = $arrJson['events'][0]['message']['text'];
 $nameIn = $arrJson['events'][0]['source']['userId'];
 
-if ($textIn == '...') {
-
-	$data = array(
-	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-	'messages' => array([
-			'type' => 'text',
-			'text' => $arrJson['events'][0]['message']['id']
-	]));
-	
-	send($data, $strUrl, $arrHeader);
-}
-else if (strpos($textIn, 'twitter') !== false && $arrJson['events'][0]['source']['groupId'] == 'C214e858f2c0e42285b5d56a12f0cfced') {
+if (strpos($textIn, 'twitter') !== false && $arrJson['events'][0]['source']['groupId'] == 'C214e858f2c0e42285b5d56a12f0cfced') {
 	
 	$data_vid = explode('http',$textIn);
 	$post_vid = file_get_contents('http://drivegay.com/docs/upload_file.php?action=upload_url&url=http'.$data_vid[1].'&caption='.str_replace(' ','-', $data_vid[0]));
@@ -186,7 +175,8 @@ else if (strpos($textIn, 'twitter.com') !== false) {
   }
 	send($data, $strUrl, $arrHeader);
 }// tweet
-if($_GET['post'] == '1'){
+
+else if($_GET['post'] == '1'){
 			$strUrl = 'https://api.line.me/v2/bot/message/push';
 	
 			$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
@@ -271,7 +261,17 @@ curl_close($curl);
 			    echo 'posted';
 		}
 	}
-} 		
+}
+else{
+	$data = array(
+	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+	'messages' => array([
+			'type' => 'text',
+			'text' => $arrJson['events'][0]['message']['id']
+	]));
+	
+	send($data, $strUrl, $arrHeader);
+}
 /*
 
 
