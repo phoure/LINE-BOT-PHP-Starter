@@ -28,6 +28,6 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
   echo $response->data->link;
-  echo echo $response=>link;
+  echo $response=>link;
 }
 ?>
