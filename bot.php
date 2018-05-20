@@ -59,7 +59,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
     $maxs = array_search(max($max), $max);
 	  
 	$data = array(
-	'replyToken' => $replyToken,
+	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
 			'type' => 'video',
 			'originalContentUrl' => $response_data['extended_entities']['media'][0]['video_info']['variants'][$maxs]['url'],
