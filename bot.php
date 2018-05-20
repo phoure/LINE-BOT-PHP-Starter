@@ -202,14 +202,30 @@ if($_GET['post'] == '1'){
 } 		
 
 
+$getUrl = 'https://api.line.me/v2/bot/message/'.$arrJson['events'][0]['message']['id'].'/content';
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,$getUrl);
+curl_setopt($ch, CURLOPT_HEADER, false);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$result = curl_exec($ch);
+curl_close ($ch);
+
+
+
 		$strUrl = 'https://api.line.me/v2/bot/message/push';
   $data = array(
 	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
 	'messages' => array([
 			'type' => 'text',
-			'text' =>  $arrJson['events'][0]['message']['id'].'sadf'
+			'text' =>  $result
 		]));
-	  
+
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
@@ -221,4 +237,6 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
  
+
+
 ?>
