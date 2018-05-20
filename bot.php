@@ -186,59 +186,65 @@ if($_GET['post'] == '1'){
 	}
 	if($_GET['target'] == 'share'){
 		
-		$upload = curl_init();
+		$curl = curl_init();
 
-		curl_setopt($upload, CURLOPT_URL,"https://api.imgur.com/3/image");
-		curl_setopt($upload, CURLOPT_POST, 1);
-		curl_setopt($upload, CURLOPT_POSTFIELDS,
-			    'image=https://pbs.twimg.com/profile_banners/829240084285243392/1526319378/1500x500';
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.imgur.com/3/image",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "image=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FDdmwlX7UQAEha-M.jpg",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: Client-ID 9247e4c204491c4",
+    "cache-control: no-cache",
+    "content-type: application/x-www-form-urlencoded",
+    "postman-token: 8b84fd63-b153-b627-403e-3c8251c250df"
+  ),
+));
 
-		$headers = [
-		    'Authorization: Client-ID 9247e4c204491c4',
-		    'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW',
-		    'Content-Type: application/x-www-form-urlencoded'
-		];
+$response = curl_exec($curl);
+$err = curl_error($curl);
 
-		curl_setopt($upload, CURLOPT_HTTPHEADER, $headers);
+curl_close($curl);
 
+		if ($err) {
+			 echo 'upload 0';
+		} else {
+			
+		  $img_upload = $server_output['data']['link'];
 
-		curl_setopt($upload, CURLOPT_RETURNTRANSFER, true);
-
-		$server_output = curl_exec ($upload);
-
-	$img_upload = $server_output['data']['link'];
-	curl_close ($upload);
-			    
-
-		
-		for ($x = 0; $x <= count($groupid)-1; $x++) {
-		    $card = array(
-		     [
-		     'type' => 'template',
-			"altText" => '🎬 แชร์วีดีโอ',
-			"template" => array(
-			    'type' => 'buttons',
-			    'thumbnailImageUrl' => $img_upload,
-			    'imageAspectRatio' => 'rectangle',
-			    'imageSize' => 'cover',
-			    'imageBackgroundColor' => '#000000',
-			    'text' => str_replace('-', ' ', $_GET['title']),
-			    'defaultAction' =>  array(
-				 'type' => 'uri',
-				 'label' => 'ดูคลิปนี้',
-				 'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
-			    ),
-			    'actions' =>  array(['type' => 'uri',
-				 'label' => '🎬 ดูคลิปนี้',
-				 'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
-				])
-			    )
-			]
-			);
-			$data = array('to' => $groupid[$x][0], 'messages' => $card);
-			send($data, $strUrl, $arrHeader);
-		}
+			for ($x = 0; $x <= count($groupid)-1; $x++) {
+			    $card = array(
+			     [
+			     'type' => 'template',
+				"altText" => '🎬 แชร์วีดีโอ',
+				"template" => array(
+				    'type' => 'buttons',
+				    'thumbnailImageUrl' => $img_upload,
+				    'imageAspectRatio' => 'rectangle',
+				    'imageSize' => 'cover',
+				    'imageBackgroundColor' => '#000000',
+				    'text' => str_replace('-', ' ', $_GET['title']),
+				    'defaultAction' =>  array(
+					 'type' => 'uri',
+					 'label' => 'ดูคลิปนี้',
+					 'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
+				    ),
+				    'actions' =>  array(['type' => 'uri',
+					 'label' => '🎬 ดูคลิปนี้',
+					 'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
+					])
+				    )
+				]
+				);
+				$data = array('to' => $groupid[$x][0], 'messages' => $card);
+				send($data, $strUrl, $arrHeader);
+			} // for
 			    echo '2';
+		}
 	}
 } 		
 /*
