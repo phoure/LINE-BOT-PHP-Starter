@@ -223,7 +223,7 @@ curl_close($curl);
 				"altText" => '🎬 แชร์วีดีโอ',
 				"template" => array(
 				    'type' => 'buttons',
-				    'thumbnailImageUrl' => 'https://i.imgur.com/FqXqAmk.jpg',
+				    'thumbnailImageUrl' => '',
 				    'imageAspectRatio' => 'rectangle',
 				    'imageSize' => 'cover',
 				    'imageBackgroundColor' => '#000000',
