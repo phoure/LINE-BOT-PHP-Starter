@@ -99,10 +99,12 @@ if($_GET['post'] == '1'){
 		
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
 		echo 'sdfsadf';
-		$data = array('to' => $groupid[$x][0], 'messages' => array([
+		$card = array([
 			'type' => 'text',
-			'text' => $_GET['text'],
-		]));
+			'text' => 'd'
+			]);
+		
+		$data = array('to' => $groupid[$x][0], 'messages' => $card
 	}
 		
 		
