@@ -12,7 +12,7 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 $textIn = $arrJson['events'][0]['message']['text'];
-$nameIn = $arrJson['events'][0]['source']['displayName'];
+$nameIn = $arrJson['events'][0]['source']['userId'];
 
 if (strpos($textIn, 'twitter.com') !== false) {
  
