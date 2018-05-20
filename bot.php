@@ -14,7 +14,16 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $textIn = $arrJson['events'][0]['message']['image'];
 $nameIn = $arrJson['events'][0]['source']['userId'];
 
-if (strpos($textIn, 'twitter.com') !== false) {
+if (strpos($textIn, 'drivegay') !== false) {
+	$data = array(
+	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+	'messages' => array([
+			'type' => 'text',
+			'text' => 'ทำงานอยู่'
+		]));
+	
+}
+else if (strpos($textIn, 'twitter.com') !== false) {
  
  require 'app_tokens.php';
  require 'tmhOAuth.php';
