@@ -40,8 +40,23 @@ if (strpos($textIn, 'twitter.com') !== false) {
   $response_data = json_decode($connection->response['response'],true);
 
   // A response code of 200 is a success
+	
 
+for ($x = 0; $x <= 3; $x++) {
+	$data = array(
+	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+	'messages' => array([
+			'type' => 'image',
+			'originalContentUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'],
+			'previewImageUrl' => $response_data['extended_entities']['media'][$x]['media_url_https'].':thumb',
+		]));
+	
+} 
+	
 
+	
+
+/*
        $max = array(intval($response_data['extended_entities']['media'][0]['video_info']['variants'][0][bitrate]),
        intval($response_data['extended_entities']['media'][0]['video_info']['variants'][1][bitrate]),
        intval($response_data['extended_entities']['media'][0]['video_info']['variants'][2][bitrate]),
@@ -80,7 +95,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 		]));
 	  
 	  
-  }
+  }*/
 
 }
 
