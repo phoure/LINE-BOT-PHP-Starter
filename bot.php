@@ -136,7 +136,11 @@ if (strpos($textIn, 'twitter.com') !== false) {
         $maxs = array_search(max($max), $max);
       $data = array(
       'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-      'messages' => array(
+      'messages' => array([
+          'type' => 'video',
+          'originalContentUrl' => $response_data['extended_entities']['media'][0]['video_info']['variants'][$maxs]['url'],
+          'previewImageUrl' => $response_data['extended_entities']['media'][0]['media_url_https'],
+        ],
         [
           'type' => 'text',
           'text' => '🎞 ดึงวีดีโอจากทวีตมาให้เพื่อนๆ แล้ว 😀',
