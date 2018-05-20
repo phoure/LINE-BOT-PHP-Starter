@@ -5,19 +5,34 @@ $access_token = 'qNTXzzZpk6jEk57U46RK5iuyMyCjQRgF3GYrEyFOxBasHkdwuGeMMPdViCDbhvF
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
  
+$strUrl = "https://api.line.me/v2/bot/message/reply";
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
 if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
-  $data = array();
-  $data['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $data['messages'][0]['type'] = "text";
-  $data['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+}else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
+}else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+}else{
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
 }
-
-$strUrl = "https://api.line.me/v2/bot/message/reply";
+ 
 
 if($_GET['post'] == '1'){
 	
@@ -67,7 +82,7 @@ if($_GET['post'] == '1'){
 
 } 				
 			// Make a POST Request to Messaging API to reply to sender
-			$post = json_encode($data);
+			$post = json_encode($arrPostData);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
