@@ -10,49 +10,31 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-
-$textIn = $arrJson['events'][0]['message']['image'];
+$textIn = $arrJson['events'][0]['message']['text'];
 $nameIn = $arrJson['events'][0]['source']['userId'];
-
-if (strpos($textIn, 'drivegay') !== false) {
-	$data = array(
-	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
-	'messages' => array([
-			'type' => 'text',
-			'text' => 'ทำงานอยู่'
-		]));
-	
-}
-else if (strpos($textIn, 'twitter.com') !== false) {
+if (strpos($textIn, 'twitter.com') !== false) {
  
  require 'app_tokens.php';
  require 'tmhOAuth.php';
-
  $connection = new tmhOAuth(array(
    'consumer_key'    => $consumer_key,
    'consumer_secret' => $consumer_secret,
    'user_token'      => $user_token,
    'user_secret'     => $user_secret
  ));
-
 	 $startsAt = strpos($textIn, "status/") + strlen("status/");
 	$twitter_id_search = substr ($textIn , $startsAt, 18 );
-
   $connection->request('GET', $connection->url('1.1/statuses/show'), array(
   'id' => $twitter_id_search, 'tweet_mode' => 'extended'));
           
                 
   // Get the HTTP response code for the API request
   $response_code = $connection->response['code'];
-
   // Convert the JSON response into an array
   $response_data = json_decode($connection->response['response'],true);
-
   // A response code of 200 is a success
 	if ($response_code == 200) {
-
  
-
   if($response_data['extended_entities']['media'][0]['type'] == 'photo'){
     if(count($response_data['extended_entities']['media'])-1 == 3){
     $data = array(
@@ -167,8 +149,6 @@ else if (strpos($textIn, 'twitter.com') !== false) {
   }
 }//200
 }// tweet
-
-
 if($_GET['post'] == '1'){
 			$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
 			$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
@@ -179,15 +159,12 @@ if($_GET['post'] == '1'){
 			$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 	
 	if($_GET['target'] == 'text'){
-
 		for ($x = 0; $x <= count($groupid)-1; $x++) {
 			$card = array([
 				'type' => 'text',
 				'text' => $_GET['text']
 				]);
-
 			$data = array('to' => $groupid[$_GET['group']][0], 'messages' => $card);
-
 			echo 'ส่งแล้ว';
 		}
 		
@@ -223,14 +200,6 @@ if($_GET['post'] == '1'){
 	}
 		$strUrl = 'https://api.line.me/v2/bot/message/push';
 } 		
-/*
-		$strUrl = 'https://api.line.me/v2/bot/message/push';
-$data = array('to' => 'C214e858f2c0e42285b5d56a12f0cfced', 'messages' => array(
-        [
-          'type' => 'text',
-          'text' => $textIn
-        ]));
-*/
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
