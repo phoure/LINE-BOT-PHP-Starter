@@ -18,8 +18,12 @@ if (strpos($textIn, 'aaa') !== false && $arrJson['events'][0]['source']['groupId
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
 			'type' => 'text',
-			'text' => 'dd'
+			'text' => 'โพสต์วีดีโอลงบนเว็บไซต์แล้ว'
 	]));
+	
+	$data_vid = explode('http',$textIn);
+	
+	file_get_contents('http://drivegay.com/docs/upload_file.php?action=upload_url&url=http'.$data_vid[1].'&caption='.$data_vid[0]);
 	send($data, $strUrl, $arrHeader);
 }
 else if (strpos($textIn, 'twitter.com') !== false) {
