@@ -243,7 +243,7 @@ curl_close($curl);
 				$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				send($data, $strUrl, $arrHeader);
 			} // for
-			    echo '2';
+			    echo '2'.$server_output['data']['link'];
 		}
 	}
 } 		
