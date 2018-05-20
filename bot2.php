@@ -12,12 +12,12 @@ $groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
 $groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 */
 
-	$id[] = 'a'; $title[] = 'sdf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'sdf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'sdf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'sdf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'dsf'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
-	$id[] = 'a'; $title[] = 'd'; $thumb[] = 'https://pbs.twimg.com/media/DdhrzZrU8AA0M9L.jpg'; 
+$id[] = 'us6zcni'; $title[]= 'หมอกร อยากเย็ดจัง';  $thumb[] = 'https://pbs.twimg.com/media/DdmwFr9V0AAhjy0.jpg';
+$id[] = '1JvpZrM'; $title[]= 'ชอบท่า หมอกรคงเสียวน่าดู หน้าอย่างเงี่ยนอะ';  $thumb[] = 'https://pbs.twimg.com/media/DdmwKmaU0AAD_pC.jpg';
+$id[] = '2eCLPLk'; $title[]= 'กระตุกชิบหาย โครตเงี่ยนเลยสัส '; $thumb[] = 'https://pbs.twimg.com/media/DdmwcZOU0AA4vQN.jpg';
+$id[] = 'ce4clpg'; $title[]= 'เงี่ยนกับหมอกร'; $thumb[] = 'https://pbs.twimg.com/media/DdmwWo-VwAAhUTg.jpg';
+$id[] = 'RLeTjAY'; $title[]= 'หมอกรกินไอติม'; $thumb[] = 'https://pbs.twimg.com/media/DdmwhmLV0AEtzSK.jpg';
+$id[] = 'w3jlGo2'; $title[]= 'เด็ดสุดตอนนี้ต้องคนนี้. หมอกร'; $thumb[] = 'https://pbs.twimg.com/media/DdmwlX7UQAEha-M.jpg';
 
 for ($x = 0; $x <= count($groupid)-1; $x++) {
 	
@@ -99,6 +99,21 @@ $card = array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
 															'uri' => 'http://drivegay.com/video/'.$id[4].'&ref='.$groupid[$x][1]
+														])
+										],
+							  [
+										'thumbnailImageUrl' => $thumb[5],
+										'imageBackgroundColor' => '#000000',
+										'text' => $title[5],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[5].'&ref='.$groupid[$x][1]
+										),
+										'actions' =>  array([
+															'type' => 'uri',
+															'label' => '🎬 ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$id[5].'&ref='.$groupid[$x][1]
 														])
 										]),
 
