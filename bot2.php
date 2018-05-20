@@ -6,20 +6,25 @@ $card = array(
 	'type' => 'template',
     "altText" => "this is a confirm template",
 	"template" => array(
-					'type' => 'confirm',
-					'text' => 'คุณแน่ใจว่าเลขติดตามคือ ss',
-					'actions' =>  array(
-										[
-										'type' => 'message',
-										'label' => 'Yes',
-										'text' => 'ยืนยันเลข'
-										],
-										[
-										'type' => 'message',
-										'label' => 'No',
-										'text' => 'โปรดกรอกเลขใหม่'
-										]
-									)
+					'type' => 'carousel',
+					'columns' => array([
+										'thumbnailImageUrl' => $_GET['thumb'],
+										'imageBackgroundColor' => '#000000',
+										'title' => $_GET['title'],
+										'text' => $_GET['title'],
+										'defaultAction' =>  array(
+															'type' => 'uri',
+															'label' => 'ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+										),
+										'actions' =>  array(['type' => 'uri',
+															'label' => 'ดูคลิปนี้',
+															'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref=group'
+														])
+										]),
+
+										'imageAspectRatio' => 'rectangle',
+										'imageSize' => 'cover'
 					)
 	]
 	);
