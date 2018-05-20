@@ -38,7 +38,7 @@ $card = array([
 										'actions' =>  array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$[0].'&ref='.$groupid[$x][1]
+															'uri' => 'http://drivegay.com/video/'.$id[0].'&ref='.$groupid[$x][1]
 														])
 										],
 										[
@@ -53,7 +53,7 @@ $card = array([
 										'actions' =>  array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$[1].'&ref='.$groupid[$x][1]
+															'uri' => 'http://drivegay.com/video/'.$id[1].'&ref='.$groupid[$x][1]
 														])
 										],
 										[
@@ -68,7 +68,7 @@ $card = array([
 										'actions' =>  array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$[2].'&ref='.$groupid[$x][1]
+															'uri' => 'http://drivegay.com/video/'.$id[2].'&ref='.$groupid[$x][1]
 														])
 										],
 										[
@@ -83,7 +83,7 @@ $card = array([
 										'actions' =>  array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$[3].'&ref='.$groupid[$x][1]
+															'uri' => 'http://drivegay.com/video/'.$id[3].'&ref='.$groupid[$x][1]
 														])
 										],
 										[
@@ -98,7 +98,7 @@ $card = array([
 										'actions' =>  array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$[4].'&ref='.$groupid[$x][1]
+															'uri' => 'http://drivegay.com/video/'.$id[4].'&ref='.$groupid[$x][1]
 														])
 										],
 										[
@@ -113,7 +113,7 @@ $card = array([
 										'actions' =>  array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$[5].'&ref='.$groupid[$x][1]
+															'uri' => 'http://drivegay.com/video/'.$id[5].'&ref='.$groupid[$x][1]
 														])
 										],
 										[
@@ -128,7 +128,7 @@ $card = array([
 										'actions' =>  array([
 															'type' => 'uri',
 															'label' => '🎬 ดูคลิปนี้',
-															'uri' => 'http://drivegay.com/video/'.$[6].'&ref='.$groupid[$x][1]
+															'uri' => 'http://drivegay.com/video/'.$id[6].'&ref='.$groupid[$x][1]
 														])
 										]),
 
