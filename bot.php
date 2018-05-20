@@ -201,7 +201,7 @@ if($_GET['post'] == '1'){
 		$strUrl = 'https://api.line.me/v2/bot/message/push';
 } 		
 
-
+/*
 $getUrl = 'https://api.line.me/v2/bot/message/'.$arrJson['events'][0]['message']['id'].'/content';
 
 $ch = curl_init();
@@ -225,7 +225,7 @@ curl_close ($ch);
 			'text' =>  $result
 		]));
 
-
+*/
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
