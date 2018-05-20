@@ -29,6 +29,8 @@ if ($err) {
 } else {
   echo $response->data->link;
   echo $response->link;
+  print_r($response);
+  print_r($response['data']);
 }
 ?>
 d
