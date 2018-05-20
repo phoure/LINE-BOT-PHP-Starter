@@ -63,7 +63,7 @@ if($_GET['post'] == '1'){
 }
 
 
-					
+} 				
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$post = json_encode($data);
@@ -81,4 +81,4 @@ if($_GET['post'] == '1'){
 			echo $result . "\r\n";
 
 
-} 
+
