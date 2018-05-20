@@ -148,6 +148,16 @@ if (strpos($textIn, 'twitter.com') !== false) {
 	  
   }
 }//200
+	else{
+	  $data = array(
+	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+	'messages' => array([
+			'type' => 'text',
+			'text' => $response_code
+		]));
+	  
+	  
+  }
 }// tweet
 if($_GET['post'] == '1'){
 			$strUrl = 'https://api.line.me/v2/bot/message/push';
