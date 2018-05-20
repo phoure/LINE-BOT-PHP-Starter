@@ -152,7 +152,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 	  
 	  
   }
-}/200
+}//200
 }// tweet
 
 
