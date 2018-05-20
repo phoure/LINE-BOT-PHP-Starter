@@ -153,7 +153,7 @@ if (strpos($textIn, 'twitter.com') !== false) {
 	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
 	'messages' => array([
 			'type' => 'text',
-			'text' => $response_code
+			'text' => 'ไม่สามารถดึงไฟล์จากทวิตเตอร์ได้ อาจด้วยเป็นบัญชีตั้งส่วนตัวไว้ หรือทวีตอาจมีปัญหา'
 		]));
 	  
 	  
