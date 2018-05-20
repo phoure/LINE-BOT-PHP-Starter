@@ -204,10 +204,10 @@ if($_GET['post'] == '1'){
 
 		$strUrl = 'https://api.line.me/v2/bot/message/push';
   $data = array(
-	'replyToken' => $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'],
+	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
 	'messages' => array([
 			'type' => 'text',
-			'text' =>  $arrJson['events'][0]['message']['id']
+			'text' =>  $arrJson['events'][0]['message']['id'].'sadf'
 		]));
 	  
 $ch = curl_init();
