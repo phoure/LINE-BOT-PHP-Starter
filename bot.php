@@ -223,7 +223,7 @@ curl_close($curl);
 				"altText" => '🎬 แชร์วีดีโอ',
 				"template" => array(
 				    'type' => 'buttons',
-				    'thumbnailImageUrl' => 'https://pbs.twimg.com/media/DdgiVMGV4AAJqIn.jpg',
+				    'thumbnailImageUrl' => 'https://i.imgur.com/FqXqAmk.jpg',
 				    'imageAspectRatio' => 'rectangle',
 				    'imageSize' => 'cover',
 				    'imageBackgroundColor' => '#000000',
