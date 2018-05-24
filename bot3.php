@@ -53,7 +53,7 @@ curl_close($curl);
 		if ($err) {
 			 echo 'upload 0';
 		} else {
-			$response_img_url = $response_data['data']['link'];
+			$response_img_url = $response_img['data']['link'];
 		}
 
 }
