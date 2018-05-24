@@ -16,54 +16,7 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
 	 send($data, $strUrl, $arrHeader);
 
-if ($textIn == 'กลุ่ม') {
-	
-	$curl = curl_init();
-	curl_setopt_array($curl, array(
-	  CURLOPT_URL => "https://api.line.me/v2/bot/group/".$arrJson['events'][0]['source']['groupId']."/member/U457d57be6372365962eacd3f739bb0d8",
-	  CURLOPT_CUSTOMREQUEST => "GET",
-	  CURLOPT_RETURNTRANSFER => true,
-	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	  CURLOPT_HTTPHEADER => array(
-	    "authorization: Bearer ".$access_token,
-	    "postman-token: 7d55f84c-714f-e493-808f-c45ca4bcdfc5"
-	  ),
-	));
-	$response = curl_exec($curl);
-	$response_data = json_decode($response, true);
-	curl_close($curl);
-	
-	if($response_data['message'] == 'Not found'){
-		 $strUrl = 'https://api.line.me/v2/bot/message/push';
-		 $data = array( 'to' => $idIn,
-				'messages' => array([
-					'type' => 'text',
-					'text' =>  'คุณยังไม่ได้ทำตามเงื่อนไข'
-				]));
-		  send($data, $strUrl, $arrHeader);
-	}
-	else{
-		 $strUrl = 'https://api.line.me/v2/bot/message/push';
-		 $data = array( 'to' => $idIn,
-				'messages' => array([
-					'type' => 'text',
-					'text' =>  'รหัส 777 '.$idIn
-				]));
-		  send($data, $strUrl, $arrHeader);
-
-		$strUrl = 'https://api.line.me/v2/bot/message/push';
-		$data = array(
-		'to' => $idIn,
-		'messages' => array([
-				'type' => 'text',
-				'text' => $arrJson['events'][0]['source']['groupId']
-		]));
-
-		send($data, $strUrl, $arrHeader);
-	}
-}
-
-else if (strpos($textIn, 'ลงทะเบียน') !== false) {
+if (strpos($textIn, 'ลงทะเบียน') !== false) {
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
 	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
