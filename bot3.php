@@ -30,12 +30,12 @@ if($_GET['post'] == '1'){
 											'defaultAction' =>  array(
 																'type' => 'uri',
 																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[0].'&ref='.$groupid[$x][1]
+																'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 											),
 											'actions' =>  array([
 																'type' => 'uri',
 																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[0].'&ref='.$groupid[$x][1]
+																'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
 											],
 								  [
