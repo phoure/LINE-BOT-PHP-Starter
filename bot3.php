@@ -19,7 +19,6 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_HTTPHEADER => array(
     "authorization: Bearer ".$access_token,
-    "cache-control: no-cache",
     "postman-token: 7d55f84c-714f-e493-808f-c45ca4bcdfc5"
   ),
 ));
@@ -37,9 +36,6 @@ $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://api.imgur.com/3/image",
   CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => "image=".$response_data['pictureUrl'],
