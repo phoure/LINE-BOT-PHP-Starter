@@ -25,9 +25,37 @@ curl_close($curl);
 
 if ($err) {
   echo "cURL Error #:" . $err;
-} else {
-  echo $response;
-   $response = json_decode($response, true);
+} else 
+	
+	
+   $response_data = json_decode($response, true);
+
+$curl = curl_init();
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.imgur.com/3/image",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "image=".str_replace('../','http://drivegay.com/', str_replace('.png','_thumb.png', $_GET['thumb'])),
+  CURLOPT_HTTPHEADER => array(
+    "authorization: Client-ID 9247e4c204491c4",
+    "cache-control: no-cache",
+    "content-type: application/x-www-form-urlencoded",
+    "postman-token: 8b84fd63-b153-b627-403e-3c8251c250df"
+  ),
+));
+$response_img = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+		if ($err) {
+			 echo 'upload 0';
+		} else {
+			$response_img_url = $response_upload['data']['link'];
+		}
+
 }
 
 if($_GET['post'] == '1'){
@@ -54,7 +82,7 @@ if($_GET['post'] == '1'){
 		"template" => array(
 						'type' => 'carousel',
 						'columns' => array([
-											'thumbnailImageUrl' => 'https://pbs.twimg.com/media/Dd9gQ6lUQAA32QB.jpg',
+											'thumbnailImageUrl' => $response_img_url,
 											'imageBackgroundColor' => '#000000',
 											'text' => $response['displayName'],
 											'defaultAction' =>  array(
