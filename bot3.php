@@ -97,14 +97,14 @@ curl_close($curl);
 				    )
 				]
 				);
-		
-		
-				$data = array('to' => $groupid[$x][0], 'messages' => $card);
-				send($data, $strUrl, $arrHeader);
 			      
 			      
 	);
 
+		
+		
+				$data = array('to' => $groupid[$x][0], 'messages' => $card);
+				send($data, $strUrl, $arrHeader);
 	} 
 
 function send($data, $strUrl, $arrHeader){
