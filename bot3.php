@@ -48,6 +48,7 @@ curl_setopt_array($curl, array(
   ),
 ));
 $response_img = curl_exec($curl);
+$response_img = json_decode($response_img,true)
 $err = curl_error($curl);
 curl_close($curl);
 		if ($err) {
