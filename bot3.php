@@ -20,7 +20,7 @@ if ($textIn == 'กลุ่ม') {
 	
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
-	  CURLOPT_URL => "https://api.line.me/v2/bot/group/'.$arrJson['events'][0]['source']['groupId'].'/member/U457d57be6372365962eacd3f739bb0d8',
+	  CURLOPT_URL => "https://api.line.me/v2/bot/group/".$arrJson['events'][0]['source']['groupId']."/member/U457d57be6372365962eacd3f739bb0d8",
 	  CURLOPT_CUSTOMREQUEST => "GET",
 	  CURLOPT_RETURNTRANSFER => true,
 	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
