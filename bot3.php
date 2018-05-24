@@ -60,12 +60,8 @@ $response_img = curl_exec($curl);
 $response_img = json_decode($response_img,true);
 $err = curl_error($curl);
 curl_close($curl);
-		if ($err) {
-			 echo 'upload 0';
-		} else {
-			$response_img_url = $response_img['data']['link'];
-			echo $response_img['data']['link'].' ;; '.$response_data['pictureUrl'];
-		}
+		$response_img_url = $response_img['data']['link'];
+		echo $response_img['data']['link'].' ;; '.$response_data['pictureUrl'];
 
 }
 
@@ -98,14 +94,12 @@ curl_close($curl);
 				]
 				);
 			      
-			      
-	);
 
-		
+
 		
 				$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				send($data, $strUrl, $arrHeader);
-	} 
+
 
 function send($data, $strUrl, $arrHeader){
 	$ch = curl_init();
