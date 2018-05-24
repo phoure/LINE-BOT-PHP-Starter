@@ -27,7 +27,7 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
 	
-	
+
    $response_data = json_decode($response, true);
 
 $curl = curl_init();
@@ -53,7 +53,7 @@ curl_close($curl);
 		if ($err) {
 			 echo 'upload 0';
 		} else {
-			$response_img_url = $response_upload['data']['link'];
+			$response_img_url = $response_data['data']['link'];
 		}
 
 }
@@ -84,7 +84,7 @@ if($_GET['post'] == '1'){
 						'columns' => array([
 											'thumbnailImageUrl' => $response_img_url,
 											'imageBackgroundColor' => '#000000',
-											'text' => $response['displayName'],
+											'text' => $response_data['displayName'],
 											'defaultAction' =>  array(
 																'type' => 'uri',
 																'label' => '🎬 ดูคลิปนี้',
