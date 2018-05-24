@@ -23,7 +23,7 @@ if ($textIn == 'กลุ่ม') {
  	 $data = array( 'to' => $idIn,
 			'messages' => array([
 				'type' => 'text',
-				'text' =>  'รหัส 777'
+				'text' =>  'รหัส 777 '.$idIn
 			]));
 	  send($data, $strUrl, $arrHeader);
 	
