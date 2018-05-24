@@ -75,16 +75,9 @@ curl_close($curl);
 
 }
 
-if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
 
 	//$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','drivegay');
-	$id[] = 'us6zcni'; $title[]= 'หมอกร อยากเย็ดจัง';  $thumb[] = 'https://pbs.twimg.com/media/DdmwFr9V0AAhjy0.jpg';
-	$id[] = '1JvpZrM'; $title[]= 'ชอบท่า หมอกรคงเสียวน่าดู หน้าอย่างเงี่ยนอะ';  $thumb[] = 'https://pbs.twimg.com/media/DdmwKmaU0AAD_pC.jpg';
-	$id[] = '2eCLPLk'; $title[]= 'กระตุกชิบหาย โครตเงี่ยนเลยสัส '; $thumb[] = 'https://pbs.twimg.com/media/DdmwcZOU0AA4vQN.jpg';
-	$id[] = 'ce4clpg'; $title[]= 'เงี่ยนกับหมอกร'; $thumb[] = 'https://pbs.twimg.com/media/DdmwWo-VwAAhUTg.jpg';
-	$id[] = 'RLeTjAY'; $title[]= 'หมอกรกินไอติม'; $thumb[] = 'https://pbs.twimg.com/media/DdmwhmLV0AEtzSK.jpg';
-	$id[] = 'w3jlGo2'; $title[]= 'เด็ดสุดตอนนี้ต้องคนนี้. หมอกร'; $thumb[] = 'https://pbs.twimg.com/media/DdmwlX7UQAEha-M.jpg';
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
 	
 		$card = array(
@@ -129,7 +122,7 @@ if($_GET['post'] == '1'){
 				curl_close($ch);
 				echo $result . "\r\n";
 	} 
-}
+
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
