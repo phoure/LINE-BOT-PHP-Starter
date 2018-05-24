@@ -24,13 +24,8 @@ curl_setopt_array($curl, array(
 ));
 
 $response = curl_exec($curl);
-$err = curl_error($curl);
-
+$response_data = json_decode($response, true);
 curl_close($curl);
-
-
-
-   $response_data = json_decode($response, true);
 
 $curl = curl_init();
 curl_setopt_array($curl, array(
@@ -41,20 +36,15 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS => "image=".$response_data['pictureUrl'],
   CURLOPT_HTTPHEADER => array(
     "authorization: Client-ID 9247e4c204491c4",
-    "cache-control: no-cache",
     "content-type: application/x-www-form-urlencoded",
     "postman-token: 8b84fd63-b153-b627-403e-3c8251c250df"
   ),
 ));
 $response_img = curl_exec($curl);
 $response_img = json_decode($response_img,true);
-$err = curl_error($curl);
 curl_close($curl);
-		$response_img_url = $response_img['data']['link'];
-		echo $response_img['data']['link'].' ;; '.$response_data['pictureUrl'].' ;; '.$arrJson['events'][0]['source']['userId'];
-
-
-
+$response_img_url = $response_img['data']['link'];
+		
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
 
 	//$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','drivegay');
@@ -85,9 +75,9 @@ curl_close($curl);
 				);
 			      
 
-				$strUrl = "https://api.line.me/v2/bot/message/push";
+				$strUrl = "https://api.line.me/v2/bot/message/reply";
 		
-				$data = array('to' => $groupid[$x][0], 'messages' => $card);
+				$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 				send($data, $strUrl, $arrHeader);
 	}
 
