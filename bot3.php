@@ -4,23 +4,22 @@ $access_token = 'fgFWEdG3kij2u4EyyvvzhSPWLCfK8Z2duZ40kmpKgbiIn/HpV6bQe5UgHesnjOa
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
  
- 
+ /*
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
-/*
 
 $strUrl = "https://api.line.me/v2/bot/message/reply";
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = 'text';
   $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['groupId'];
-
 */
+
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.line.me/v2/bot/profile/Ua526fbc34fe537e8405cc502d9b861cd",
+  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
