@@ -40,7 +40,7 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
 				);
 			      
 
-
+				$strUrl = "https://api.line.me/v2/bot/message/push";
 		
 				$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				send($data, $strUrl, $arrHeader);
