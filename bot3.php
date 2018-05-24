@@ -12,7 +12,7 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
 
 
-if($textIn == 'ลงทะเบียน'){
+if (strpos($textIn, 'ลงทะเบียน') !== false) {
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
 	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
@@ -27,12 +27,12 @@ if($textIn == 'ลงทะเบียน'){
 	$response = curl_exec($curl);
 	$response_data = json_decode($response, true);
 	curl_close($curl);
-
+	$id = explode(' ',$textIn);
 	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'],
 			'messages' => array([
 				'type' => 'text',
-				'text' =>  'ลงทะเบียนการแชร์ให้ '.$response_data['displayName'].' แล้ว'
+				'text' =>  'ลงทะเบียนการแชร์ให้ '.$response_data['displayName'].'ด้วยไอดี '.$id[1].' แล้ว'
 			]));
 	  send($data, $strUrl, $arrHeader);
 
