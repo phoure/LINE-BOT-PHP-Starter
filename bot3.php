@@ -53,7 +53,7 @@ if($_GET['post'] == '1'){
 		"template" => array(
 						'type' => 'carousel',
 						'columns' => array([
-											'thumbnailImageUrl' => $response['pictureUrl'],
+											'thumbnailImageUrl' => 'https://pbs.twimg.com/media/Dd9gQ6lUQAA32QB.jpg',
 											'imageBackgroundColor' => '#000000',
 											'text' => $response['displayName'],
 											'defaultAction' =>  array(
