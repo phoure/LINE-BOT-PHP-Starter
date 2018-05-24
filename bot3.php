@@ -1,5 +1,34 @@
 <?php
 $access_token = 'MaNINLONsNr6WVQXl5lw1qHUUEstWHC45HctvmJB0+EghI4B0z9cJfC3BUrsWGrHxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQFTfXyJrUnsR/mVKm/pKpWWYo9zsijkiWqOjleKvfJRIwdB04t89/1O/w1cDnyilFU=';
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.line.me/v2/bot/profile/Ua526fbc34fe537e8405cc502d9b861cd",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: Bearer MaNINLONsNr6WVQXl5lw1qHUUEstWHC45HctvmJB0+EghI4B0z9cJfC3BUrsWGrHxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQFTfXyJrUnsR/mVKm/pKpWWYo9zsijkiWqOjleKvfJRIwdB04t89/1O/w1cDnyilFU=",
+    "cache-control: no-cache",
+    "postman-token: 7d55f84c-714f-e493-808f-c45ca4bcdfc5"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
 if($_GET['post'] == '1'){
 	$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
 	/*
@@ -24,9 +53,9 @@ if($_GET['post'] == '1'){
 		"template" => array(
 						'type' => 'carousel',
 						'columns' => array([
-											'thumbnailImageUrl' => $thumb[0],
+											'thumbnailImageUrl' => $response['pictureUrl'],
 											'imageBackgroundColor' => '#000000',
-											'text' => $title[0],
+											'text' => $response['displayName'],
 											'defaultAction' =>  array(
 																'type' => 'uri',
 																'label' => '🎬 ดูคลิปนี้',
@@ -36,81 +65,6 @@ if($_GET['post'] == '1'){
 																'type' => 'uri',
 																'label' => '🎬 ดูคลิปนี้',
 																'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
-															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[1],
-											'imageBackgroundColor' => '#000000',
-											'text' => $title[1],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[1].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[1].'&ref='.$groupid[$x][1]
-															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[2],
-											'imageBackgroundColor' => '#000000',
-											'text' => $title[2],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[2].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[2].'&ref='.$groupid[$x][1]
-															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[3],
-											'imageBackgroundColor' => '#000000',
-											'text' => $title[3],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[3].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[3].'&ref='.$groupid[$x][1]
-															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[4],
-											'imageBackgroundColor' => '#000000',
-											'text' => $title[4],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[4].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[4].'&ref='.$groupid[$x][1]
-															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[5],
-											'imageBackgroundColor' => '#000000',
-											'text' => $title[5],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[5].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[5].'&ref='.$groupid[$x][1]
 															])
 											]),
 											'imageAspectRatio' => 'rectangle',
