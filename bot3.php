@@ -54,6 +54,7 @@ curl_close($curl);
 			 echo 'upload 0';
 		} else {
 			$response_img_url = $response_img['data']['link'];
+			echo $response_img['data']['link'].' ;; '.$response_data['pictureUrl'];
 		}
 
 }
