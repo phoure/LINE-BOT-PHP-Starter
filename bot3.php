@@ -11,6 +11,22 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
 
+$strUrl = "https://api.line.me/v2/bot/message/reply";
+$arrPostData = array();
+$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+$arrPostData['messages'][0]['type'] = "join";
+
+
+$strUrl = "https://api.line.me/v2/bot/message/reply";
+$arrPostData = array();
+$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+$arrPostData['messages'][0]['type'] = "join";
+
+
+	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
+ 	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
+	 send($data, $strUrl, $arrHeader);
+
 
 if (strpos($textIn, 'ลงทะเบียน') !== false) {
 	$curl = curl_init();
@@ -32,10 +48,9 @@ if (strpos($textIn, 'ลงทะเบียน') !== false) {
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'],
 			'messages' => array([
 				'type' => 'text',
-				'text' =>  'ลงทะเบียนการแชร์ให้ '.$response_data['displayName'].'ด้วยไอดี '.$id[1].' แล้ว'
+				'text' =>  'ลงทะเบียนการแชร์ให้ '.$response_data['displayName'].' ด้วยไอดี '.$id[1].' แล้ว'
 			]));
 	  send($data, $strUrl, $arrHeader);
-
 }
 
 function send($data, $strUrl, $arrHeader){
