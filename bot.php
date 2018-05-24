@@ -269,7 +269,7 @@ else{
 	'to' => 'C214e858f2c0e42285b5d56a12f0cfced',
 	'messages' => array([
 			'type' => 'text',
-			'text' => $arrJson['events'][0]['source']['displayName']
+			'text' => $arrJson['events'][0]['source']['userId']
 	]));
 	
 	send($data, $strUrl, $arrHeader);
