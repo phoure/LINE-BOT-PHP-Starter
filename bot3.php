@@ -5,30 +5,41 @@ $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
 
 $textIn = $arrJson['events'][0]['message']['text'];
-$nameIn = $arrJson['events'][0]['source']['userId'];
+$idIn = $arrJson['events'][0]['source']['userId'];
 
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
-
-$strUrl = "https://api.line.me/v2/bot/message/reply";
-$arrPostData = array();
-$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-$arrPostData['messages'][0]['type'] = "join";
-
-
-$strUrl = "https://api.line.me/v2/bot/message/reply";
-$arrPostData = array();
-$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-$arrPostData['messages'][0]['type'] = "join";
 
 
 	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
 	 send($data, $strUrl, $arrHeader);
 
+if ($textIn == 'กลุ่ม') {
+	
+	
+	$strUrl = 'https://api.line.me/v2/bot/message/push';
+ 	 $data = array( 'to' => $idIn,
+			'messages' => array([
+				'type' => 'text',
+				'text' =>  'รหัส 777'
+			]));
+	  send($data, $strUrl, $arrHeader);
+	
+	
+	$strUrl = 'https://api.line.me/v2/bot/message/push';
+	$data = array(
+	'to' => $idIn,
+	'messages' => array([
+			'type' => 'text',
+			'text' => $arrJson['events'][0]['source']['groupId']
+	]));
+	
+	send($data, $strUrl, $arrHeader);
+}
 
-if (strpos($textIn, 'ลงทะเบียน') !== false) {
+else if (strpos($textIn, 'ลงทะเบียน') !== false) {
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
 	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
