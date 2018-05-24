@@ -8,7 +8,7 @@ $arrJson = json_decode($content, true);
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
-
+/*
 
 $strUrl = "https://api.line.me/v2/bot/message/reply";
   $arrPostData = array();
@@ -16,7 +16,7 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
   $arrPostData['messages'][0]['type'] = 'text';
   $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['groupId'];
 
-
+*/
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -77,16 +77,9 @@ curl_close($curl);
 }
 
 if($_GET['post'] == '1'){
-	$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
-	/*
-	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
-	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
-	$groupid[] = array('C5acee5a1fea67f1e79201ded58d1f91d','gkawanrak');
-	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
-	$groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
-	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
-	
-*/
+	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
+
+	//$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','drivegay');
 	$id[] = 'us6zcni'; $title[]= 'หมอกร อยากเย็ดจัง';  $thumb[] = 'https://pbs.twimg.com/media/DdmwFr9V0AAhjy0.jpg';
 	$id[] = '1JvpZrM'; $title[]= 'ชอบท่า หมอกรคงเสียวน่าดู หน้าอย่างเงี่ยนอะ';  $thumb[] = 'https://pbs.twimg.com/media/DdmwKmaU0AAD_pC.jpg';
 	$id[] = '2eCLPLk'; $title[]= 'กระตุกชิบหาย โครตเงี่ยนเลยสัส '; $thumb[] = 'https://pbs.twimg.com/media/DdmwcZOU0AA4vQN.jpg';
