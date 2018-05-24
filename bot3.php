@@ -1,5 +1,5 @@
 <?php
-$access_token = 'MaNINLONsNr6WVQXl5lw1qHUUEstWHC45HctvmJB0+EghI4B0z9cJfC3BUrsWGrHxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQFTfXyJrUnsR/mVKm/pKpWWYo9zsijkiWqOjleKvfJRIwdB04t89/1O/w1cDnyilFU=';
+$access_token = 'fgFWEdG3kij2u4EyyvvzhSPWLCfK8Z2duZ40kmpKgbiIn/HpV6bQe5UgHesnjOa07GizYWFnE0AoDjUnMLj4iEi/PufqScjhbj5QBxDDgeiHm82i9h5zLJ2y9kc0y7+1NlW9CUSbKsUU6X8KUQC26wdB04t89/1O/w1cDnyilFU=';
 
 $curl = curl_init();
 
@@ -78,30 +78,33 @@ if($_GET['post'] == '1'){
 	$id[] = 'RLeTjAY'; $title[]= 'หมอกรกินไอติม'; $thumb[] = 'https://pbs.twimg.com/media/DdmwhmLV0AEtzSK.jpg';
 	$id[] = 'w3jlGo2'; $title[]= 'เด็ดสุดตอนนี้ต้องคนนี้. หมอกร'; $thumb[] = 'https://pbs.twimg.com/media/DdmwlX7UQAEha-M.jpg';
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
-	$card = array([
-		'type' => 'template',
-	    "altText" => '🎬 แชร์วีดีโอ',
-		"template" => array(
-						'type' => 'carousel',
-						'columns' => array([
-											'thumbnailImageUrl' => $response_img_url,
-											'imageBackgroundColor' => '#000000',
-											'text' => $response_data['displayName'],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
-															])
-											]),
-											'imageAspectRatio' => 'rectangle',
-											'imageSize' => 'cover'
-						)
-		]);
+	
+		$card = array(
+			     [
+			     'type' => 'template',
+				"altText" => '🎬 แชร์วีดีโอ',
+				"template" => array(
+				    'type' => 'buttons',
+				    'thumbnailImageUrl' => $response_img_url,
+				    'imageAspectRatio' => 'rectangle',
+				    'imageSize' => 'cover',
+				    'imageBackgroundColor' => '#000000',
+				    'text' => $response_data['displayName'],
+				    'defaultAction' =>  array(
+					 'type' => 'uri',
+					 'label' => 'ดูคลิปนี้',
+					 'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
+				    ),
+				    'actions' =>  array(['type' => 'uri',
+					 'label' => '🎬 ดูคลิปนี้',
+					 'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
+					])
+				    )
+				]
+				);
+				$data = array('to' => $groupid[$x][0], 'messages' => $card);
+				send($data, $strUrl, $arrHeader);
+		
 		$data = array('to' => $groupid[$x][0], 'messages' => $card
 	);
 				// Make a POST Request to Messaging API to reply to sender
