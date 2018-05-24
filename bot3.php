@@ -55,7 +55,7 @@ if($_GET['post'] == '1'){
 						'columns' => array([
 											'thumbnailImageUrl' => 'https://pbs.twimg.com/media/Dd9gQ6lUQAA32QB.jpg',
 											'imageBackgroundColor' => '#000000',
-											'text' => $response['displayName'],
+											'text' => $response->displayName,
 											'defaultAction' =>  array(
 																'type' => 'uri',
 																'label' => '🎬 ดูคลิปนี้',
