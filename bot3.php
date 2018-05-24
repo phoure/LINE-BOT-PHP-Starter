@@ -13,7 +13,7 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
   $arrPostData = array();
  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = 'text';
-  $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['groupId'];
+  $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['userId'];
 
 
 $curl = curl_init();
