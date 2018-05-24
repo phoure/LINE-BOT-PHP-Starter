@@ -10,61 +10,6 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
 
 
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "authorization: Bearer MaNINLONsNr6WVQXl5lw1qHUUEstWHC45HctvmJB0+EghI4B0z9cJfC3BUrsWGrHxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQFTfXyJrUnsR/mVKm/pKpWWYo9zsijkiWqOjleKvfJRIwdB04t89/1O/w1cDnyilFU=",
-    "cache-control: no-cache",
-    "postman-token: 7d55f84c-714f-e493-808f-c45ca4bcdfc5"
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-	
-
-   $response_data = json_decode($response, true);
-
-$curl = curl_init();
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.imgur.com/3/image",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "image=".$response_data['pictureUrl'],
-  CURLOPT_HTTPHEADER => array(
-    "authorization: Client-ID 9247e4c204491c4",
-    "cache-control: no-cache",
-    "content-type: application/x-www-form-urlencoded",
-    "postman-token: 8b84fd63-b153-b627-403e-3c8251c250df"
-  ),
-));
-$response_img = curl_exec($curl);
-$response_img = json_decode($response_img,true);
-$err = curl_error($curl);
-curl_close($curl);
-		$response_img_url = $response_img['data']['link'];
-		echo $response_img['data']['link'].' ;; '.$response_data['pictureUrl'];
-
-}
-
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
 
 	//$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','drivegay');
@@ -76,11 +21,11 @@ curl_close($curl);
 				"altText" => '🎬 แชร์วีดีโอ',
 				"template" => array(
 				    'type' => 'buttons',
-				    'thumbnailImageUrl' => $response_img_url,
+				    'thumbnailImageUrl' => 'https://pbs.twimg.com/profile_banners/970238984822534144/1526954831/1500x500',
 				    'imageAspectRatio' => 'rectangle',
 				    'imageSize' => 'cover',
 				    'imageBackgroundColor' => '#000000',
-				    'text' => $response_data['displayName'],
+				    'text' => 'dsdfsdaf',
 				    'defaultAction' =>  array(
 					 'type' => 'uri',
 					 'label' => 'ดูคลิปนี้',
