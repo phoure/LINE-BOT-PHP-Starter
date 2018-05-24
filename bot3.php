@@ -58,9 +58,7 @@ $response_img = json_decode($response_img,true);
 $err = curl_error($curl);
 curl_close($curl);
 		$response_img_url = $response_img['data']['link'];
-		//echo $response_img['data']['link'].' ;; '.$response_data['pictureUrl'];
-
-
+		echo $response_img['data']['link'].' ;; '.$response_data['pictureUrl'].' ;; '.$arrJson['events'][0]['source']['userId'];
 
 
 
