@@ -212,6 +212,9 @@ if($_GET['post'] == '1'){
 				    'actions' =>  array(['type' => 'uri',
 					 'label' => 'แบ่งปันกลุ่มให้เพื่อน',
 					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+					],['type' => 'uri',
+					 'label' => 'แบ่งปันกลุ่มให้เพื่อน',
+					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 					])
 				    )
 				]
