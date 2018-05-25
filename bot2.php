@@ -16,7 +16,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 	
 */
-	$id[] = 'กลุ่มคลิปหลุด 20+'; $title[]= 'แจกคลิปหลุด คลิปเสียว ช่วยกันแชร์ตลอดทั้งวันทั้งคืน';  $thumb[] = 'https://pbs.twimg.com/media/DeAZ6_yVMAAl4hq.jpg';
+	$id[] = 'กลุ่มคลิปหลุด 20+'; $title[]= 'แจกคลิปหลุด คลิปเสียว ช่วยกันแชร์ตลอดทั้งวันทั้งคืน';  $thumb[] = 'https://pbs.twimg.com/media/DeAtpz-VMAAsNcz.jpg';
 	$id[] = 'กลุ่มหนังโป๊'; $title[]= 'กลุ่มสำหรับคนชอบดูหนังโป๊ หนังเสียว ภาพยนตร์เรท แจกลิงก์ดูเต็มเรื่อง';  $thumb[] = 'https://pbs.twimg.com/media/DeAWtydU8AMw-7i.jpg';
 	$id[] = 'กลุ่มหนังเกย์เสียวๆ'; $title[]= 'แจกหนัง แชร์คลิป หนุ่มหล่อ เสียว ฟิน กล้ามแน่น ควยใหญ่'; $thumb[] = 'https://pbs.twimg.com/media/DeAWtydU8AEUtQd.jpg';
 	$id[] = 'กลุ่มคลื่นเหงาสาวเซ็กซ์โฟน'; $title[]= 'หาเพื่อนคลายเงี่ยน เพื่อนเสียว หนุ่มๆ สาวๆ มาพากันเงี่ยนได้ที่นี่'; $thumb[] = 'https://pbs.twimg.com/media/DeAXClcUQAADxv4.jpg';
