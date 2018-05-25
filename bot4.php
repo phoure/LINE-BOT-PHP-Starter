@@ -24,16 +24,16 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 	*/
 
-	$id[] = 'เทคนิคและวิธีโพสต์ในไลน์ ปี2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา ใหม่ล่าสุด!';  $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFV0AA8tkL.jpg:large';
-	$id[] = 'สอนดึงไลน์ official เข้ากลุ่ม'; $title[]= 'วันนี้คุณสามารถนำแอคเคาท์ LINE@ เข้าร่วมกลุ่มได้แล้ว';  $thumb[] = 'https://pbs.twimg.com/media/DeDdJgEVQAAcNDE.jpg:large';
-	$id[] = 'โพสต์อัตโนมัติ ไม่ต้องคอยส่งข้อความเอง'; $title[]= 'ไลน์สามารถรู้เวลา สั่งส่งข้อความไปยังกลุ่มต่างๆ โดยไม่เสีย Reach'; $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFVwAAdSIQ.jpg:large';
-	$id[] = 'โพสต์สินค้าให้เด่น ใครๆ ก็เห็น'; $title[]= 'โฆษณาของคุณจะเด่นกว่าใคร ลืมข้อความโฆษณาธรรมดาไปเลย'; $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFVAAA7swv.jpg:large';
-	$id[] = 'โพสต์ให้สวยงามน่าซื้อ'; $title[]= 'ส่งข้อความภาพแบบเต็มจอโดยไม่ต้องเสียเงินสักบาท'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMLzU8AAGUiw.jpg';
-	$id[] = 'ทำให้ไลน์รู้จักลูกค้าของคุณ'; $title[]= 'ไลน์สามารถเรียกชื่อลูกค้าของคุณได้ สร้างความประทับใจได้ไม่น้อย'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMLzU8AAGUiw.jpg';
-	$id[] = 'ส่งข้อความยืนยันออร์เดอร์ง่ายๆ'; $title[]= 'สร้างความน่าเชื่อถือที่มากกว่าคนอื่น ด้วยการส่งข้อความยืนยันถึงลูกค้า'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMMPVAAA829I.jpg:large';
-	$id[] = 'ควบคุมได้ทุกอย่างในแอปไลน์'; $title[]= 'เพิ่มความสะดวกสบาย และน่าอัศจรรย์ด้วยการส่งลูกค้าไปทุกที่ที่ต้องการ'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMMPU0AE2NaC.jpg:large';
-	$id[] = 'ตอบกลับได้มากกว่า 5 ข้อความ'; $title[]= 'จะกี่ข้อความก็ส่งได้ไม่มีปัญหา ทิ้งข้อจำกัดทั้งข้อความต้อนรับและตอบกลับอัตโนมัติ'; $thumb[] = 'https://pbs.twimg.com/media/DeDdO8_VQAAeaHN.jpg:large';
-	$id[] = 'เทคนิคอื่นๆ อีกมากมาย'; $title[]= 'เทคนิคที่ไม่เคยมีใครสอนมาก่อน เปิดสอนฟรีเพียง 1 กลุ่มเต็มปิดลิงก์ทันที รีบด่วน!'; $thumb[] = 'https://pbs.twimg.com/media/DeDdO9WUwAAX1N-.jpg';
+	$id[] = 'เทคนิคและวิธีโพสต์ในไลน์ ปี2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา ใหม่ล่าสุด!';  $thumb[] = 'https://www.img.in.th/images/6b5fa5ca7063cf8cc10c47bd5473f4cf.jpg';
+	$id[] = 'สอนดึงไลน์ official เข้ากลุ่ม'; $title[]= 'วันนี้คุณสามารถนำแอคเคาท์ LINE@ เข้าร่วมกลุ่มได้แล้ว';  $thumb[] = 'https://www.img.in.th/images/41dcccb59e66641db783b7b492166823.jpg';
+	$id[] = 'โพสต์อัตโนมัติ ไม่ต้องคอยส่งข้อความเอง'; $title[]= 'ไลน์สามารถรู้เวลา สั่งส่งข้อความไปยังกลุ่มต่างๆ โดยไม่เสีย Reach'; $thumb[] = 'https://www.img.in.th/images/cddf08fd9d6032bd9b8aeb28e8c572c1.jpg';
+	$id[] = 'โพสต์สินค้าให้เด่น ใครๆ ก็เห็น'; $title[]= 'โฆษณาของคุณจะเด่นกว่าใคร ลืมข้อความโฆษณาธรรมดาไปเลย'; $thumb[] = 'https://www.img.in.th/images/f2de649746267a9556855833d96f357a.jpg';
+	$id[] = 'ส่ง Rich Message'; $title[]= 'ส่งข้อความภาพแบบเต็มจอโดยไม่ต้องเสียเงินสักบาท'; $thumb[] = 'https://www.img.in.th/images/3305912fa6e44c8246dcc9f5e0c0beee.jpg';
+	$id[] = 'ทำให้ไลน์รู้จักลูกค้าของคุณ'; $title[]= 'ภาพเต็มจอได้ฟรีๆ เด่นสุดโดยไม่ต้องซื้อแพ็คเกจ ไม่หักเครดิตข้อความ'; $thumb[] = 'https://www.img.in.th/images/594186f26141568d5bb51f5bbec1dbb5.jpg';
+	$id[] = 'ส่งข้อความยืนยันออร์เดอร์ง่ายๆ'; $title[]= 'สร้างความน่าเชื่อถือที่มากกว่าคนอื่น ด้วยการส่งข้อความยืนยันถึงลูกค้า'; $thumb[] = 'https://www.img.in.th/images/a0bd6d6ed1c6036a68265b53f0835921.jpg';
+	$id[] = 'ควบคุมได้ทุกอย่างในแอปไลน์'; $title[]= 'เพิ่มความสะดวกสบาย และน่าอัศจรรย์ด้วยการส่งลูกค้าไปทุกที่ที่ต้องการ'; $thumb[] = 'https://www.img.in.th/images/1a4ca077e8c6f9c1421072958a4306df.jpg';
+	$id[] = 'ตอบกลับได้มากกว่า 5 ข้อความ'; $title[]= 'จะกี่ข้อความก็ส่งได้ไม่มีปัญหา ทิ้งข้อจำกัดทั้งข้อความต้อนรับและตอบกลับอัตโนมัติ'; $thumb[] = 'https://www.img.in.th/images/af83d26d25a1131f06404fdb56ce4472.jpg';
+	$id[] = 'เทคนิคอื่นๆ อีกมากมาย'; $title[]= 'เทคนิคที่ไม่เคยมีใครสอนมาก่อน เปิดสอนฟรีเพียง 1 กลุ่มเต็มปิดลิงก์ทันที รีบด่วน!'; $thumb[] = 'https://www.img.in.th/images/b9e2d3455c31d2e0a10c662eae1106e5.jpg';
 
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
 		
@@ -74,11 +74,6 @@ if($_GET['post'] == '1'){
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[0],
 								'text' => $title[0],
-								'defaultAction' =>  array(
-									'type' => 'uri',
-									'label' => '➡ เข้าร่วมกลุ่มนี้',
-									'uri' => 'line://ti/p/%40gkw1117o'
-									),
 								'actions' =>  array([
 									'type' => 'uri',
 									'label' => '➡ เข้าร่วมกลุ่มนี้',
