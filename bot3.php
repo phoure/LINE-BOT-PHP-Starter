@@ -37,6 +37,10 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 	$card = array(
 			     [
 			     'type' => 'template',
+				    'thumbnailImageUrl' => '',
+				    'imageAspectRatio' => 'rectangle',
+				    'imageSize' => 'cover',
+				    'imageBackgroundColor' => '#000000',
 				"altText" => '🎬 แชร์วีดีโอ',
 				"template" => array(
 				    'type' => 'buttons',
