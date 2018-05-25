@@ -311,7 +311,7 @@ else if ($textIn == 'การยืนยันออร์เดอร์') {
 		 $card = array('messages' => array([
 				'type' => 'template',
 				'altText' => 'template',
-				'template' =>  array('type' => 'template',
+				'template' =>  array('type' => 'confirm',
 						      'text' =>  'Group ID: '.$arrJson['events'][0]['source']['groupId'],
 							    'actions' =>  array([
 								    'type' => 'message',
