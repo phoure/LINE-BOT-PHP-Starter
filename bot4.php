@@ -36,6 +36,34 @@ if($_GET['post'] == '1'){
 	$id[] = 'เทคนิคอื่นๆ อีกมากมาย'; $title[]= 'เทคนิคที่ไม่เคยมีใครสอนมาก่อน เปิดสอนฟรีเพียง 1 กลุ่มเต็มปิดลิงก์ทันที รีบด่วน!'; $thumb[] = 'https://pbs.twimg.com/media/DeDdO9WUwAAX1N-.jpg';
 
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
+		
+		
+		$card = array([
+			'type' => 'text',
+			'text' => 'แสดงตัวอย่างการโพสต์ขายสินค้าให้เด่น'
+		      ],
+		     [
+		     'type' => 'imagemap',
+  			"baseUrl": "https://i.imgur.com/T7hKyAA.jpg",
+			"altText" => 'มาแบ่งปันกลุ่มกัน!',
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040
+			    ),
+			  'actions' =>  array([
+						 'type' => 'uri',
+          					"linkUri": "https://example.com/",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 1040,
+						    'width' => 1040
+						    )
+						])
+			]
+			);
+		$data = array('to' => $groupid[$x][0], 'messages' => $card);
+		
 /*
 	$card = array([
 		'type' => 'template',
@@ -200,34 +228,6 @@ if($_GET['post'] == '1'){
 		]);
 */
 		
-		$card = array([
-			'type' => 'text',
-			'text' => 'แสดงตัวอย่างการโพสต์ขายสินค้าให้เด่น'
-		      ],[
-			'type' => 'text',
-			'text' => 'เสื้อผ้าแฟชั่นกาหลีเชิ้ตคอวี ใช้ผ้าเชิ้ตอย่างดีใส่สบายมากๆ ด้านหลังมีห่วงเปิดหลัง ช่วงแขนมีสายรัดแขนอลูมิเนียมเข้าทรงแขน งานน่ารัก มีให้เลือก 3 สี สีขาว สีน้ำตาลเทา และสีกรม'
-		      ],
-		     [
-		     'type' => 'imagemap',
-  			"baseUrl": "https://i.imgur.com/T7hKyAA.jpg",
-			"altText" => 'มาแบ่งปันกลุ่มกัน!',
-			"baseSize" => array(
-			    'height' => 1040,
-			    'width' => 1040,
-			    ),
-			  'actions' =>  array([
-						 'type' => 'uri',
-						 'label' => 'สีขาว',
-						 "area" => array(
-						    'x' => 0,
-						    'y' => 0,
-						    'height' => 1040,
-						    'width' => 1040,
-						    )
-						])
-			]
-			);
-		$data = array('to' => $groupid[$x][0], 'messages' => $card);
 
 		
 		/*
