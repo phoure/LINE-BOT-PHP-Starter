@@ -375,13 +375,6 @@ else if ($textIn == 'ข้อความไม่จำกัด') {
 	
 	$card = array([
 		'type' => 'text',
-		'text' => 'แสดงตัวอย่างการตอบกลับอัตโนมัติแบบไม่จำกัด (ปกติส่งได้ไม่เกิน 5 ข้อความพร้อมกัน)'
-	      ]);
-	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
-	 send($data, $strUrl, $arrHeader);
-	
-	$card = array([
-		'type' => 'text',
 		'text' => 'ข้อความที่ 2'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
