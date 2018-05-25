@@ -75,7 +75,7 @@ else if (strpos($textIn, 'แบ่งปันอย่างไร?') !== fals
 				);
 	
 
-		$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card
+		$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 }
