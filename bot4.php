@@ -86,8 +86,8 @@ if($_GET['post'] == '1'){
 								'text' => $title[1],
 								'actions' =>  array([
 									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'ดึง LINE Official เข้ากลุ่ม'
+									'label' => '▶️ ลองความสามารถนี้',
+									'text' => 'ดึง LINE@ เข้ากลุ่ม'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[2],
@@ -96,8 +96,8 @@ if($_GET['post'] == '1'){
 								'text' => $title[2],
 								'actions' =>  array([
 									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'ตั้งเวลาโพสต์'
+									'label' => '▶️ ลองความสามารถนี้',
+									'text' => 'กระจายโฆษณา'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[3],
@@ -106,7 +106,7 @@ if($_GET['post'] == '1'){
 								'text' => $title[3],
 								'actions' =>  array([
 									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
+									'label' => '▶️ ลองความสามารถนี้',
 									'text' => 'โพสต์สินค้าให้เด่น'
 															])
 								],[
@@ -116,7 +116,7 @@ if($_GET['post'] == '1'){
 								'text' => $title[4],
 								'actions' =>  array([
 									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
+									'label' => '▶️ ลองความสามารถนี้',
 									'text' => 'โพสต์ Rich Message'
 															])
 								],[
@@ -126,7 +126,7 @@ if($_GET['post'] == '1'){
 								'text' => $title[5],
 								'actions' =>  array([
 									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
+									'label' => '▶️ ลองความสามารถนี้',
 									'text' => 'ไลน์รู้จักฉัน?'
 															])
 								],[
@@ -136,7 +136,7 @@ if($_GET['post'] == '1'){
 								'text' => $title[6],
 								'actions' =>  array([
 									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
+									'label' => '▶️ ลองความสามารถนี้',
 									'text' => 'การยืนยัน'
 															])
 								],[
@@ -156,7 +156,7 @@ if($_GET['post'] == '1'){
 								'text' => $title[8],
 								'actions' =>  array([
 									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
+									'label' => '▶️ ลองความสามารถนี้',
 									'text' => 'ข้อความไม่จำกัด'
 															])
 								],[
