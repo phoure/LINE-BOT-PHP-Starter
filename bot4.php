@@ -210,7 +210,7 @@ if($_GET['post'] == '1'){
 				 'imageUrl' => 'https://i.imgur.com/WkTEjhW.jpg',
 				 'action' =>  array(
 						 'type' => 'uri',
-						 'label' => 'เสื้อเชิ้ตเกาหลี',
+						 'label' => 'เสื้อเชิ้ตสไลต์เกาหลี',
 						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
 						)
 				],[
@@ -238,21 +238,21 @@ if($_GET['post'] == '1'){
 				 'imageUrl' => 'https://i.imgur.com/iRxJ0kz.jpg',
 				 'action' =>  array(
 						 'type' => 'uri',
-						 'label' => 'มีห่วงเปิดหลัง',
+						 'label' => 'มีห่วงเปิดด้านหลัง',
 						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
 						)
 				],[
 				 'imageUrl' => 'https://i.imgur.com/T7hKyAA.jpg',
 				 'action' =>  array(
 						 'type' => 'uri',
-						 'label' => 'ช่วงแขนมีสายรัด',
+						 'label' => 'สายรัดแขนอลูมิเนียม',
 						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
 						)
 				],[
 				 'imageUrl' => 'https://i.imgur.com/rqMPOYE.jpg',
 				 'action' =>  array(
 						 'type' => 'uri',
-						 'label' => 'มีของพร้อมส่ง',
+						 'label' => 'ของพร้อมส่ง',
 						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
 						)
 				])
