@@ -47,11 +47,11 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 				    'text' => 'สวัสดี '.$response_data['displayName'].' หากคุณต้องการหากลุ่ม โปรดเพิ่มเราเป็นเพื่อน และพิมพ์ว่า "หากลุ่ม"',
 				    'defaultAction' =>  array(
 					 'type' => 'uri',
-					 'label' => '➕ เพิ่ม LINE GROUPS เป็นเพื่อน',
+					 'label' => '➕ เพิ่มเป็นเพื่อน',
 					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 				    ),
 				    'actions' =>  array(['type' => 'uri',
-					 'label' => '➕ เพิ่ม LINE GROUPS เป็นเพื่อน',
+					 'label' => '➕ เพิ่มเป็นเพื่อน',
 					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 					])
 				    )
