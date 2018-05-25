@@ -213,8 +213,34 @@ $card = array([
 
 
 
-else if (strpos($textIn, 'หากลุ่ม') !== false) {
-	/*
+else if ($textIn == 'ไลน์รู้จักคุณ') {
+	$card = array(
+			     [
+			     'type' => 'template',
+				"altText" => 'มาแบ่งปันกลุ่มกัน!',
+				"template" => array(
+				    'type' => 'buttons',
+				    'text' => 'แน่นอนว่าไลน์สามารถรู้จักลูกค้าของคุณได้มากมาย สร้างความประทับใจในบริการ สามารถรู้ชื่อของคุณ ภาพโปรไฟล์ หรือแม้แต่สถานะที่คุณตั้งอยู่ตอนนี้ ลองให้ไลน์กรุ๊ปเรียกคุณดูสิ',
+				    'actions' =>  array([
+					  'type' => 'message',
+					 'label' => 'ลองให้ไลน์กรุ๊ปเรียกคุณ',
+					 'text' => 'สวัสดีไลน์กรุ๊ป'
+					],[
+					  'type' => 'message',
+					 'label' => 'ลองส่องสถานะของฉัน',
+					 'text' => 'ส่องสถานะของฉัน'
+					])
+				    )
+				]
+				);
+	
+	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+}
+
+
+else if ($textIn == 'สวัสดีไลน์กรุ๊ป') {
+	
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
 	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
@@ -229,32 +255,40 @@ else if (strpos($textIn, 'หากลุ่ม') !== false) {
 	$response = curl_exec($curl);
 	$response_data = json_decode($response, true);
 	curl_close($curl);
-	$id = explode(' ',$textIn);
-	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
- 	 
-	$card = array(
-			     [
-			     'type' => 'template',
-				"altText" => 'แจกวาร์ปกลุ่มเพียบ!',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'สวัสดี '.$response_data['displayName'].' หากคุณต้องการหากลุ่ม กดปุ่ม "เพิ่มเป็นเพื่อน" และพิมพ์ว่า "หากลุ่ม" ระบบจะแสดงหมวดหมู่ให้เพื่อนๆ เลือกก่อนจะเลือกกลุ่มที่ต้องการเข้า',
-				    'defaultAction' =>  array(
-					 'type' => 'uri',
-					 'label' => '➕ เพิ่มเป็นเพื่อน',
-					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
-				    ),
-				    'actions' =>  array(['type' => 'uri',
-					 'label' => '➕ เพิ่มเป็นเพื่อน',
-					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
-					])
-				    )
-				]
-				);
-				$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	
-	  send($data, $strUrl, $arrHeader);
-	  */
+	$card = array([
+			'type' => 'text',
+			'text' => 'สวัสดี '.$response_data['displayName']
+		      ]);
+	
+	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+}
+
+else if ($textIn == 'ส่องสถานะของฉัน') {
+	
+	$curl = curl_init();
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
+	  CURLOPT_CUSTOMREQUEST => "GET",
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_HTTPHEADER => array(
+	    "authorization: Bearer ".$access_token,
+	    "postman-token: 7d55f84c-714f-e493-808f-c45ca4bcdfc5"
+	  ),
+	));
+	$response = curl_exec($curl);
+	$response_data = json_decode($response, true);
+	curl_close($curl);
+	
+	$card = array([
+			'type' => 'text',
+			'text' => 'สวัสดี '.$response_data['displayName'].' สถานะของคุณคือ '.$response_data['displayName']
+		      ]);
+	
+	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
 }
 /*
 	
