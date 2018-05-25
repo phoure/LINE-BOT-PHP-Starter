@@ -199,6 +199,7 @@ if($_GET['post'] == '1'){
 						)
 		]);
 
+		$data = array('to' => $groupid[$x][0], 'messages' => $card
 
 		
 		/*
