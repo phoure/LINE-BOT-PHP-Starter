@@ -212,15 +212,14 @@ if($_GET['post'] == '1'){
 				    'actions' =>  array(['type' => 'uri',
 					 'label' => 'แบ่งปันกลุ่มต่อให้เพื่อน',
 					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+					],['type' => 'message',
+					 'label' => 'แบ่งปันอย่างไร?',
+					 'uri' => 'แบ่งปันอย่างไร?'
 					])
 				    )
 				]
 				);
-				$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	
-		
-		
-		
 
 		$data = array('to' => $groupid[$x][0], 'messages' => $card
 	);
