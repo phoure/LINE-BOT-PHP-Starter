@@ -326,6 +326,36 @@ else if ($textIn == 'การส่งแบบฟอร์ม') {
 								   'text' => 'ขอปรับเปลี่ยนออร์เดอร์'
 								])
 						    )
+			            ],[
+				'type' => 'template',
+				'altText' => 'สอนวิธีจัดการร้านค้าออนไลน์รูปแบบใหม่ 2018',
+				'template' =>  array('type' => 'confirm',
+						      'text' =>  'คุณพอใจในสินค้าและบริการของเราหรือไม่?',
+							    'actions' =>  array([
+								    'type' => 'message',
+								   'label' => 'พอใจ'
+								   'text' => 'พอใจ'
+								],[
+								    'type' => 'message',
+								   'label' => 'ยังไม่พอใจ'
+								   'text' => 'ยังไม่พอใจ'
+								])
+						    )
+			            ],[
+				'type' => 'template',
+				'altText' => 'สอนวิธีจัดการร้านค้าออนไลน์รูปแบบใหม่ 2018',
+				'template' =>  array('type' => 'confirm',
+						      'text' =>  'คุณได้รับสินค้าของเราหรือยัง?',
+							    'actions' =>  array([
+								    'type' => 'message',
+								   'label' => 'ได้รับแล้ว'
+								   'text' => 'ได้รับแล้ว'
+								],[
+								    'type' => 'message',
+								   'label' => 'ยังไม่ได้รับ'
+								   'text' => 'ยังไม่ได้รับ'
+								])
+						    )
 			            ]);
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
