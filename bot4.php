@@ -138,12 +138,12 @@ if($_GET['post'] == '1'){
 								'defaultAction' =>  array(
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'โพสต์ Rich Message เต็มจอ'
+									'text' => 'โพสต์ Rich Message'
 									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'โพสต์ Rich Message เต็มจอ'
+									'text' => 'โพสต์ Rich Message'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[5],
