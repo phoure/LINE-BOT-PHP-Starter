@@ -81,7 +81,7 @@ else if (strpos($textIn, 'แบ่งปันอย่างไร?') !== fals
 }
 
 
-else if ($textIn == 'ดึง LINE Official เข้ากลุ่ม') {
+else if ($textIn == 'ดึง LINE@ เข้ากลุ่ม') {
 	
 	$card = array([
 			'type' => 'text',
@@ -94,7 +94,7 @@ else if ($textIn == 'ดึง LINE Official เข้ากลุ่ม') {
 }
 
 
-else if ($textIn == 'โพสต์ไปยังกลุ่ม') {
+else if ($textIn == 'กระจายโฆษณา') {
 	
 	$card = array([
 			'type' => 'text',
