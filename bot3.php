@@ -42,7 +42,7 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 }
 
 
-if (strpos($textIn, '.') !== false) {
+if ($textIn == '.') {
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
 	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
@@ -58,8 +58,8 @@ if (strpos($textIn, '.') !== false) {
 	$response_data = json_decode($response, true);
 	curl_close($curl);
 	$id = explode(' ',$textIn);
-	 $strUrl = 'https://api.line.me/v2/bot/message/push';
- 	 $data = array( 'to' => 'U457d57be6372365962eacd3f739bb0d8d',
+	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
+ 	 $data = array(  'replyToken' => $arrJson['events'][0]['replyToken'],
 			'messages' => array([
 				'type' => 'text',
 				'text' =>  'Group ID: '.$arrJson['events'][0]['source']['userId']
