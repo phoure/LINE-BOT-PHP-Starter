@@ -27,7 +27,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 	*/
 
-	$id[] = 'เทคนิคและวิธีโพสต์ในไลน์ ปี2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา ใหม่ล่าสุด!';  $thumb[] = 'https://www.img.in.th/images/6b5fa5ca7063cf8cc10c47bd5473f4cf.jpg';
+	$id[] = 'เทคนิคและวิธีโพสต์สินค้าในไลน์ให้ขายดี 2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา ใหม่ล่าสุด!';  $thumb[] = 'https://www.img.in.th/images/6b5fa5ca7063cf8cc10c47bd5473f4cf.jpg';
 	$id[] = 'สอนดึงไลน์ official เข้ากลุ่ม'; $title[]= 'วันนี้คุณสามารถนำแอคเคาท์ LINE@ เข้าร่วมกลุ่มได้แล้ว';  $thumb[] = 'https://www.img.in.th/images/41dcccb59e66641db783b7b492166823.jpg';
 	$id[] = 'โพสต์สินค้าไปยังกลุ่ม'; $title[]= 'กระจายโฆษณาของคุณไปยังกลุ่มนับพันได้ฟรี โดยที่คุณไม่ต้องเข้ากลุ่ม'; $thumb[] = 'https://www.img.in.th/images/cddf08fd9d6032bd9b8aeb28e8c572c1.jpg';
 	$id[] = 'โพสต์โฆษณาให้เด่นและปังกว่าใคร'; $title[]= 'โพสโฆษณาด้วยรูปแบบต่างๆ ที่ใครเห็นก็ต้องกดดู'; $thumb[] = 'https://www.img.in.th/images/f2de649746267a9556855833d96f357a.jpg';
@@ -79,8 +79,8 @@ if($_GET['post'] == '1'){
 								'text' => $title[0],
 								'actions' =>  array([
 									'type' => 'uri',
-									'label' => '➡ เข้าร่วมกลุ่มนี้',
-									'uri' => 'line://nv/camera/'
+									'label' => '➡ เข้าร่วมคอร์สนี้',
+									'uri' => 'line://ti/p/%40gkw1117o'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[1],
@@ -149,7 +149,7 @@ if($_GET['post'] == '1'){
 								'text' => $title[7],
 								'actions' =>  array([
 									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
+									'label' => '▶️ ลองความสามารถนี้',
 									'text' => 'การกำหนดเส้นทาง'
 															])
 								],[
