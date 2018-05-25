@@ -311,7 +311,7 @@ else if ($textIn == 'การยืนยันออร์เดอร์') {
 		 $card = array([
 			'type' => 'text',
 			'text' => 'แสดงตัวอย่างการส่งข้อความยืนยันออร์เดอร์สินค้า'
-		      ],
+		      ],[
 				'type' => 'template',
 				'altText' => 'template',
 				'template' =>  array('type' => 'confirm',
@@ -319,11 +319,11 @@ else if ($textIn == 'การยืนยันออร์เดอร์') {
 							    'actions' =>  array([
 								    'type' => 'message',
 								   'label' => 'ยืนยัน',
-								   'text' => 'ยืนยั'
+								   'text' => 'ยืนยันออร์เดอร์'
 								],[
 								    'type' => 'message',
 								   'label' => 'เปลี่ยน',
-								   'text' => 'ขอปรั'
+								   'text' => 'ขอปรับเปลี่ยนออร์เดอร์'
 								])
 						    )
 			            ]);
