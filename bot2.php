@@ -2,7 +2,7 @@
 $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
 
 if($_GET['post'] == '1'){
-	$groupid[] = array('C214e858f2c0e42285b5d56a12f0cfced','test');
+	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
 	/*
 	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
 	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
