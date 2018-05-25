@@ -128,7 +128,7 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 			    'type' => 'image_carousel',
 			    'column' => array([
 				 'imageUrl' => 'https://pbs.twimg.com/profile_banners/714709520258375682/1526892337/1500x500',
-				 'actions' =>  array(
+				 'action' =>  array(
 						 'type' => 'uri',
 						 'label' => 'ลองค้นหากลุ่ม',
 						 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
