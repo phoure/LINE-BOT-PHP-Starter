@@ -94,18 +94,6 @@ else if ($textIn == 'ดึง LINE Official เข้ากลุ่ม') {
 }
 
 
-else if ($textIn == 'ดึง LINE Official เข้ากลุ่ม') {
-	
-	$card = array([
-			'type' => 'text',
-			'text' => 'วันนี้คุณสามามารถดึง LINE Official ให้เข้าไปช่วยงานในกลุ่มของคุณได้แล้ว ด้วยความสามารถรอบด้าน ไม่ว่าจะช่วยโพสต์สินค้า ส่งข้อความ ภาพ วีดีโอ เสียง การแจ้งเตือน หรือโฆษณาต่างๆ ให้ลูกค้าหรือสมาชิกในกลุ่มได้ทราบได้แบบนี้'
-		      ]);
-	
-	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
-	 send($data, $strUrl, $arrHeader);
-	
-}
-
 else if ($textIn == 'ตั้งเวลาโพสต์') {
 	
 	$card = array([
@@ -190,6 +178,34 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 	 send($data, $strUrl, $arrHeader);
 }
 
+
+else if ($textIn == 'โพสต์ Rich Message') {
+$card = array([
+			'type' => 'text',
+			'text' => 'แสดงตัวอย่างการโพสต์ภาพแบบเต็มจอแบบ Rich Message โดยไม่ต้องลงทุน'
+		      ],
+		     [
+		     'type' => 'imagemap',
+  			"baseUrl"=> "https://i.imgur.com/pHeEc3g.jpg",
+			"altText" => 'มาแบ่งปันกลุ่มกัน!',
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040
+			    ),
+			  'actions' =>  array([
+						 'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40gkw1117o",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 1040,
+						    'width' => 1040
+						    )
+						])
+			]
+			);
+		$data = array('to' => $groupid[$x][0], 'messages' => $card);
+}
 /*
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
