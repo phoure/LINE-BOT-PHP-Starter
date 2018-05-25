@@ -63,7 +63,6 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 }
 
 
-if ($textIn == '.') {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
  	 $data = array(  'to' => 'C5ca58854e5e7ae33964770acadc0211d',
@@ -72,7 +71,7 @@ if ($textIn == '.') {
 				'text' =>  'Group ID: '.$arrJson['events'][0]['source']['groupId']
 			]));
 	  send($data, $strUrl, $arrHeader);
-}
+
 
 
 function send($data, $strUrl, $arrHeader){
