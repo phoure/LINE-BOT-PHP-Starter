@@ -52,12 +52,12 @@ if($_GET['post'] == '1'){
 			    ),
 			  'actions' =>  array([
 						 'type' => 'uri',
-          					"linkUri" => "https://example.com/",
+          					"linkUri" => "line://ti/p/%40gkw1117o",
 						 "area" => array(
 						    'x' => 0,
 						    'y' => 0,
-						    'height' => 0,
-						    'width' => 0
+						    'height' => 1040,
+						    'width' => 1040
 						    )
 						])
 			]
