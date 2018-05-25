@@ -180,21 +180,6 @@ if($_GET['post'] == '1'){
 									'label' => 'เข้าร่วมกลุ่มนี้',
 									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
-								],[
-								'thumbnailImageUrl' => $thumb[10],
-								'imageBackgroundColor' => '#000000',
-								'title' => $id[10],
-								'text' => $title[10],
-								'defaultAction' =>  array(
-									'type' => 'uri',
-									'label' => 'เข้าร่วมกลุ่มนี้',
-									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
-									),
-								'actions' =>  array([
-									'type' => 'uri',
-									'label' => 'เข้าร่วมกลุ่มนี้',
-									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
-															])
 								]),
 
 											'imageAspectRatio' => 'rectangle',
