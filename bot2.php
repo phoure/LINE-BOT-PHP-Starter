@@ -4,7 +4,7 @@ $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/
 if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
 	
-		/*
+	
 		
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
@@ -13,7 +13,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('C1d928e7a66b686c47096843cfa54aea5','hotvip4');
 	$groupid[] = array('C7637dca57b09b0b7a88243ce49895ac6','กลุ่ม sexphone 18+');
 	$groupid[] = array('Cfb706767723304e5d44b91789bed6ac1','eiei');
-	
+		/*
 	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
 	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
 	$groupid[] = array('C5acee5a1fea67f1e79201ded58d1f91d','gkawanrak');
