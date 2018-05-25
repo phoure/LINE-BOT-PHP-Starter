@@ -55,7 +55,7 @@ if($_GET['post'] == '1'){
 								'actions' =>  array([
 									'type' => 'uri',
 									'label' => '➡ เข้าร่วมกลุ่มนี้',
-									'uri' => 'line://ti/p/%40gkw1117o'
+									'uri' => 'line://oaMessage/C5ca58854e5e7ae33964770acadc0211d/?testtttt'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[1],
