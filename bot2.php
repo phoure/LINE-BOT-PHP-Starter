@@ -22,7 +22,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
 	$groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
 	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
-	
+	*/
 
 	$id[] = 'กลุ่มคลิปหลุด 20+'; $title[]= 'แจกคลิปหลุด คลิปเสียว ช่วยกันแชร์ตลอดทั้งวันทั้งคืน';  $thumb[] = 'https://pbs.twimg.com/media/DeAtpz-VMAAsNcz.jpg';
 	$id[] = 'กลุ่มหนังโป๊'; $title[]= 'กลุ่มสำหรับคนชอบดูหนังโป๊ หนังเสียว ภาพยนตร์เรท แจกลิงก์ดูเต็มเรื่อง';  $thumb[] = 'https://pbs.twimg.com/media/DeAWtydU8AMw-7i.jpg';
@@ -34,7 +34,7 @@ if($_GET['post'] == '1'){
 	$id[] = 'กลุ่มคอเกม เกมเมอร์'; $title[]= 'คอเกมต้องไม่พลาด กลุ่มใหญ่ ถาม-ตอบเรื่องเกมกับเหล่าเซียนเกม'; $thumb[] = 'https://pbs.twimg.com/media/DeAWoq_UQAAgN6F.jpg:large';
 	$id[] = 'กลุ่มเล่นหวย เลขเด็ด'; $title[]= 'ชาวลุ้นต้องมาที่นี่ เลขเด็ดเยอะ รวบรวมจากหลายแหล่ง แม่นๆ ทั้งนั้น'; $thumb[] = 'https://pbs.twimg.com/media/DeAN_7rVAAArlQP.jpg';
 	$id[] = 'กลุ่มอื่นๆ อีกเพียบ!'; $title[]= 'มาค้นหากลุ่มอีกมากมายที่นี่ เพียงพิมพ์ "หากลุ่ม" มีรายชื่อกลุ่มให้ร่วมเข้าอีกเพียบ!'; $thumb[] = 'https://pbs.twimg.com/media/DeAY10cV0AIoSaw.jpg:large';
-*/
+
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
 
 	$card = array([
