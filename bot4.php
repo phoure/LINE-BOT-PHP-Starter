@@ -202,67 +202,29 @@ if($_GET['post'] == '1'){
 		
 		$card = array([
 			'type' => 'text',
-			'text' => 'ตัวอย่างการโพสต์ขายสินค้าให้เด่น'
+			'text' => 'แสดงตัวอย่างการโพสต์ขายสินค้าให้เด่น'
 		      ],[
 			'type' => 'text',
 			'text' => 'เสื้อผ้าแฟชั่นกาหลีเชิ้ตคอวี ใช้ผ้าเชิ้ตอย่างดีใส่สบายมากๆ ด้านหลังมีห่วงเปิดหลัง ช่วงแขนมีสายรัดแขนอลูมิเนียมเข้าทรงแขน งานน่ารัก มีให้เลือก 3 สี สีขาว สีน้ำตาลเทา และสีกรม'
 		      ],
 		     [
-		     'type' => 'template',
+		     'type' => 'imagemap',
+  			"baseUrl": "https://i.imgur.com/T7hKyAA.jpg",
 			"altText" => 'มาแบ่งปันกลุ่มกัน!',
-			"template" => array(
-			    'type' => 'image_carousel',
-			    'columns' => array([
-				 'imageUrl' => 'https://i.imgur.com/rqMPOYE.jpg',
-				 'action' =>  array(
-						 'type' => 'uri',
-						 'label' => 'เสื้อเชิ้ตเกาหลี',
-						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
-						)
-				],[
-				 'imageUrl' => 'https://i.imgur.com/VJdkpjG.jpg',
-				 'action' =>  array(
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040,
+			    ),
+			  'actions' =>  array([
 						 'type' => 'uri',
 						 'label' => 'สีขาว',
-						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
-						)
-				],[
-				 'imageUrl' => 'https://i.imgur.com/veJd7cq.jpg',
-				 'action' =>  array(
-						 'type' => 'uri',
-						 'label' => 'สีน้ำตาลเทา',
-						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
-						)
-				],[
-				 'imageUrl' => 'https://i.imgur.com/knaY6dk.jpg',
-				 'action' =>  array(
-						 'type' => 'uri',
-						 'label' => 'สีกรม',
-						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
-						)
-				],[
-				 'imageUrl' => 'https://i.imgur.com/iRxJ0kz.jpg',
-				 'action' =>  array(
-						 'type' => 'uri',
-						 'label' => 'มีห่วงเปิดหลัง',
-						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
-						)
-				],[
-				 'imageUrl' => 'https://i.imgur.com/T7hKyAA.jpg',
-				 'action' =>  array(
-						 'type' => 'uri',
-						 'label' => 'สายรัดอลูมิเนียม',
-						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
-						)
-				],[
-				 'imageUrl' => 'https://i.imgur.com/WkTEjhW.jpg',
-				 'action' =>  array(
-						 'type' => 'uri',
-						 'label' => 'ของพร้อมส่ง',
-						 'uri' => 'http://www.lovelyday-shop.com/product/570/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B9%89%E0%B8%95%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B8%84%E0%B8%AD%E0%B8%A7%E0%B8%B5'
-						)
-				])
-			    )
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 1040,
+						    'width' => 1040,
+						    )
+						])
 			]
 			);
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
