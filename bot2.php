@@ -31,101 +31,171 @@ if($_GET['post'] == '1'){
 		"template" => array(
 						'type' => 'carousel',
 						'columns' => array([
-											'thumbnailImageUrl' => $thumb[0],
-											'imageBackgroundColor' => '#000000',
-											'title' => $id[0],
-											'text' => $title[0],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[0].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[0].'&ref='.$groupid[$x][1]
+								'thumbnailImageUrl' => $thumb[0],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[0],
+								'text' => $title[0],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[1],
-											'imageBackgroundColor' => '#000000',
-											'title' => $id[1],
-											'text' => $title[1],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[1].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[1].'&ref='.$groupid[$x][1]
+								],[
+								'thumbnailImageUrl' => $thumb[1],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[1],
+								'text' => $title[1],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[2],
-											'imageBackgroundColor' => '#000000',
-											'title' => $id[2],
-											'text' => $title[2],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[2].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[2].'&ref='.$groupid[$x][1]
+								],[
+								'thumbnailImageUrl' => $thumb[2],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[2],
+								'text' => $title[2],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[3],
-											'imageBackgroundColor' => '#000000',
-											'text' => $title[3],
-											'title' => $id[3],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[3].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[3].'&ref='.$groupid[$x][1]
+								],[
+								'thumbnailImageUrl' => $thumb[3],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[3],
+								'text' => $title[3],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[4],
-											'imageBackgroundColor' => '#000000',
-											'title' => $id[4],
-											'text' => $title[4],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[4].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[4].'&ref='.$groupid[$x][1]
+								],[
+								'thumbnailImageUrl' => $thumb[4],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[4],
+								'text' => $title[4],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
-											],
-								  [
-											'thumbnailImageUrl' => $thumb[5],
-											'imageBackgroundColor' => '#000000',
-											'title' => $id[5],
-											'text' => $title[5],
-											'defaultAction' =>  array(
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[5].'&ref='.$groupid[$x][1]
-											),
-											'actions' =>  array([
-																'type' => 'uri',
-																'label' => '🎬 ดูคลิปนี้',
-																'uri' => 'http://drivegay.com/video/'.$id[5].'&ref='.$groupid[$x][1]
+								],[
+								'thumbnailImageUrl' => $thumb[5],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[5],
+								'text' => $title[5],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
-											]),
+								],[
+								'thumbnailImageUrl' => $thumb[6],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[6],
+								'text' => $title[6],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+															])
+								],[
+								'thumbnailImageUrl' => $thumb[7],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[7],
+								'text' => $title[7],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+															])
+								],[
+								'thumbnailImageUrl' => $thumb[8],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[8],
+								'text' => $title[8],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+															])
+								],[
+								'thumbnailImageUrl' => $thumb[9],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[9],
+								'text' => $title[9],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+															])
+								],[
+								'thumbnailImageUrl' => $thumb[10],
+								'imageBackgroundColor' => '#000000',
+								'title' => $id[10],
+								'text' => $title[10],
+								'defaultAction' =>  array(
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+															])
+								]),
 
 											'imageAspectRatio' => 'rectangle',
 											'imageSize' => 'cover'
