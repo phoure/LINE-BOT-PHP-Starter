@@ -84,11 +84,6 @@ if($_GET['post'] == '1'){
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[1],
 								'text' => $title[1],
-								'defaultAction' =>  array(
-									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'ดึง LINE Official เข้ากลุ่ม'
-									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ลองความสามารถนี้',
@@ -99,11 +94,6 @@ if($_GET['post'] == '1'){
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[2],
 								'text' => $title[2],
-								'defaultAction' =>  array(
-									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'ตั้งเวลาโพสต์'
-									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ลองความสามารถนี้',
@@ -114,11 +104,6 @@ if($_GET['post'] == '1'){
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[3],
 								'text' => $title[3],
-								'defaultAction' =>  array(
-									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'โพสต์สินค้าให้เด่น'
-									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ลองความสามารถนี้',
@@ -129,11 +114,6 @@ if($_GET['post'] == '1'){
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[4],
 								'text' => $title[4],
-								'defaultAction' =>  array(
-									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'โพสต์ Rich Message'
-									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ลองความสามารถนี้',
@@ -144,26 +124,16 @@ if($_GET['post'] == '1'){
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[5],
 								'text' => $title[5],
-								'defaultAction' =>  array(
-									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'ไลน์รู้จักคุณ'
-									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ลองความสามารถนี้',
-									'text' => 'ไลน์รู้จักคุณ'
+									'text' => 'ไลน์รู้จักฉัน?'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[6],
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[6],
 								'text' => $title[6],
-								'defaultAction' =>  array(
-									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'การยืนยัน'
-									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ลองความสามารถนี้',
@@ -174,26 +144,16 @@ if($_GET['post'] == '1'){
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[7],
 								'text' => $title[7],
-								'defaultAction' =>  array(
-									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'การพาไป'
-									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ลองความสามารถนี้',
-									'text' => 'การพาไป'
+									'text' => 'การกำหนดเส้นทาง'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[8],
 								'imageBackgroundColor' => '#000000',
 								'title' => $id[8],
 								'text' => $title[8],
-								'defaultAction' =>  array(
-									'type' => 'message',
-									'label' => 'ลองความสามารถนี้',
-									'text' => 'ข้อความไม่จำกัด'
-									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ลองความสามารถนี้',
