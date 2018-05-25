@@ -24,7 +24,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 	*/
 
-	$id[] = 'สอนโปรโมท เทคนิคและวิธีโพสต์ในไลน์ ปี2018'; $title[]= 'สอนโปรโมท เทคนิคและวิธีโพสต์ในไลน์ ปี2018';  $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFV0AA8tkL.jpg:large';
+	$id[] = 'เทคนิคและวิธีโพสต์ในไลน์ ปี2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา ใหม่ล่าสุด!';  $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFV0AA8tkL.jpg:large';
 	$id[] = 'สอนดึงไลน์ official เข้ากลุ่ม'; $title[]= 'วันนี้คุณสามารถนำแอคเคาท์ LINE@ เข้าร่วมกลุ่มได้แล้ว';  $thumb[] = 'https://pbs.twimg.com/media/DeDdJgEVQAAcNDE.jpg:large';
 	$id[] = 'โพสต์อัตโนมัติ ไม่ต้องคอยส่งข้อความเอง'; $title[]= 'ไลน์สามารถรู้เวลาและสั่งส่งข้อความไปยังกลุ่มต่างๆ ตามที่ตั้งไว้โดยไม่เสีย Reach'; $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFVwAAdSIQ.jpg:large';
 	$id[] = 'โพสต์สินค้าให้เด่น ใครๆ ก็เห็น'; $title[]= 'โฆษณาของคุณจะเด่นกว่าใคร ลืมข้อความโฆษณาธรรมดาไปเลย'; $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFVAAA7swv.jpg:large';
