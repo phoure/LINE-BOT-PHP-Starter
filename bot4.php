@@ -137,7 +137,7 @@ if($_GET['post'] == '1'){
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => '▶️ ลองความสามารถนี้',
-									'text' => 'การยืนยัน'
+									'text' => 'การส่งแบบฟอร์ม'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[7],
