@@ -34,10 +34,18 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 	$id = explode(' ',$textIn);
 	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'],
-			'messages' => array([
-				'type' => 'text',
+		        'type' => 'template',
+		        'altText' => 'this is a confirm template',
+			'template' => array([
+				'type' => 'confirm',
 				'text' =>  'สวัสดีคุณ '.$response_data['displayName'].' หากต้องการค้นหากลุ่ม โปรดเพิ่ม https://line.me/R/ti/p/%40gkw1117o เป็นเพื่อน และพิมพ์ "หากลุ่ม"'
-			]));
+			]),
+								'actions' =>  array([
+									'type' => 'uri',
+									'label' => 'เข้าร่วมกลุ่มนี้',
+									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+															])
+								);
 	  send($data, $strUrl, $arrHeader);
 }
 
