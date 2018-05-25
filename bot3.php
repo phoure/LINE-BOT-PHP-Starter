@@ -308,7 +308,7 @@ else if ($textIn == 'การยืนยันออร์เดอร์') {
 	$response_data = json_decode($response, true);
 	curl_close($curl);
 	
-		 $card = array('messages' => array([
+		 $card = array([
 				'type' => 'template',
 				'altText' => 'template',
 				'template' =>  array('type' => 'confirm',
@@ -323,7 +323,7 @@ else if ($textIn == 'การยืนยันออร์เดอร์') {
 								   'text' => 'ปรับเปลี่ยน'
 								])
 						    )
-			            ]));
+			            ]);
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
