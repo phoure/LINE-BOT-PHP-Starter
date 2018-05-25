@@ -33,6 +33,7 @@ if($_GET['post'] == '1'){
 						'columns' => array([
 											'thumbnailImageUrl' => $thumb[0],
 											'imageBackgroundColor' => '#000000',
+											'title' => $id[0],
 											'text' => $title[0],
 											'defaultAction' =>  array(
 																'type' => 'uri',
@@ -48,6 +49,7 @@ if($_GET['post'] == '1'){
 								  [
 											'thumbnailImageUrl' => $thumb[1],
 											'imageBackgroundColor' => '#000000',
+											'title' => $id[1],
 											'text' => $title[1],
 											'defaultAction' =>  array(
 																'type' => 'uri',
@@ -63,6 +65,7 @@ if($_GET['post'] == '1'){
 								  [
 											'thumbnailImageUrl' => $thumb[2],
 											'imageBackgroundColor' => '#000000',
+											'title' => $id[2],
 											'text' => $title[2],
 											'defaultAction' =>  array(
 																'type' => 'uri',
@@ -79,6 +82,7 @@ if($_GET['post'] == '1'){
 											'thumbnailImageUrl' => $thumb[3],
 											'imageBackgroundColor' => '#000000',
 											'text' => $title[3],
+											'title' => $id[3],
 											'defaultAction' =>  array(
 																'type' => 'uri',
 																'label' => '🎬 ดูคลิปนี้',
@@ -93,6 +97,7 @@ if($_GET['post'] == '1'){
 								  [
 											'thumbnailImageUrl' => $thumb[4],
 											'imageBackgroundColor' => '#000000',
+											'title' => $id[4],
 											'text' => $title[4],
 											'defaultAction' =>  array(
 																'type' => 'uri',
@@ -108,6 +113,7 @@ if($_GET['post'] == '1'){
 								  [
 											'thumbnailImageUrl' => $thumb[5],
 											'imageBackgroundColor' => '#000000',
+											'title' => $id[5],
 											'text' => $title[5],
 											'defaultAction' =>  array(
 																'type' => 'uri',
