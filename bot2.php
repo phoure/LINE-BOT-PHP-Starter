@@ -14,10 +14,10 @@ if($_GET['post'] == '1'){
 */
 	$id[] = 'กลุ่มคลิปหลุด'; $title[]= 'แจกคลิปหลุด คลิปเสียว ช่วยกันแชร์ตลอดทั้งวันทั้งคืน';  $thumb[] = 'https://pbs.twimg.com/media/DeAMsvJUwAE59ys.jpg';
 	$id[] = 'กลุ่มหนังโป๊'; $title[]= 'กลุ่มสำหรับคนชอบดูหนังโป๊ หนังเสียว ภาพยนตร์เรท แจกลิงก์ดูเต็มเรื่อง';  $thumb[] = 'https://pbs.twimg.com/media/DeAMsvKUQAUzA1E.jpg';
-	$id[] = 'กลุ่มหนังเกย์'; $title[]= 'แจกหนัง แชร์คลิป หนุ่มหล่อ เสียว ฟิน'; $thumb[] = 'https://pbs.twimg.com/media/DeAMsvTU0AAdsOl.jpg';
-	$id[] = 'กลุ่มเซ็กซ์โฟน'; $title[]= 'หาเพื่อนคลายเงี่ยน เพื่อนเสียว หนุ่มๆ สาวๆ เพียบ!'; $thumb[] = 'https://pbs.twimg.com/media/DeAMsvKU8AAzXDB.jpg';
+	$id[] = 'กลุ่มหนังเกย์'; $title[]= 'แจกหนัง แชร์คลิป หนุ่มหล่อ เสียว ฟิน กล้ามแน่น ควยใหญ่'; $thumb[] = 'https://pbs.twimg.com/media/DeAMsvTU0AAdsOl.jpg';
+	$id[] = 'กลุ่มเซ็กซ์โฟน'; $title[]= 'หาเพื่อนคลายเงี่ยน เพื่อนเสียว หนุ่มๆ สาวๆ มาพากันเงี่ยนได้ที่นี่'; $thumb[] = 'https://pbs.twimg.com/media/DeAMsvKU8AAzXDB.jpg';
 	$id[] = 'กลุ่มกล้องเสียว'; $title[]= 'กล้องโชว์เสียว จะส่วนตัวหรือกลุ่มก็มาดีลกันได้ในกลุ่มนี้ มีแต่ตัวเด็ดๆ'; $thumb[] = 'https://pbs.twimg.com/media/DeANWo7U8AAO5fX.jpg';
-	$id[] = 'กลุ่มแจกวาร์ปหนุ่มหล่อสาวสวย'; $title[]= 'แจกวาร์ป หนุ่มหล่อ สาวสวย หุ่นแน่น นมใหญ่'; $thumb[] = 'https://pbs.twimg.com/media/DeANWo5VwAA1Uud.jpg';
+	$id[] = 'กลุ่มแจกวาร์ปหนุ่มหล่อสาวสวย'; $title[]= 'แจกวาร์ป หนุ่มหล่อ สาวสวย หุ่นแน่น นมใหญ่ ของเยอะมาก'; $thumb[] = 'https://pbs.twimg.com/media/DeANWo5VwAA1Uud.jpg';
 	$id[] = 'กลุ่มเพื่อนคุยชิลล์ๆ'; $title[]= 'กลุ่มเพื่อนๆ คุยกันเหงาๆ ยามว่าง นอนไม่หลับ ดึกดื่นแค่ไหนก็มีเพื่อนคุย'; $thumb[] = 'https://pbs.twimg.com/media/DeAN_7jVQAAv07s.jpg';
 	$id[] = 'กลุ่มคอเกม'; $title[]= 'คอเกมต้องไม่พลาด กลุ่มใหญ่ ถาม-ตอบเรื่องเกมกับเหล่าเซียน'; $thumb[] = 'https://pbs.twimg.com/media/DeANWpXUQAAjQGT.jpg';
 	$id[] = 'กลุ่มเล่นหวย'; $title[]= 'ชาวลุ้นต้องมาที่นี่ เลขเด็ดเยอะ รวบรวมจากหลายแหล่ง แม่นๆ ทั้งนั้น'; $thumb[] = 'https://pbs.twimg.com/media/DeAN_7rVAAArlQP.jpg';
