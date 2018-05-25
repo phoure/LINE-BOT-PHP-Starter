@@ -43,21 +43,7 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 
 
 if ($textIn == '.') {
-	$curl = curl_init();
-	curl_setopt_array($curl, array(
-	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
-	  CURLOPT_CUSTOMREQUEST => "GET",
-	  CURLOPT_RETURNTRANSFER => true,
-	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	  CURLOPT_HTTPHEADER => array(
-	    "authorization: Bearer ".$access_token,
-	    "postman-token: 7d55f84c-714f-e493-808f-c45ca4bcdfc5"
-	  ),
-	));
-	$response = curl_exec($curl);
-	$response_data = json_decode($response, true);
-	curl_close($curl);
-	$id = explode(' ',$textIn);
+	
 	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
  	 $data = array(  'replyToken' => $arrJson['events'][0]['replyToken'],
 			'messages' => array([
