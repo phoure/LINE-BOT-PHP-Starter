@@ -40,11 +40,11 @@ if($_GET['post'] == '1'){
 		
 		$card = array([
 			'type' => 'text',
-			'text' => 'แสดงตัวอย่างการโพสต์ขายสินค้าให้เด่น'
+			'text' => 'แสดงตัวอย่างการโพสต์ภาพแบบเต็มจอแบบ Rich Message โดยไม่ต้องลงทุน'
 		      ],
 		     [
 		     'type' => 'imagemap',
-  			"baseUrl"=> "https://i.imgur.com/T7hKyAA.jpg",
+  			"baseUrl"=> "https://i.imgur.com/pHeEc3g.jpg",
 			"altText" => 'มาแบ่งปันกลุ่มกัน!',
 			"baseSize" => array(
 			    'height' => 1040,
@@ -56,8 +56,8 @@ if($_GET['post'] == '1'){
 						 "area" => array(
 						    'x' => 0,
 						    'y' => 0,
-						    'height' => 1040,
-						    'width' => 1040
+						    'height' => 0,
+						    'width' => 0
 						    )
 						])
 			]
