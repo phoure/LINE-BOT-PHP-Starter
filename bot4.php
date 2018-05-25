@@ -44,7 +44,7 @@ if($_GET['post'] == '1'){
 		      ],
 		     [
 		     'type' => 'imagemap',
-  			"baseUrl": "https://i.imgur.com/T7hKyAA.jpg",
+  			"baseUrl"=> "https://i.imgur.com/T7hKyAA.jpg",
 			"altText" => 'มาแบ่งปันกลุ่มกัน!',
 			"baseSize" => array(
 			    'height' => 1040,
