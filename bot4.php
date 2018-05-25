@@ -26,14 +26,14 @@ if($_GET['post'] == '1'){
 
 	$id[] = 'สอนโปรโมท เทคนิคและวิธีโพสต์ในไลน์ ปี2018'; $title[]= 'สอนโปรโมท เทคนิคและวิธีโพสต์ในไลน์ ปี2018';  $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFV0AA8tkL.jpg:large';
 	$id[] = 'สอนดึงไลน์ official เข้ากลุ่ม'; $title[]= 'วันนี้คุณสามารถนำแอคเคาท์ LINE@ เข้าร่วมกลุ่มได้แล้ว';  $thumb[] = 'https://pbs.twimg.com/media/DeDdJgEVQAAcNDE.jpg:large';
-	$id[] = 'โพสต์อัตโนมัติ ไม่ต้องคอยส่งข้อความเอง'; $title[]= 'ไลน์สามารถรู้เวลาและสั่งส่งข้อความไปยังกลุ่มต่างๆ ตามที่ตั้งไว้โดยที่คุณไม่ต้องคอยส่งเอง และไม่เสีย Reach'; $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFVwAAdSIQ.jpg:large';
+	$id[] = 'โพสต์อัตโนมัติ ไม่ต้องคอยส่งข้อความเอง'; $title[]= 'ไลน์สามารถรู้เวลาและสั่งส่งข้อความไปยังกลุ่มต่างๆ ตามที่ตั้งไว้โดยไม่เสีย Reach'; $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFVwAAdSIQ.jpg:large';
 	$id[] = 'โพสต์สินค้าให้เด่น ใครๆ ก็เห็น'; $title[]= 'โฆษณาของคุณจะเด่นกว่าใคร ลืมข้อความโฆษณาธรรมดาไปเลย'; $thumb[] = 'https://pbs.twimg.com/media/DeDdJgFVAAA7swv.jpg:large';
 	$id[] = 'โพสต์ให้สวยงามน่าซื้อ'; $title[]= 'ส่งข้อความภาพแบบเต็มจอโดยไม่ต้องเสียเงินสักบาท'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMLzU8AAGUiw.jpg';
-	$id[] = 'ทำให้ไลน์รู้จักลูกค้าของคุณ'; $title[]= 'ไลน์สามารถเรียกชื่อลูกค้าของคุณได้ ซึ่งจะสร้างความแปลกใหม่และความประทับใจได้ไม่น้อย'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMLzU8AAGUiw.jpg';
+	$id[] = 'ทำให้ไลน์รู้จักลูกค้าของคุณ'; $title[]= 'ไลน์สามารถเรียกชื่อลูกค้าของคุณได้ สร้างความประทับใจได้ไม่น้อย'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMLzU8AAGUiw.jpg';
 	$id[] = 'ส่งข้อความยืนยันออร์เดอร์ง่ายๆ'; $title[]= 'สร้างความน่าเชื่อถือที่มากกว่าคนอื่น ด้วยการส่งข้อความยืนยันถึงลูกค้า'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMMPVAAA829I.jpg:large';
 	$id[] = 'ควบคุมได้ทุกอย่างในแอปไลน์'; $title[]= 'เพิ่มความสะดวกสบาย และน่าอัศจรรย์ด้วยการส่งลูกค้าไปทุกที่ที่ต้องการ'; $thumb[] = 'https://pbs.twimg.com/media/DeDdMMPU0AE2NaC.jpg:large';
 	$id[] = 'ตอบกลับได้มากกว่า 5 ข้อความ'; $title[]= 'จะกี่ข้อความก็ส่งได้ไม่มีปัญหา ทิ้งข้อจำกัดทั้งข้อความต้อนรับและตอบกลับอัตโนมัติ'; $thumb[] = 'https://pbs.twimg.com/media/DeDdO8_VQAAeaHN.jpg:large';
-	$id[] = 'เทคนิคอื่นๆ อีกมากมาย'; $title[]= 'เทคนิคนี้ไม่เคยมีใครสอนมาก่อน เปิดสอนฟรีเพียง 1 กลุ่มตอนนี้ กลุ่มเต็มปิดลิงก์ทันที รีบด่วน!'; $thumb[] = 'https://pbs.twimg.com/media/DeDdO9WUwAAX1N-.jpg';
+	$id[] = 'เทคนิคอื่นๆ อีกมากมาย'; $title[]= 'เทคนิคที่ไม่เคยมีใครสอนมาก่อน เปิดสอนฟรีเพียง 1 กลุ่มเต็มปิดลิงก์ทันที รีบด่วน!'; $thumb[] = 'https://pbs.twimg.com/media/DeDdO9WUwAAX1N-.jpg';
 
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
 
