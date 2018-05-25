@@ -118,6 +118,31 @@ else if ($textIn == 'ตั้งเวลาโพสต์') {
 	
 }
 
+else if ($textIn == 'โพสต์สินค้าให้เด่น') {
+	
+	$card = array(
+		     [
+		     'type' => 'template',
+			"altText" => 'มาแบ่งปันกลุ่มกัน!',
+			"template" => array(
+			    'type' => 'image_carousel',
+			    'columns' => array([
+				 'imageUrl' => 'https://pbs.twimg.com/profile_banners/714709520258375682/1526892337/1500x500',
+				 'actions' =>  array(
+						 'type' => 'uri',
+						 'label' => 'ลองค้นหากลุ่ม',
+						 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+						)
+				])
+			    )
+			]
+			);
+	
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+}
+
 /*
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
