@@ -21,7 +21,7 @@ if($_GET['post'] == '1'){
 	$id[] = 'กลุ่มเพื่อนคุยชิลล์ๆ'; $title[]= 'กลุ่มเพื่อนๆ คุยกันเหงาๆ ยามว่าง นอนไม่หลับ ดึกดื่นแค่ไหนก็มีเพื่อนคุย'; $thumb[] = 'https://pbs.twimg.com/media/DeAN_7jVQAAv07s.jpg';
 	$id[] = 'กลุ่มคอเกม'; $title[]= 'คอเกมต้องไม่พลาด กลุ่มใหญ่ ถาม-ตอบเรื่องเกมกับเหล่าเซียนเกม'; $thumb[] = 'https://pbs.twimg.com/media/DeAX86vVMAIAr4f.jpg';
 	$id[] = 'กลุ่มเล่นหวย'; $title[]= 'ชาวลุ้นต้องมาที่นี่ เลขเด็ดเยอะ รวบรวมจากหลายแหล่ง แม่นๆ ทั้งนั้น'; $thumb[] = 'https://pbs.twimg.com/media/DeAN_7rVAAArlQP.jpg';
-	$id[] = 'กลุ่มอื่นๆ อีกเพียบ!'; $title[]= 'มาค้นหากลุ่มอีกมากมายที่นี่ เพียงพิมพ์ "หากลุ่ม" มีรายชื่อกลุ่มให้ร่วมเข้าอีกเพียบ!'; $thumb[] = 'https://pbs.twimg.com/media/DeAWoq_UQAE4ZmG.jpg';
+	$id[] = 'กลุ่มอื่นๆ อีกเพียบ!'; $title[]= 'มาค้นหากลุ่มอีกมากมายที่นี่ เพียงพิมพ์ "หากลุ่ม" มีรายชื่อกลุ่มให้ร่วมเข้าอีกเพียบ!'; $thumb[] = 'https://pbs.twimg.com/media/DeAY10cV0AIoSaw.jpg:large';
 
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
 
