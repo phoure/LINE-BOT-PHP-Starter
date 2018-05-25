@@ -291,7 +291,7 @@ else if ($textIn == 'ส่องสถานะของฉัน') {
 	 send($data, $strUrl, $arrHeader);
 }
 
-else if ($textIn == 'การยืนยันออร์เดอร์') {
+else if ($textIn == 'การยืนยัน') {
 	
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
