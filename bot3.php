@@ -213,7 +213,7 @@ $card = array(
 
 
 
-else if ($textIn == 'ไลน์รู้จักคุณ') {
+else if ($textIn == 'ไลน์รู้จักฉัน?') {
 	$card = array(
 			     [
 			     'type' => 'template',
@@ -332,7 +332,7 @@ else if ($textIn == 'การยืนยัน') {
 	 send($data, $strUrl, $arrHeader);
 }
 
-else if ($textIn == 'การตั้งเส้นทาง') {
+else if ($textIn == 'การกำหนดเส้นทาง') {
 	$card = array([
 			'type' => 'text',
 			'text' => 'ตัวอย่างระบบการสร้างเส้นทางไปยังส่วนต่างๆ ของแอปฯไลน์ เว็บไซต์ หรือแหล่งข้อมูลต่างๆ ที่สามารถนำไปต่อยอดได้มากมายไม่จำกัด'
