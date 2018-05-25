@@ -360,6 +360,59 @@ else if ($textIn == 'การพาไป') {
 	 send($data, $strUrl, $arrHeader);
 }
 
+
+else if ($textIn == 'ข้อความไม่จำกัด') {
+	$card = array([
+		'type' => 'text',
+		'text' => 'แสดงตัวอย่างการตอบกลับอัตโนมัติแบบไม่จำกัด (ปกติส่งได้ไม่เกิน 5 ข้อความพร้อมกัน) รวมถึงภาพ วีดีโอ เสียง ตำแหน่ง และอื่นๆ'
+	      ]);
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'text',
+		'text' => 'แสดงตัวอย่างการตอบกลับอัตโนมัติแบบไม่จำกัด (ปกติส่งได้ไม่เกิน 5 ข้อความพร้อมกัน)'
+	      ]);
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'text',
+		'text' => 'ข้อความที่ 2'
+	      ]);
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'text',
+		'text' => 'ข้อความที่ 3'
+	      ]);
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'text',
+		'text' => 'ข้อความที่ 4'
+	      ]);
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'text',
+		'text' => 'ข้อความที่ 5'
+	      ]);
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'text',
+		'text' => 'ข้อความที่ 6 และได้อีกไม่จำกัด'
+	      ]);
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+
+}
+
 /*
 	
 	
