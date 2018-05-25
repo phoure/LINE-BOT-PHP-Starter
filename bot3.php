@@ -126,7 +126,7 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น' || 
 			"altText" => 'มาแบ่งปันกลุ่มกัน!',
 			"template" => array(
 			    'type' => 'image_carousel',
-			    'column' => array([
+			    'columns' => array([
 				 'imageUrl' => 'https://pbs.twimg.com/profile_banners/714709520258375682/1526892337/1500x500',
 				 'action' =>  array(
 						 'type' => 'uri',
