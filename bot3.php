@@ -290,14 +290,48 @@ else if ($textIn == 'ส่องสถานะของฉัน') {
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
+
+else if ($textIn == 'การยืนยันออร์เดอร์') {
+	
+	$curl = curl_init();
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
+	  CURLOPT_CUSTOMREQUEST => "GET",
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_HTTPHEADER => array(
+	    "authorization: Bearer ".$access_token,
+	    "postman-token: 7d55f84c-714f-e493-808f-c45ca4bcdfc5"
+	  ),
+	));
+	$response = curl_exec($curl);
+	$response_data = json_decode($response, true);
+	curl_close($curl);
+	
+		 $card = array('messages' => array([
+				'type' => 'template',
+				'altText' => 'template',
+				'template' =>  array('type' => 'template',
+						      'text' =>  'Group ID: '.$arrJson['events'][0]['source']['groupId'],
+							    'actions' =>  array([
+								    'type' => 'message',
+								   'label' => 'ยืนยันออร์เดอร์',
+								   'text' => 'ยืนยัน'
+								],[
+								    'type' => 'message',
+								   'label' => 'ขอปรับเปลี่ยนออร์เดอร์',
+								   'text' => 'ปรับเปลี่ยน'
+								])
+						    )
+			            ]));
+	
+	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+}
 /*
 	
-	 $strUrl = 'https://api.line.me/v2/bot/message/push';
- 	 $data = array(  'to' => 'C5ca58854e5e7ae33964770acadc0211d',
-			'messages' => array([
-				'type' => 'text',
-				'text' =>  'Group ID: '.$arrJson['events'][0]['source']['groupId']
-			]));
+	
+ 
 	 
 
 */
