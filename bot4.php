@@ -182,12 +182,12 @@ if($_GET['post'] == '1'){
 								'defaultAction' =>  array(
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'การพาไป'
+									'text' => 'ข้อความไม่จำกัด'
 									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'การพาไป'
+									'text' => 'ข้อความไม่จำกัด'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[8],
