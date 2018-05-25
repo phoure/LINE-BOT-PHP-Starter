@@ -366,8 +366,7 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 	$card = array([
 			'type' => 'text',
 			'text' => 'ตัวอย่างระบบการสร้างเส้นทางไปยังส่วนต่างๆ ของแอปฯไลน์ เว็บไซต์ หรือแหล่งข้อมูลต่างๆ ที่สามารถนำไปต่อยอดได้มากมายไม่จำกัด'
-		      ],
-			     [
+		      ],[
 			     'type' => 'template',
 				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
 				"template" => array(
@@ -381,6 +380,30 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 					  'type' => 'uri',
 					 'label' => 'อัปโหลดหลักฐาน',
 					 'uri' => 'line://nv/cameraRoll/single'
+					])
+				    )
+				],[
+			     'type' => 'template',
+				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
+				"template" => array(
+				    'type' => 'buttons',
+				    'text' => 'คุณสามารถชี้ปลายทางไปที่ใดก็ได้ สามารถต่อยอดบริการได้มากมายได้ไม่จำกัด',
+				    'actions' =>  array([
+					  'type' => 'uri',
+					 'label' => 'หน้าเพิ่มเพื่อน',
+					 'uri' => 'line://nv/addFriends'
+					],[
+					  'type' => 'uri',
+					 'label' => 'ร้านขายสติกเกอร์',
+					 'uri' => 'line://nv/stickerShop/mySticker'
+					],[
+					  'type' => 'uri',
+					 'label' => 'ไทม์ไลน์',
+					 'uri' => 'line://nv/timeline'
+					],[
+					  'type' => 'uri',
+					 'label' => 'การตั้งค่า',
+					 'uri' => 'line://nv/settings'
 					])
 				    )
 				]
