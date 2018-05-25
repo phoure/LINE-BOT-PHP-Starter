@@ -37,22 +37,22 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 	$card = array(
 			     [
 			     'type' => 'template',
-				    'thumbnailImageUrl' => 'https://pbs.twimg.com/media/DeAWoq_UQAAgN6F.jpg:large',
+				    'thumbnailImageUrl' => '',
 				    'imageAspectRatio' => 'rectangle',
 				    'imageSize' => 'cover',
 				    'imageBackgroundColor' => '#000000',
 				"altText" => '🎬 แชร์วีดีโอ',
 				"template" => array(
 				    'type' => 'buttons',
-				    'text' => 'asdf',
+				    'text' => 'สวัสดี '.$response_data['displayName'].' หากคุณต้องการค้นหากลุ่ม โปรดเพิ่มเราเป็นเพื่อน',
 				    'defaultAction' =>  array(
 					 'type' => 'uri',
-					 'label' => 'ดูคลิปนี้',
-					 'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
+					 'label' => 'เพิ่มเป็นเพื่อน',
+					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 				    ),
 				    'actions' =>  array(['type' => 'uri',
-					 'label' => '🎬 ดูคลิปนี้',
-					 'uri' => 'http://drivegay.com/video/'.$_GET['id'].'&ref='.$groupid[$x][1]
+					 'label' => 'เพิ่มเป็นเพื่อน',
+					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 					])
 				    )
 				]
