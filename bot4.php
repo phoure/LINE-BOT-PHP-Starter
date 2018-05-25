@@ -52,7 +52,7 @@ if($_GET['post'] == '1'){
 			    ),
 			  'actions' =>  array([
 						 'type' => 'uri',
-          					"linkUri": "https://example.com/",
+          					"linkUri" => "https://example.com/",
 						 "area" => array(
 						    'x' => 0,
 						    'y' => 0,
