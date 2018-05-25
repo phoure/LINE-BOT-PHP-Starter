@@ -180,14 +180,14 @@ if($_GET['post'] == '1'){
 								'title' => $id[7],
 								'text' => $title[7],
 								'defaultAction' =>  array(
-									'type' => 'uri',
-									'label' => '➡ เข้าร่วมกลุ่มนี้',
-									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									'type' => 'message',
+									'label' => 'ดูความสามารถนี้',
+									'text' => 'การทำทาง'
 									),
 								'actions' =>  array([
-									'type' => 'uri',
-									'label' => '➡ เข้าร่วมกลุ่มนี้',
-									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									'type' => 'message',
+									'label' => 'ดูความสามารถนี้',
+									'text' => 'การทำทาง'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[8],
