@@ -331,6 +331,35 @@ else if ($textIn == 'การยืนยันออร์เดอร์') {
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
+
+else if ($textIn == 'การพาไป') {
+	$card = array([
+			'type' => 'text',
+			'text' => 'แสดงตัวอย่างระบบการนำทางไปยังส่วนต่างๆ ของแอปไลน์ สามารถนำไปต่อยอดได้มากมาย'
+		      ],
+			     [
+			     'type' => 'template',
+				"altText" => 'มาแบ่งปันกลุ่มกัน!',
+				"template" => array(
+				    'type' => 'buttons',
+				    'text' => 'ชำระเงินแล้ว? คุณสามารถส่งหลักฐานการชำระได้ทันที',
+				    'actions' =>  array([
+					  'type' => 'uri',
+					 'label' => 'ถ่ายรูปหลักฐาน',
+					 'uri' => 'line://nv/camera/'
+					],[
+					  'type' => 'uri',
+					 'label' => 'อัปโหลดหลักฐาน',
+					 'uri' => 'line://nv/cameraRoll/single'
+					])
+				    )
+				]
+				);
+	
+	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+}
+
 /*
 	
 	
