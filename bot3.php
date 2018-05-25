@@ -309,6 +309,9 @@ else if ($textIn == 'การยืนยันออร์เดอร์') {
 	curl_close($curl);
 	
 		 $card = array([
+			'type' => 'text',
+			'text' => 'แสดงตัวอย่างการส่งข้อความยืนยันออร์เดอร์สินค้า'
+		      ],
 				'type' => 'template',
 				'altText' => 'template',
 				'template' =>  array('type' => 'confirm',
