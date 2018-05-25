@@ -12,16 +12,16 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
 	
 */
-	$id[] = 'กลุ่มคลิปหลุด'; $title[]= 'แจกคลิปหลุด คลิปเสียว มีคนช่วยกันแชร์ตลอด เสียงทั้งวันทั้งคืน';  $thumb[] = 'https://pbs.twimg.com/media/DeAMsvJUwAE59ys.jpg';
+	$id[] = 'กลุ่มคลิปหลุด'; $title[]= 'แจกคลิปหลุด คลิปเสียว ช่วยกันแชร์ตลอดทั้งวันทั้งคืน';  $thumb[] = 'https://pbs.twimg.com/media/DeAMsvJUwAE59ys.jpg';
 	$id[] = 'กลุ่มหนังโป๊'; $title[]= 'กลุ่มสำหรับคนชอบดูหนังโป๊ หนังเสียว ภาพยนตร์เรท แจกลิงก์ดูเต็มเรื่อง';  $thumb[] = 'https://pbs.twimg.com/media/DeAMsvKUQAUzA1E.jpg';
 	$id[] = 'กลุ่มหนังเกย์'; $title[]= 'แจกหนัง แชร์คลิป หนุ่มหล่อ เสียว ฟิน'; $thumb[] = 'https://pbs.twimg.com/media/DeAMsvTU0AAdsOl.jpg';
 	$id[] = 'กลุ่มเซ็กซ์โฟน'; $title[]= 'หาเพื่อนคลายเงี่ยน เพื่อนเสียว หนุ่มๆ สาวๆ เพียบ!'; $thumb[] = 'https://pbs.twimg.com/media/DeAMsvKU8AAzXDB.jpg';
 	$id[] = 'กลุ่มกล้องเสียว'; $title[]= 'กล้องโชว์เสียว จะส่วนตัวหรือกลุ่มก็มาดีลกันได้ในกลุ่มนี้ มีแต่ตัวเด็ดๆ'; $thumb[] = 'https://pbs.twimg.com/media/DeANWo7U8AAO5fX.jpg';
 	$id[] = 'กลุ่มแจกวาร์ปหนุ่มหล่อสาวสวย'; $title[]= 'แจกวาร์ป หนุ่มหล่อ สาวสวย หุ่นแน่น นมใหญ่'; $thumb[] = 'https://pbs.twimg.com/media/DeANWo5VwAA1Uud.jpg';
 	$id[] = 'กลุ่มเพื่อนคุยชิลล์ๆ'; $title[]= 'กลุ่มเพื่อนๆ คุยกันเหงาๆ ยามว่าง นอนไม่หลับ ดึกดื่นแค่ไหนก็มีเพื่อนคุย'; $thumb[] = 'https://pbs.twimg.com/media/DeAN_7jVQAAv07s.jpg';
-	$id[] = 'กลุ่มคอเกม'; $title[]= 'คอเกมต้องไม่พลาด เหล่าเซียนรออยู่ กลุ่มใหญ่ เกมหลากหลาย ถาม-ตอบเรื่องเกม'; $thumb[] = 'https://pbs.twimg.com/media/DeANWpXUQAAjQGT.jpg';
+	$id[] = 'กลุ่มคอเกม'; $title[]= 'คอเกมต้องไม่พลาด กลุ่มใหญ่ ถาม-ตอบเรื่องเกมกับเหล่าเซียน'; $thumb[] = 'https://pbs.twimg.com/media/DeANWpXUQAAjQGT.jpg';
 	$id[] = 'กลุ่มเล่นหวย'; $title[]= 'ชาวลุ้นต้องมาที่นี่ เลขเด็ดเยอะ รวบรวมจากหลายแหล่ง แม่นๆ ทั้งนั้น'; $thumb[] = 'https://pbs.twimg.com/media/DeAN_7rVAAArlQP.jpg';
-	$id[] = 'กลุ่มอื่นๆ อีกเพียบ!'; $title[]= 'มาค้นหากลุ่มได้ที่นี่ เพียงพิมพ์ "หากลุ่ม"มีรายชื่อกลุ่มให้ร่วมเข้าอีกเพียบ!'; $thumb[] = 'https://pbs.twimg.com/media/DeANWo5VwAA1Uud.jpg';
+	$id[] = 'กลุ่มอื่นๆ อีกเพียบ!'; $title[]= 'มาค้นหากลุ่มอีกมากมายที่นี่ เพียงพิมพ์ "หากลุ่ม" มีรายชื่อกลุ่มให้ร่วมเข้าอีกเพียบ!'; $thumb[] = 'https://pbs.twimg.com/media/DeANWo5VwAA1Uud.jpg';
 
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
 
