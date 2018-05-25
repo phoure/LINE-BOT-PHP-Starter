@@ -284,7 +284,7 @@ else if ($textIn == 'ส่องสถานะของฉัน') {
 	
 	$card = array([
 			'type' => 'text',
-			'text' => 'สวัสดี '.$response_data['displayName'].' สถานะของคุณคือ '.$response_data['displayName']
+			'text' => 'สวัสดี '.$response_data['displayName'].' สถานะของคุณคือ '.$response_data['statusMessage']
 		      ]);
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
