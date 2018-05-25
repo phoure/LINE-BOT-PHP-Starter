@@ -8,6 +8,9 @@ if($_GET['post'] == '1'){
 		
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
+	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
+	
+	
 	*/
 		/*
 	$groupid[] = array('Ca50339a267e2c0d17c0254976452070e','woo');
