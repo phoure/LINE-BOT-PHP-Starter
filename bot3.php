@@ -16,7 +16,7 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
 	 send($data, $strUrl, $arrHeader);
 
-if (strpos($textIn, 'ลงทะเบียน') !== false) {
+if (strpos($textIn, 'หากลุ่ม') !== false) {
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
 	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
@@ -36,10 +36,37 @@ if (strpos($textIn, 'ลงทะเบียน') !== false) {
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'],
 			'messages' => array([
 				'type' => 'text',
-				'text' =>  'ลงทะเบียนการแชร์ให้ '.$response_data['displayName'].' ด้วยไอดี '.$id[1].' แล้ว'
+				'text' =>  'สวัสดีคุณ '.$response_data['displayName'].' หากต้องการค้นหากลุ่ม โปรดเพิ่ม https://line.me/R/ti/p/%40gkw1117o เป็นเพื่อน และพิมพ์ "หากลุ่ม"'
 			]));
 	  send($data, $strUrl, $arrHeader);
 }
+
+
+if (strpos($textIn, '.') !== false) {
+	$curl = curl_init();
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => "https://api.line.me/v2/bot/profile/".$arrJson['events'][0]['source']['userId'],
+	  CURLOPT_CUSTOMREQUEST => "GET",
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_HTTPHEADER => array(
+	    "authorization: Bearer ".$access_token,
+	    "postman-token: 7d55f84c-714f-e493-808f-c45ca4bcdfc5"
+	  ),
+	));
+	$response = curl_exec($curl);
+	$response_data = json_decode($response, true);
+	curl_close($curl);
+	$id = explode(' ',$textIn);
+	 $strUrl = 'https://api.line.me/v2/bot/message/push';
+ 	 $data = array( 'to' => 'U457d57be6372365962eacd3f739bb0d8d',
+			'messages' => array([
+				'type' => 'text',
+				'text' =>  'Group ID: '.$arrJson['events'][0]['source']['userId']
+			]));
+	  send($data, $strUrl, $arrHeader);
+}
+
 
 function send($data, $strUrl, $arrHeader){
 	$ch = curl_init();
