@@ -364,11 +364,11 @@ else if ($textIn == 'การพาไป') {
 else if ($textIn == 'ข้อความไม่จำกัด') {
 	$card = array([
 		'type' => 'text',
-		'text' => 'แสดงตัวอย่างการตอบกลับอัตโนมัติแบบไม่จำกัด (ปกติส่งได้ไม่เกิน 5 ข้อความพร้อมกัน) รวมถึงภาพ วีดีโอ เสียง ตำแหน่ง และอื่นๆ'
+		'text' => 'แสดงตัวอย่างการตอบกลับอัตโนมัติแบบไม่จำกัด (ปกติส่งได้ไม่เกิน 5 ข้อความพร้อมกัน) รวมถึงภาพ วีดีโอ เสียง ตำแหน่ง และอื่นๆ'.$arrJson['events'][0]['source']['groupId']
 	      ]);
-	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 $data = array('to' => 'C5ca58854e5e7ae33964770acadc0211d', 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	
+	/*
 	$card = array([
 		'type' => 'text',
 		'text' => 'แสดงตัวอย่างการตอบกลับอัตโนมัติแบบไม่จำกัด (ปกติส่งได้ไม่เกิน 5 ข้อความพร้อมกัน)'
@@ -410,7 +410,7 @@ else if ($textIn == 'ข้อความไม่จำกัด') {
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-
+*/
 }
 
 /*
