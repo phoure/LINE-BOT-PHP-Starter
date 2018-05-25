@@ -13,6 +13,10 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $textIn = $arrJson['events'][0]['message']['text'];
 $nameIn = $arrJson['events'][0]['source']['userId'];
 
+	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
+ 	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
+	 send($data, $strUrl, $arrHeader);
+
 if (strpos($textIn, 'twitter') !== false && $arrJson['events'][0]['source']['groupId'] == 'C214e858f2c0e42285b5d56a12f0cfced') {
 	
 	$data_vid = explode('http',$textIn);
