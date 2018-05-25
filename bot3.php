@@ -185,7 +185,9 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 			    )
 			]
 			);
-	
+
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
 }
 
 /*
