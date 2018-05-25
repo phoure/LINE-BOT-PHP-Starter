@@ -176,12 +176,12 @@ if($_GET['post'] == '1'){
 								'text' => $title[9],
 								'defaultAction' =>  array(
 									'type' => 'uri',
-									'label' => '➡ เข้าร่วมกลุ่มนี้',
+									'label' => '➡ ค้นหากลุ่มอื่นๆ',
 									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 									),
 								'actions' =>  array([
 									'type' => 'uri',
-									'label' => '➡ เข้าร่วมกลุ่มนี้',
+									'label' => '➡ ค้นหากลุ่มอื่นๆ',
 									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
 															])
 								]),
