@@ -76,7 +76,7 @@ else if (strpos($textIn, 'แบ่งปันอย่างไร?') !== fals
 	
 
 		$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card
-	
+	 send($data, $strUrl, $arrHeader);
 	
 }
 
@@ -88,7 +88,7 @@ else if (strpos($textIn, 'แบ่งปันอย่างไร?') !== fals
 				'type' => 'text',
 				'text' =>  'Group ID: '.$arrJson['events'][0]['source']['groupId']
 			]));
-	  send($data, $strUrl, $arrHeader);
+	 
 
 */
 
