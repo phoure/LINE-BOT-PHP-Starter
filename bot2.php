@@ -205,19 +205,10 @@ if($_GET['post'] == '1'){
 		$card = array(
 			     [
 			     'type' => 'template',
-				    'thumbnailImageUrl' => '',
-				    'imageAspectRatio' => 'rectangle',
-				    'imageSize' => 'cover',
-				    'imageBackgroundColor' => '#000000',
 				"altText" => 'มาแบ่งปันกลุ่มกัน!',
 				"template" => array(
-				    'type' => 'buttons',
+				    'type' => 'confirm',
 				    'text' => 'ขณะนี้ระบบกำลังจัดเก็บกลุ่มใหม่เพิ่มจากเพื่อนๆ ที่เข้ามาร่วมกันแนะนำ หากคุณมีกลุ่มที่อยากแนะนำให้เพื่อนๆ อยากเข้า มาแชร์ลิงก์ของกลุ่มไว้ที่นี่เพื่อให้เพื่อนๆ ได้ค้นหาต่อ',
-				    'defaultAction' =>  array(
-					 'type' => 'uri',
-					 'label' => 'แบ่งปันกลุ่มให้เพื่อน',
-					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
-				    ),
 				    'actions' =>  array(['type' => 'uri',
 					 'label' => 'แบ่งปันกลุ่มให้เพื่อน',
 					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
