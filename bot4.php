@@ -65,12 +65,12 @@ if($_GET['post'] == '1'){
 								'defaultAction' =>  array(
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'uri' => 'ดึง LINE Official เข้ากลุ่ม'
+									'text' => 'ดึง LINE Official เข้ากลุ่ม'
 									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'uri' => 'ดึง LINE Official เข้ากลุ่ม'
+									'text' => 'ดึง LINE Official เข้ากลุ่ม'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[2],
