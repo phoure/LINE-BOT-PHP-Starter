@@ -57,7 +57,7 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 				    )
 				]
 				);
-				$data = array('to' => $groupid[$x][0], 'messages' => $card);
+				$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	
 	  send($data, $strUrl, $arrHeader);
 }
