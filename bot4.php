@@ -167,12 +167,12 @@ if($_GET['post'] == '1'){
 								'defaultAction' =>  array(
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'การยืนยันออร์เดอร์'
+									'text' => 'การยืนยัน'
 									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'การยืนยันออร์เดอร์'
+									'text' => 'การยืนยัน'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[7],
@@ -182,12 +182,12 @@ if($_GET['post'] == '1'){
 								'defaultAction' =>  array(
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'การทำทาง'
+									'text' => 'การพาไป'
 									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'การทำทาง'
+									'text' => 'การพาไป'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[8],
