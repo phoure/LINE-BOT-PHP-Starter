@@ -182,12 +182,12 @@ if($_GET['post'] == '1'){
 								'defaultAction' =>  array(
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'ข้อความไม่จำกัด'
+									'text' => 'การพาไป'
 									),
 								'actions' =>  array([
 									'type' => 'message',
 									'label' => 'ดูความสามารถนี้',
-									'text' => 'ข้อความไม่จำกัด'
+									'text' => 'การพาไป'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[8],
@@ -195,14 +195,14 @@ if($_GET['post'] == '1'){
 								'title' => $id[8],
 								'text' => $title[8],
 								'defaultAction' =>  array(
-									'type' => 'uri',
-									'label' => '➡ เข้าร่วมกลุ่มนี้',
-									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									'type' => 'message',
+									'label' => 'ดูความสามารถนี้',
+									'text' => 'ข้อความไม่จำกัด'
 									),
 								'actions' =>  array([
-									'type' => 'uri',
-									'label' => '➡ เข้าร่วมกลุ่มนี้',
-									'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+									'type' => 'message',
+									'label' => 'ดูความสามารถนี้',
+									'text' => 'ข้อความไม่จำกัด'
 															])
 								],[
 								'thumbnailImageUrl' => $thumb[9],
