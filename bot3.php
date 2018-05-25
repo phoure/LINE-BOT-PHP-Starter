@@ -80,6 +80,19 @@ else if (strpos($textIn, 'แบ่งปันอย่างไร?') !== fals
 	
 }
 
+
+else if ($textIn == 'ดึง LINE Official เข้ากลุ่ม') {
+	
+	$card = array([
+			'type' => 'text',
+			'text' => 'วันนี้คุณสามามารถดึง LINE Official ให้เข้าไปช่วยงานในกลุ่มของคุณได้แล้ว ด้วยความสามารถรอบด้าน ไม่ว่าจะช่วยโพสต์สินค้า ส่งข้อความ ภาพ วีดีโอ เสียง การแจ้งเตือน หรือโฆษณาต่างๆ ให้ลูกค้าหรือสมาชิกในกลุ่มได้ทราบแบบนี้'
+		      ]);
+	
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+}
+
 /*
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
