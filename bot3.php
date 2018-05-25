@@ -48,7 +48,7 @@ if ($textIn == '.') {
  	 $data = array(  'replyToken' => $arrJson['events'][0]['replyToken'],
 			'messages' => array([
 				'type' => 'text',
-				'text' =>  'Group ID: '.$arrJson['events'][0]['source']['groupID']
+				'text' =>  'Group ID: '.$arrJson['events'][0]['source']['groupId']
 			]));
 	  send($data, $strUrl, $arrHeader);
 }
