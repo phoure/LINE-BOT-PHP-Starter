@@ -44,11 +44,11 @@ if (strpos($textIn, 'หากลุ่ม') !== false) {
 				    'defaultAction' =>  array(
 					 'type' => 'uri',
 					 'label' => '➕ เพิ่มเป็นเพื่อน',
-					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+					 'uri' => 'line://ti/p/%40gkw1117o'
 				    ),
 				    'actions' =>  array(['type' => 'uri',
 					 'label' => '➕ เพิ่มเป็นเพื่อน',
-					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+					 'uri' => 'line://ti/p/%40gkw1117o'
 					])
 				    )
 				]
@@ -68,7 +68,7 @@ else if (strpos($textIn, 'แบ่งปันอย่างไร?') !== fals
 				    'text' => 'LINE Groups คือการรวมรวมไลน์กลุ่มไว้ให้เพื่อนๆ ได้ค้นหา ตอนนี้มีกลุ่มมากกว่า 1,800 กลุ่มที่พร้อมให้เพื่อนๆ ได้กดเข้าตามความต้องการที่ถูกจัดแบ่งเป็นหมวดหมู่ เพียงพิมพ์ "หากลุ่ม"',
 				    'actions' =>  array(['type' => 'uri',
 					 'label' => 'ลองค้นหากลุ่ม',
-					 'uri' => 'https://line.me/R/ti/p/%40gkw1117o'
+					 'uri' => 'line://ti/p/%40gkw1117o'
 					])
 				    )
 				]
