@@ -507,7 +507,7 @@ function to(){
 				    )
 				]
 				);
-	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	$data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
 
