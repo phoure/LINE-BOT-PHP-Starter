@@ -1,23 +1,15 @@
 <?php
 $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
-
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
-
 $textIn = $arrJson['events'][0]['message']['text'];
 $idIn = $arrJson['events'][0]['source']['userId'];
-
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
-
-
 	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
 	 send($data, $strUrl, $arrHeader);
-
-
-
 if (strpos($textIn, 'หากลุ่ม') !== false) {
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
@@ -76,63 +68,33 @@ else if (strpos($textIn, 'แบ่งปันอย่างไร?') !== fals
 				]
 				);
 	
-
 		$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 }
-
-
 else if ($textIn == 'ดึง LINE@ เข้ากลุ่ม') {
 	
 	$card = array([
 			'type' => 'text',
 			'text' => 'วันนี้คุณสามามารถดึง LINE@ หรือ LINE Official ให้เข้าไปช่วยงานในกลุ่มของคุณได้แล้ว ด้วยความสามารถรอบด้าน ไม่ว่าจะช่วยโพสต์สินค้า ส่งข้อความ ภาพ วีดีโอ เสียง การแจ้งเตือน หรือโฆษณาต่างๆ ให้ลูกค้าหรือสมาชิกในกลุ่มได้ทราบได้แบบนี้'
-		      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]);
+		      ]);
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 	
 }
-
-
 else if ($textIn == 'กระจายโฆษณา') {
 	
 	$card = array([
 			'type' => 'text',
 			'text' => 'คุณสามารถโพสต์โฆษณาของคุณไปยังกลุ่มนับพันได้โดยที่คุณไม่ต้องเข้ากลุ่มเหล่านั้น ผู้คนที่อยู่ในกลุ่มเหล่านั้นจะเห็นโฆษณาของคุณอย่างชัดเจน มีวิธีพิเศษในการประกาศโฆษณาของคุณได้ง่ายและทันทีโดยไม่ต้องลงทุนใดๆ สามารถตั้งเวลาการโพสได้ เลือกประเภทของกลุ่มได้ หรือจะกระจายโฆษณาทั้งหมดไปยังกลุ่มทั้งหมดไม่จำกัดทุกๆ ชั่วโมงก็ยังทำได้'
-		      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]);
+		      ]);
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 }
-
 else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 	
 	$card = array(
@@ -198,26 +160,11 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 		      ],[
 			'type' => 'text',
 			'text' => 'ตัวอย่างการโพสต์ขายสินค้าให้เด่น และน่าสนใจ'
-		      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]
+		      ]
 			);
-
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	  send($data, $strUrl, $arrHeader);
 }
-
-
 else if ($textIn == 'โพสต์ Rich Message') {
 $card = array(
 		     [
@@ -241,29 +188,11 @@ $card = array(
 			],[
 			'type' => 'text',
 			'text' => 'ตัวอย่างการส่งข้อความภาพเต็มจอและกดได้แบบ Rich Message ได้ฟรี โดยไม่ต้องลงทุนซื้อแพ็คเกจ ส่งได้ทั้งกระจายไปยังลูกค้าของคุณหรือส่งในกลุ่มก็ได้'
-		      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]
+		      ]
 			);
-
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
-
-
-
-
-
 else if ($textIn == 'ไลน์รู้จักฉัน?') {
 	$card = array(
 			     [
@@ -288,8 +217,6 @@ else if ($textIn == 'ไลน์รู้จักฉัน?') {
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
-
-
 else if ($textIn == 'สวัสดีไลน์กรุ๊ป') {
 	
 	$curl = curl_init();
@@ -310,24 +237,11 @@ else if ($textIn == 'สวัสดีไลน์กรุ๊ป') {
 	$card = array([
 			'type' => 'text',
 			'text' => 'สวัสดี '.$response_data['displayName']
-		      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]);
+		      ]);
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
-
 else if ($textIn == 'ส่องสถานะของฉัน') {
 	
 	$curl = curl_init();
@@ -348,24 +262,11 @@ else if ($textIn == 'ส่องสถานะของฉัน') {
 	$card = array([
 			'type' => 'text',
 			'text' => 'สวัสดี '.$response_data['displayName'].' สถานะของคุณคือ '.$response_data['statusMessage']
-		      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]);
+		      ]);
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
-
 else if ($textIn == 'การส่งแบบฟอร์ม') {
 	
 	$curl = curl_init();
@@ -431,24 +332,11 @@ else if ($textIn == 'การส่งแบบฟอร์ม') {
 								   'text' => 'ยังไม่ได้รับ'
 								])
 						    )
-			            ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]);
+			            ]);
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
-
 else if ($textIn == 'การกำหนดเส้นทาง') {
 	$card = array([
 			'type' => 'text',
@@ -493,29 +381,14 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 					 'uri' => 'line://nv/settings'
 					])
 				    )
-				],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
 				]
 				);
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 }
-
-
 else if ($textIn == 'ข้อความไม่จำกัด') {
 	
-
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	
 	$card = array([
@@ -556,26 +429,10 @@ else if ($textIn == 'ข้อความไม่จำกัด') {
 	$card = array([
 		'type' => 'text',
 		'text' => 'ข้อความที่ 6 และได้อีกไม่จำกัด'
-	      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]);
+	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
-	 send($data, $strUrl, $arrHeader);=
-
+	 send($data, $strUrl, $arrHeader);
 }
-
-
-
 else if ($textIn == '.') {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
@@ -588,9 +445,6 @@ else if ($textIn == '.') {
 	 send($data, $strUrl, $arrHeader);
 	
 }
-
-
-
 function send($data, $strUrl, $arrHeader){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL,$strUrl);
@@ -604,6 +458,33 @@ function send($data, $strUrl, $arrHeader){
 	curl_close ($ch);
 }
  
-
+	 $strUrl = 'https://api.line.me/v2/bot/message/push';
+	$card = array([
+			     'type' => 'template',
+				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
+				"template" => array(
+				    'type' => 'buttons',
+				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
+				    'actions' =>  array([
+					  'type' => 'uri',
+					 'label' => 'สำรองคอร์ส',
+					 'uri' => 'line://ti/p/%40gkw1117o'
+					])
+				    )
+				]
+				);
+	$data = array('to' => 'to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL,$strUrl);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	$result = curl_exec($ch);
+	curl_close ($ch);
+	
 
  ?>
