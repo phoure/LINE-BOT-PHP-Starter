@@ -17,7 +17,7 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
 	 send($data, $strUrl, $arrHeader);
 
 
-function to($data,$group){
+function to($data,$group, $arrHeader){
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	$card = array([
 			'type' => 'text',
@@ -115,7 +115,7 @@ else if ($textIn == 'ดึง LINE@ เข้ากลุ่ม') {
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 	
 }
 
@@ -129,7 +129,7 @@ else if ($textIn == 'กระจายโฆษณา') {
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 	
 }
 
@@ -203,7 +203,7 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	  send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 }
 
 
@@ -235,7 +235,7 @@ $card = array(
 
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 }
 
 
@@ -292,7 +292,7 @@ else if ($textIn == 'สวัสดีไลน์กรุ๊ป') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 }
 
 else if ($textIn == 'ส่องสถานะของฉัน') {
@@ -319,7 +319,7 @@ else if ($textIn == 'ส่องสถานะของฉัน') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 }
 
 else if ($textIn == 'การส่งแบบฟอร์ม') {
@@ -391,7 +391,7 @@ else if ($textIn == 'การส่งแบบฟอร์ม') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 }
 
 else if ($textIn == 'การกำหนดเส้นทาง') {
@@ -443,7 +443,7 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 }
 
 
@@ -493,7 +493,7 @@ else if ($textIn == 'ข้อความไม่จำกัด') {
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId']);
+	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
 
 }
 
