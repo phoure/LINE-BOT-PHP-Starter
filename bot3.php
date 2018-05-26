@@ -469,6 +469,11 @@ function send($data, $strUrl, $arrHeader){
  
 function last(){
 	
+$access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
+$content = file_get_contents('php://input');
+$arrJson = json_decode($content, true);
+$textIn = $arrJson['events'][0]['message']['text'];
+$idIn = $arrJson['events'][0]['source']['userId'];
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
