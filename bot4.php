@@ -3,7 +3,7 @@ $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/
 
 if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
-	
+	/*
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
 	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
@@ -12,14 +12,15 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('C1d928e7a66b686c47096843cfa54aea5','hotvip4');
 	$groupid[] = array('C7637dca57b09b0b7a88243ce49895ac6','กลุ่ม sexphone 18+');
 	$groupid[] = array('Cfb706767723304e5d44b91789bed6ac1','eiei');
-		
+	*/
+	$groupid[] = array('C024ff6d8bb7414a952bc620da8942384','gsawanrak');
+	$groupid[] = array('C6551e5a95a2f80d6311b296b21676cca','peodklongwao');
+	$groupid[] = array('C44bd3b2fd00f81a47563fa9f8deb3653','mangkonnimitr');
+		/*
 	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
 	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
-	$groupid[] = array('C5acee5a1fea67f1e79201ded58d1f91d','gkawanrak');
 	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
-	$groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
-	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
-	
+	*/
 
 	$id[] = 'เทคนิคและวิธีโพสต์สินค้าในไลน์ให้ขายดี 2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา ใหม่ล่าสุด!';  $thumb[] = 'https://www.img.in.th/images/6b5fa5ca7063cf8cc10c47bd5473f4cf.jpg';
 	$id[] = 'สอนดึงไลน์ LINE@ เข้ากลุ่ม'; $title[]= 'วันนี้คุณสามารถนำแอคเคาท์ LINE@ เข้าร่วมกลุ่มได้แล้ว';  $thumb[] = 'https://www.img.in.th/images/41dcccb59e66641db783b7b492166823.jpg';
