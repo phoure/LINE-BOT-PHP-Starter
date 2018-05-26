@@ -508,9 +508,6 @@ function send($data, $strUrl, $arrHeader){
 function too($group,$arrHeader){
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	$card = array([
-			'type' => 'text',
-			'text' => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา 2018'
-		      ],[
 			     'type' => 'template',
 				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
 				"template" => array(
