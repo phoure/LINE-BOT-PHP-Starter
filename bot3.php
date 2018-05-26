@@ -489,6 +489,10 @@ function send($data, $strUrl, $arrHeader){
 }
  
 function last(){
+	
+$arrHeader = array();
+$arrHeader[] = "Content-Type: application/json";
+$arrHeader[] = "Authorization: Bearer {$access_token}";
  $strUrl = 'https://api.line.me/v2/bot/message/push';
 	$card = array([
 			     'type' => 'template',
