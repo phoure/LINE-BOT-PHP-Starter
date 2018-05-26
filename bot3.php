@@ -90,6 +90,7 @@ else if ($textIn == 'ดึง LINE@ เข้ากลุ่ม') {
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 	
 }
 
@@ -103,6 +104,7 @@ else if ($textIn == 'กระจายโฆษณา') {
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 	
 }
 
@@ -111,7 +113,7 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 	$card = array(
 		     [
 		     'type' => 'template',
-			"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา วิธีใหม่ปี 2018',
+			"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา 2018',
 			"template" => array(
 			    'type' => 'image_carousel',
 			    'columns' => array([
@@ -176,6 +178,7 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 }
 
 
@@ -207,6 +210,7 @@ $card = array(
 
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 }
 
 
@@ -217,7 +221,7 @@ else if ($textIn == 'ไลน์รู้จักฉัน?') {
 	$card = array(
 			     [
 			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา วิธีใหม่ปี 2018',
+				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา 2018',
 				"template" => array(
 				    'type' => 'buttons',
 				    'text' => 'แน่นอนว่าฉันรู้จักคุณ และทุกคนที่นี่ คุณสร้างความประทับใจในบริการ วิธีให้ LINE@ ของคุณสามารถรู้ชื่อของลูกค้า ภาพโปรไฟล์ หรือแม้แต่สถานะที่คุณตั้งอยู่ตอนนี้ ลองให้ไลน์กรุ๊ปเรียกคุณดูสิ',
@@ -263,6 +267,7 @@ else if ($textIn == 'สวัสดีไลน์กรุ๊ป') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 }
 
 else if ($textIn == 'ส่องสถานะของฉัน') {
@@ -289,6 +294,7 @@ else if ($textIn == 'ส่องสถานะของฉัน') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 }
 
 else if ($textIn == 'การส่งแบบฟอร์ม') {
@@ -360,6 +366,7 @@ else if ($textIn == 'การส่งแบบฟอร์ม') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 }
 
 else if ($textIn == 'การกำหนดเส้นทาง') {
@@ -411,6 +418,7 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 }
 
 
@@ -460,6 +468,7 @@ else if ($textIn == 'ข้อความไม่จำกัด') {
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+	to();
 
 }
 
@@ -478,6 +487,29 @@ else if ($textIn == '.') {
 	
 }
 
+
+
+function to(){
+	$card = array([
+			'type' => 'text',
+			'text' => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา 2018'
+		      ],[
+			     'type' => 'template',
+				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
+				"template" => array(
+				    'type' => 'buttons',
+				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
+				    'actions' =>  array([
+					  'type' => 'uri',
+					 'label' => 'สำรองคอร์ส',
+					 'uri' => 'line://ti/p/%40gkw1117o'
+					])
+				    )
+				]
+				);
+	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+}
 
 function send($data, $strUrl, $arrHeader){
 	$ch = curl_init();
