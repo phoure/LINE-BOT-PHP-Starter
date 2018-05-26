@@ -3,7 +3,7 @@ $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/
 
 if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
-	/*
+	
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
 	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
@@ -19,7 +19,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
 	$groupid[] = array('C19be33210e004052910aba5a817621e2','peodklongwao');
 	$groupid[] = array('Cd08afe8945428db31485bca7effc88a2','mangkonnimitr');
-	*/
+	
 
 	$id[] = 'เทคนิคและวิธีโพสต์สินค้าในไลน์ให้ขายดี 2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา ใหม่ล่าสุด!';  $thumb[] = 'https://www.img.in.th/images/6b5fa5ca7063cf8cc10c47bd5473f4cf.jpg';
 	$id[] = 'สอนดึงไลน์ LINE@ เข้ากลุ่ม'; $title[]= 'วันนี้คุณสามารถนำแอคเคาท์ LINE@ เข้าร่วมกลุ่มได้แล้ว';  $thumb[] = 'https://www.img.in.th/images/41dcccb59e66641db783b7b492166823.jpg';
