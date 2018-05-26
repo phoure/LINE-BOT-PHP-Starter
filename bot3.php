@@ -488,4 +488,33 @@ function send($data, $strUrl, $arrHeader){
 	curl_close ($ch);
 }
  
+
+ $strUrl = 'https://api.line.me/v2/bot/message/push';
+	$card = array([
+			     'type' => 'template',
+				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
+				"template" => array(
+				    'type' => 'buttons',
+				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
+				    'actions' =>  array([
+					  'type' => 'uri',
+					 'label' => 'สำรองคอร์ส',
+					 'uri' => 'line://ti/p/%40gkw1117o'
+					])
+				    )
+				]
+				);
+	$data = array('to' => 'to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL,$strUrl);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	$result = curl_exec($ch);
+	curl_close ($ch);
+	
  ?>
