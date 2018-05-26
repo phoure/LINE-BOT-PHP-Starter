@@ -10,28 +10,7 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
 	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
 	 send($data, $strUrl, $arrHeader);
-function to($data,$group, $arrHeader){
-	 $strUrl = 'https://api.line.me/v2/bot/message/push';
-	$card = array([
-			'type' => 'text',
-			'text' => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา 2018'
-		      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]
-				);
-	$data = array('to' => $group, 'messages' => $card);
-	 send($data, $strUrl, $arrHeader);
-}
+
 if (strpos($textIn, 'หากลุ่ม') !== false) {
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
