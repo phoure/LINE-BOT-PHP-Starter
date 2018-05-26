@@ -17,29 +17,6 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
 	 send($data, $strUrl, $arrHeader);
 
 
-function to($data,$group, $arrHeader){
-	 $strUrl = 'https://api.line.me/v2/bot/message/push';
-	$card = array([
-			'type' => 'text',
-			'text' => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา 2018'
-		      ],[
-			     'type' => 'template',
-				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
-				"template" => array(
-				    'type' => 'buttons',
-				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
-				    'actions' =>  array([
-					  'type' => 'uri',
-					 'label' => 'สำรองคอร์ส',
-					 'uri' => 'line://ti/p/%40gkw1117o'
-					])
-				    )
-				]
-				);
-	$data = array('to' => $group, 'messages' => $card);
-	 send($data, $strUrl, $arrHeader);
-}
-
 
 if (strpos($textIn, 'หากลุ่ม') !== false) {
 	$curl = curl_init();
@@ -115,7 +92,7 @@ else if ($textIn == 'ดึง LINE@ เข้ากลุ่ม') {
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	
 	
 }
 
@@ -129,7 +106,7 @@ else if ($textIn == 'กระจายโฆษณา') {
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	too($arrJson['events'][0]['source']['groupId'],$arrHeader);
 	
 }
 
@@ -203,7 +180,7 @@ else if ($textIn == 'โพสต์สินค้าให้เด่น') {
 
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	  send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	too($arrJson['events'][0]['source']['groupId'],$arrHeader);
 }
 
 
@@ -235,7 +212,7 @@ $card = array(
 
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	too($arrJson['events'][0]['source']['groupId'],$arrHeader);
 }
 
 
@@ -292,7 +269,7 @@ else if ($textIn == 'สวัสดีไลน์กรุ๊ป') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	too($arrJson['events'][0]['source']['groupId'],$arrHeader);
 }
 
 else if ($textIn == 'ส่องสถานะของฉัน') {
@@ -319,7 +296,7 @@ else if ($textIn == 'ส่องสถานะของฉัน') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	too($arrJson['events'][0]['source']['groupId'],$arrHeader);
 }
 
 else if ($textIn == 'การส่งแบบฟอร์ม') {
@@ -391,7 +368,7 @@ else if ($textIn == 'การส่งแบบฟอร์ม') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	too($arrJson['events'][0]['source']['groupId'],$arrHeader);
 }
 
 else if ($textIn == 'การกำหนดเส้นทาง') {
@@ -443,7 +420,7 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 	
 	$data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	too($arrJson['events'][0]['source']['groupId'],$arrHeader);
 }
 
 
@@ -493,7 +470,7 @@ else if ($textIn == 'ข้อความไม่จำกัด') {
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	to($data,$arrJson['events'][0]['source']['groupId'], $arrHeader);
+	too($arrJson['events'][0]['source']['groupId'],$arrHeader);
 
 }
 
@@ -528,6 +505,39 @@ function send($data, $strUrl, $arrHeader){
 }
  
 
+function too($group,$arrHeader){
+	 $strUrl = 'https://api.line.me/v2/bot/message/push';
+	$card = array([
+			'type' => 'text',
+			'text' => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา 2018'
+		      ],[
+			     'type' => 'template',
+				"altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สร้างความแตกต่าง',
+				"template" => array(
+				    'type' => 'buttons',
+				    'text' => 'เรียนออนไลน์ โพสต์โฆษณาบนไลน์อย่างไรให้เด่น สะดุดตา สร้างความแตกต่างให้น่าสนใจ ฟีเจอร์แปลกๆ เพียบ! สอนหมดไม่หมกเม็ด ไม่ต้องเดินทาง สอนออนไลน์ฟรีเพียง 1 กลุ่ม ไม่มีค่าใช้จ่าย 100% รีบเข้าสำรองคอร์สก่อนกลุ่มเต็ม!',
+				    'actions' =>  array([
+					  'type' => 'uri',
+					 'label' => 'สำรองคอร์ส',
+					 'uri' => 'line://ti/p/%40gkw1117o'
+					])
+				    )
+				]
+				);
+	$data = array('to' => $group, 'messages' => $card);
+	 
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL,$strUrl);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	$result = curl_exec($ch);
+	curl_close ($ch);
+	
+}
 
 
  ?>
