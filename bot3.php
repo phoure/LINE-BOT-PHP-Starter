@@ -504,7 +504,7 @@ function send($data, $strUrl, $arrHeader){
 				    )
 				]
 				);
-	$data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	$data = array('to' => 'C5ca58854e5e7ae33964770acadc0211d', 'messages' => $card);
 	 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL,$strUrl);
@@ -516,5 +516,5 @@ function send($data, $strUrl, $arrHeader){
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	$result = curl_exec($ch);
 	curl_close ($ch);
-	
+	echo $result;
  ?>
