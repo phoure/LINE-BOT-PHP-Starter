@@ -207,7 +207,7 @@ if($_GET['post'] == '1'){
 		$card = array(
 		     [
 		     'type' => 'imagemap',
-  			"baseUrl"=> "https://www.img.in.th/images/7422cc14fef4846e53019cd5f219d415.jpg",
+  			"baseUrl"=> "https://i.imgur.com/W23qHMJ.jpg",
 			"altText" => 'สอนฟรี! ส่ง Rich Message ภาพเต็มจอได้ในกลุ่ม ตามมาเลย',
 			"baseSize" => array(
 			    'height' => 1040,
