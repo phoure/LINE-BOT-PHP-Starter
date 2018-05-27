@@ -266,10 +266,8 @@ if($_GET['post'] == '1'){
 			    'width' => 1040
 			    ),
 			  'actions' =>  array([
-						'type' => 'postback',
-   						"label" => "Buy",
-          					"data" => "action=buy&itemid=111",
-   							"text" => "Buy",
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40gkw1117o",
 						 "area" => array(
 						    'x' => 0,
 						    'y' => 0,
@@ -277,10 +275,9 @@ if($_GET['post'] == '1'){
 						    'width' => 520
 						    )
 						],[
-						'type' => 'postback',
-   						"label" => "Buy",
-          					"data" => "action=buy&itemid=111",
-   							"text" => "Buy",
+						'type' => 'message',
+          					"label" => "ข้อความไม่จำกัด",
+          					"text" => "ข้อความไม่จำกัด",
 						 "area" => array(
 						    'x' => 520,
 						    'y' => 0,
