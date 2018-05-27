@@ -3,7 +3,7 @@ $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/
 
 if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
-	
+		/*
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
 	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
@@ -14,7 +14,7 @@ if($_GET['post'] == '1'){
 	
 	$groupid[] = array('C7637dca57b09b0b7a88243ce49895ac6','กลุ่ม sexphone 18+');
 	
-	/*
+
 	
 	$groupid[] = array('C024ff6d8bb7414a952bc620da8942384','gsawanrak');
 	$groupid[] = array('C6551e5a95a2f80d6311b296b21676cca','peodklongwao');
@@ -230,7 +230,7 @@ if($_GET['post'] == '1'){
 			]
 			);
 		
-*/
+
 		
 		$card = array(
 		     [
@@ -249,6 +249,39 @@ if($_GET['post'] == '1'){
 						    'y' => 0,
 						    'height' => 1040,
 						    'width' => 1040
+						    )
+						])
+			]
+			);
+	*/	
+		
+		
+		$card = array(
+		     [
+		     'type' => 'imagemap',
+  			"baseUrl"=> "https://i.imgur.com/uetdiEe.jpg",
+			"altText" => 'รับแลกกลุ่ม ด่วน❗️',
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040
+			    ),
+			  'actions' =>  array([
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40gkw1117o",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 520,
+						    'width' => 520
+						    )
+						],[
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40gkw1117o",
+						 "area" => array(
+						    'x' => 520,
+						    'y' => 0,
+						    'height' => 520,
+						    'width' => 520
 						    )
 						])
 			]
