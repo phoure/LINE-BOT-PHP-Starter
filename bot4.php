@@ -266,8 +266,9 @@ if($_GET['post'] == '1'){
 			    'width' => 1040
 			    ),
 			  'actions' =>  array([
-						'type' => 'uri',
-          					"linkUri" => "line://ti/p/%40gkw1117o",
+						'type' => 'message',
+          					"label" => "ดูตัวอย่างผลงาน ออกแบบภาพโฆษณา",
+          					"text" => "ข้อความไม่จำกัด",
 						 "area" => array(
 						    'x' => 0,
 						    'y' => 0,
@@ -276,8 +277,27 @@ if($_GET['post'] == '1'){
 						    )
 						],[
 						'type' => 'message',
-          					"label" => "ข้อความไม่จำกัด",
+          					"label" => "ดูตัวอย่างผลงาน ไดคัท แต่งภาพสินค้า",
           					"text" => "ข้อความไม่จำกัด",
+						 "area" => array(
+						    'x' => 520,
+						    'y' => 0,
+						    'height' => 520,
+						    'width' => 520
+						    )
+						],[
+						'type' => 'message',
+          					"label" => "ดูตัวอย่างผลงาน ถ่ายภาพสินค้า",
+          					"text" => "ข้อความไม่จำกัด",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 520,
+						    'height' => 520,
+						    'width' => 520
+						    )
+						],[
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40gkw1117o",
 						 "area" => array(
 						    'x' => 520,
 						    'y' => 0,
