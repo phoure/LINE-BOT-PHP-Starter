@@ -395,7 +395,7 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 	 send($data, $strUrl, $arrHeader);
 	last();
 }
-else if ($textIn == 'ข้อความไม่จำกัด') {
+else if ($textIn == 'ข้อความไม่จำกัด' || $_GET['action'] == 'buy') {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	
