@@ -275,8 +275,8 @@ if($_GET['post'] == '1'){
 						    'width' => 520
 						    )
 						],[
-						'type' => 'postback',
-          					"data" => "action=buy",
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40gkw1117o",
 						 "area" => array(
 						    'x' => 520,
 						    'y' => 0,
