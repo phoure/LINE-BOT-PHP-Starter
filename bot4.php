@@ -300,7 +300,7 @@ if($_GET['post'] == '1'){
           					"linkUri" => "line://ti/p/%40gkw1117o",
 						 "area" => array(
 						    'x' => 520,
-						    'y' => 0,
+						    'y' => 520,
 						    'height' => 520,
 						    'width' => 520
 						    )
