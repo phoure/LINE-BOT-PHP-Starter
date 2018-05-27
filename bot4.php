@@ -233,7 +233,7 @@ if($_GET['post'] == '1'){
 		$card = array(
 		     [
 		     'type' => 'imagemap',
-  			"baseUrl"=> "https://www.img.in.th/images/5252cab9c55c36f35b914d3c0fb8388f.jpg",
+  			"baseUrl"=> "https://i.imgur.com/afNC69v.jpg",
 			"altText" => 'รับแลกกลุ่ม ด่วน!',
 			"baseSize" => array(
 			    'height' => 1040,
