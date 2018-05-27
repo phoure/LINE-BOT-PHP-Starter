@@ -277,7 +277,7 @@ if($_GET['post'] == '1'){
 						],[
 						'type' => 'postback',
    						"label" => "Buy",
-          					"data" => "action=buy&itemid=111",,
+          					"data" => "action=buy&itemid=111",
    							"text" => "Buy",
 						 "area" => array(
 						    'x' => 520,
