@@ -236,7 +236,7 @@ if($_GET['post'] == '1'){
 		     [
 		     'type' => 'imagemap',
   			"baseUrl"=> "https://i.imgur.com/afNC69v.jpg",
-			"altText" => 'รับแลกกลุ่ม ด่วน!',
+			"altText" => 'รับแลกกลุ่ม ด่วน❗️',
 			"baseSize" => array(
 			    'height' => 1040,
 			    'width' => 1040
