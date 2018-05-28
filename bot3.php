@@ -415,6 +415,16 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ออกแ�
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/bdba9eae4cad61ddb3c9e3a086372afe.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/bdba9eae4cad61ddb3c9e3a086372afe.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	
 	$card = array([
 		'type' => 'image',
 		'originalContentUrl' => 'https://www.img.in.th/images/2f7596e238d5854d51eff9b43d5f3aaf.jpg',
