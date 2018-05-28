@@ -443,7 +443,7 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ออกแ�
 	
 	$card = array([
      'type' => 'template',
-	"altText" => 'ออกแบบภาพโฆษณาคุณภาพ ราคาโดน สำหรับธุรกิจของท่าน',
+	"altText" => 'ออกแบบภาพโฆษณาคุณภาพ แต่ง-ถ่ายภาพสินค้า ราคาโดน สำหรับธุรกิจของท่าน',
 	"template" => array(
 	    'type' => 'buttons',
 	    'text' => 'ตัวอย่างผลงาน ออกแบบภาพโฆษณา หากสนใจงานคุณภาพ ราคาถูก สำหรับธุรกิจและร้านค้าของคุณ สามารถสอบถามรายละเอียดเพิ่มเติมได้เลยนะครับ',
@@ -509,7 +509,7 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ไดคั�
 	
 	$card = array([
      'type' => 'template',
-	"altText" => 'ออกแบบภาพโฆษณาคุณภาพ ราคาโดน สำหรับธุรกิจของท่าน',
+	"altText" => 'ออกแบบภาพโฆษณาคุณภาพ แต่ง-ถ่ายภาพสินค้า ราคาโดน สำหรับธุรกิจของท่าน',
 	"template" => array(
 	    'type' => 'buttons',
 	    'text' => 'ตัวอย่างผลงาน ไดคัตและแต่งภาพสินค้า หากสนใจงานคุณภาพ ราคาถูก สำหรับธุรกิจและร้านค้าของคุณ สามารถสอบถามรายละเอียดเพิ่มเติมได้เลยนะครับ',
@@ -525,6 +525,72 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ไดคั�
 	 send($data, $strUrl, $arrHeader);
 	//last();
 }
+
+else if ($textIn == 'ดูตัวอย่างผลงาน ถ่ายภาพสินค้า') {
+	
+	 $strUrl = 'https://api.line.me/v2/bot/message/push';
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/3e3a73bc6a0f9e1baebff70f12b117c8.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/3e3a73bc6a0f9e1baebff70f12b117c8.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/d35a5efd0573d8e7e9597136ec148dbc.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/d35a5efd0573d8e7e9597136ec148dbc.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/0f7b1c1a0e885cf927236b49cf1cbdf4.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/0f7b1c1a0e885cf927236b49cf1cbdf4.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/45cbe13abe41398188813cada210bb2b.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/45cbe13abe41398188813cada210bb2b.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/44f1e95bdfcec6738f5f1fe790a36472.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/44f1e95bdfcec6738f5f1fe790a36472.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+     'type' => 'template',
+	"altText" => 'ออกแบบภาพโฆษณาคุณภาพ แต่ง-ถ่ายภาพสินค้า ราคาโดน สำหรับธุรกิจของท่าน',
+	"template" => array(
+	    'type' => 'buttons',
+	    'text' => 'ตัวอย่างผลงาน ถ่ายภาพสินค้า หากสนใจงานคุณภาพ ราคาถูก สำหรับธุรกิจและร้านค้าของคุณ สามารถสอบถามรายละเอียดเพิ่มเติมได้เลยนะครับ',
+	    'actions' =>  array([
+		  'type' => 'uri',
+		 'label' => 'สอบถามรายละเอียด',
+		 'uri' => 'line://ti/p/%40gkw1117o'
+		])
+	    )
+	]
+	);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	//last();
+}
+
 else if ($textIn == '.') {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
