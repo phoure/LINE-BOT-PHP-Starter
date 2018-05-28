@@ -467,8 +467,8 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ถ่าย�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/6558ac1f311ebc888e513e36eafd781b.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/6558ac1f311ebc888e513e36eafd781b.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/947751944847dcb99d8acfaabcaeadd3.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/947751944847dcb99d8acfaabcaeadd3.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
@@ -493,16 +493,16 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ถ่าย�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/c548de0cd4ba4cc1c14d03bb748a4264.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/c548de0cd4ba4cc1c14d03bb748a4264.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/8e5b55a4a21dd75b8a1b631c84bcb5f7.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/8e5b55a4a21dd75b8a1b631c84bcb5f7.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/67153caf60b2a55de7a71cb34bbf10e6.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/67153caf60b2a55de7a71cb34bbf10e6.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/ad84820dba45581aeda842dba759c056.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/ad84820dba45581aeda842dba759c056.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
@@ -558,16 +558,16 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ไดคั�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/45cbe13abe41398188813cada210bb2b.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/45cbe13abe41398188813cada210bb2b.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/2cd590d5aaf589549c1c739a097e7937.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/2cd590d5aaf589549c1c739a097e7937.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/44f1e95bdfcec6738f5f1fe790a36472.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/44f1e95bdfcec6738f5f1fe790a36472.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/16a00d3f251d9728947d69255e283293.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/16a00d3f251d9728947d69255e283293.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
