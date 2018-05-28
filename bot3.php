@@ -400,48 +400,54 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ออกแ�
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	
 	$card = array([
-		'type' => 'text',
-		'text' => 'ตัวอย่างการตอบกลับอัตโนมัติแบบไม่จำกัด (ปกติส่งได้ไม่เกิน 5 ข้อความพร้อมกัน) รวมถึงภาพ วีดีโอ เสียง ตำแหน่ง และอื่นๆ'
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/8d3fecb9f6624ddfdc6a1934141766f1.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/8d3fecb9f6624ddfdc6a1934141766f1.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/851d7832f57a8a3d1b01105f21356583.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/851d7832f57a8a3d1b01105f21356583.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/7f00ecf9b6d3dc48804ed4b5f43fb8fd.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/7f00ecf9b6d3dc48804ed4b5f43fb8fd.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 	$card = array([
-		'type' => 'text',
-		'text' => 'ข้อความที่ 3'
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/2f7596e238d5854d51eff9b43d5f3aaf.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/2f7596e238d5854d51eff9b43d5f3aaf.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 	$card = array([
-		'type' => 'text',
-		'text' => 'ข้อความที่ 4'
+		'type' => 'image',
+		'originalContentUrl' => 'https://image.ibb.co/jZNZJJ/squar_a.jpg',
+		'previewImageUrl' => 'https://image.ibb.co/jZNZJJ/squar_a.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 	$card = array([
-		'type' => 'text',
-		'text' => 'ข้อความที่ 5'
-	      ]);
+     'type' => 'template',
+	"altText" => 'ออกแบบภาพโฆษณาคุณภาพ ราคาโดน สำหรับธุรกิจของท่าน',
+	"template" => array(
+	    'type' => 'buttons',
+	    'text' => 'ตัวอย่างผลงาน ออกแบบภาพโฆษณา หากสนใจงานคุณภาพ ราคาถูก สำหรับธุรกิจและร้านค้าของคุณ สามารถสอบถามรายละเอียดเพิ่มเติมได้เลยนะครับ',
+	    'actions' =>  array([
+		  'type' => 'uri',
+		 'label' => 'สอบถามรายละเอียด',
+		 'uri' => 'line://ti/p/%40gkw1117o'
+		])
+	    )
+	]
+	);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
-	
-	$card = array([
-		'type' => 'text',
-		'text' => 'ข้อความที่ 6 และได้อีกไม่จำกัด'
-	      ]);
-	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
-	 send($data, $strUrl, $arrHeader);
-	last();
+	//last();
 }
 else if ($textIn == '.') {
 	
