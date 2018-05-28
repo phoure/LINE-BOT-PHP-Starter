@@ -395,7 +395,7 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 	 send($data, $strUrl, $arrHeader);
 	last();
 }
-else if ($textIn == 'ข้อความไม่จำกัด') {
+else if ($textIn == 'ดูตัวอย่างผลงาน ออกแบบภาพโฆษณา') {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	
