@@ -459,6 +459,72 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ออกแ�
 	 send($data, $strUrl, $arrHeader);
 	//last();
 }
+
+
+else if ($textIn == 'ดูตัวอย่างผลงาน ไดคัตและแต่งภาพสินค้า') {
+	
+	 $strUrl = 'https://api.line.me/v2/bot/message/push';
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/6558ac1f311ebc888e513e36eafd781b.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/6558ac1f311ebc888e513e36eafd781b.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/3e4507e0733279f56f997c7130813183.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/3e4507e0733279f56f997c7130813183.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/7f9ac20f569e7f9e2d92e98e22f6f158.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/7f9ac20f569e7f9e2d92e98e22f6f158.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/c548de0cd4ba4cc1c14d03bb748a4264.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/c548de0cd4ba4cc1c14d03bb748a4264.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/67153caf60b2a55de7a71cb34bbf10e6.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/67153caf60b2a55de7a71cb34bbf10e6.md.jpg'
+	      ]);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	
+	$card = array([
+     'type' => 'template',
+	"altText" => 'ออกแบบภาพโฆษณาคุณภาพ ราคาโดน สำหรับธุรกิจของท่าน',
+	"template" => array(
+	    'type' => 'buttons',
+	    'text' => 'ตัวอย่างผลงาน ไดคัตและแต่งภาพสินค้า หากสนใจงานคุณภาพ ราคาถูก สำหรับธุรกิจและร้านค้าของคุณ สามารถสอบถามรายละเอียดเพิ่มเติมได้เลยนะครับ',
+	    'actions' =>  array([
+		  'type' => 'uri',
+		 'label' => 'สอบถามรายละเอียด',
+		 'uri' => 'line://ti/p/%40gkw1117o'
+		])
+	    )
+	]
+	);
+	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+	//last();
+}
 else if ($textIn == '.') {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
