@@ -1,6 +1,5 @@
 <?php
 $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
-
 if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
 		/*
@@ -8,13 +7,11 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
 	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
 	$groupid[] = array('Ca50339a267e2c0d17c0254976452070e','woo');
-
 	$groupid[] = array('C1d928e7a66b686c47096843cfa54aea5','hotvip4');
 	$groupid[] = array('Cfb706767723304e5d44b91789bed6ac1','eiei');
 	
 	$groupid[] = array('C7637dca57b09b0b7a88243ce49895ac6','กลุ่ม sexphone 18+');
 	
-
 	
 	$groupid[] = array('C024ff6d8bb7414a952bc620da8942384','gsawanrak');
 	$groupid[] = array('C6551e5a95a2f80d6311b296b21676cca','peodklongwao');
@@ -24,7 +21,6 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
 	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
 	*/
-
 	$id[] = 'เทคนิคและวิธีโพสต์สินค้าในไลน์ให้ขายดี 2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา แบบมืออาชีพ';  $thumb[] = 'https://www.img.in.th/images/3d4ed988b8d35b0517a01b7a8152db17.jpg';
 	$id[] = 'โพสต์โฆษณาให้เด่นและปังกว่าใคร'; $title[]= 'โพสโฆษณาด้วยรูปแบบต่างๆ ที่ใครเห็นก็ต้องกดดู'; $thumb[] = 'https://www.img.in.th/images/f2de649746267a9556855833d96f357a.jpg';
 	$id[] = 'ส่ง Rich Message ได้ฟรีๆ'; $title[]= 'ส่งข้อความภาพแบบเต็มจอโดยไม่ต้องเสียเงินสักบาท'; $thumb[] = 'https://www.img.in.th/images/3305912fa6e44c8246dcc9f5e0c0beee.jpg';
@@ -35,7 +31,6 @@ if($_GET['post'] == '1'){
 	$id[] = 'ควบคุมได้ทุกอย่างในแอปไลน์'; $title[]= 'เพิ่มความสะดวกสบาย และน่าอัศจรรย์ด้วยการส่งลูกค้าไปทุกที่ที่ต้องการ'; $thumb[] = 'https://www.img.in.th/images/1a4ca077e8c6f9c1421072958a4306df.jpg';
 	$id[] = 'ตอบกลับได้มากกว่า 5 ข้อความ'; $title[]= 'จะกี่ข้อความก็ส่งได้ไม่มีปัญหา ทิ้งข้อจำกัดทั้งข้อความต้อนรับและตอบกลับอัตโนมัติ'; $thumb[] = 'https://www.img.in.th/images/af83d26d25a1131f06404fdb56ce4472.jpg';
 	$id[] = 'เทคนิคอื่นๆ อีกมากมาย'; $title[]= 'เทคนิคที่ไม่เคยมีใครสอนมาก่อน สอนฟรีเพียง 1 กลุ่ม เต็มปิดลิงก์ทันที รีบเข้า!'; $thumb[] = 'https://www.img.in.th/images/b9e2d3455c31d2e0a10c662eae1106e5.jpg';
-
 	for ($x = 0; $x <= count($groupid)-1; $x++) {
 		
 	/*
@@ -176,12 +171,10 @@ if($_GET['post'] == '1'){
 									'uri' => 'line://ti/p/%40gkw1117o'
 															])
 								]),
-
 											'imageAspectRatio' => 'rectangle',
 											'imageSize' => 'cover'
 						)
 		]);
-
 	*/	
 	/*
 		$card = array(
@@ -202,11 +195,7 @@ if($_GET['post'] == '1'){
 				]
 				);
 	
-
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
-
-
-
 		
 		$card = array(
 		     [
@@ -230,13 +219,12 @@ if($_GET['post'] == '1'){
 			]
 			);
 		
-
 		
 		$card = array(
 		     [
 		     'type' => 'imagemap',
   			"baseUrl"=> "https://i.imgur.com/LMUnroM.jpg",
-			"altText" => 'รับแลกกลุ่ม ด่วน❗️',
+			"altText" => 'ลดถึง 50% ทุกบริการ ออกแบบภาพโฆษณา แต่ง-ถ่ายภาพสินค้า สำหรับธุรกิจและร้านค้าของคุณ งานคุณภาพสูง ราคาโดน ลูกค้าซื้อแน่นอน!',
 			"baseSize" => array(
 			    'height' => 1040,
 			    'width' => 1040
@@ -260,7 +248,7 @@ if($_GET['post'] == '1'){
 		     [
 		     'type' => 'imagemap',
   			"baseUrl"=> "https://i.imgur.com/FeG6ZsJ.jpg",
-			"altText" => 'ลดถึง 50% ทุกบริการ ออกแบบภาพโฆษณา แต่ง-ถ่ายภาพสินค้า สำหรับธุรกิจและร้านค้าของคุณ งานคุณภาพสูง ราคาโดน ลูกค้าซื้อแน่นอน!',
+			"altText" => 'รับแลกกลุ่ม ด่วน❗️',
 			"baseSize" => array(
 			    'height' => 1040,
 			    'width' => 1040
@@ -319,12 +307,10 @@ if($_GET['post'] == '1'){
 			);
 		
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
-
 				// Make a POST Request to Messaging API to reply to sender
 				$url = 'https://api.line.me/v2/bot/message/push';
 				$post = json_encode($data);
 				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
 				$ch = curl_init($url);
 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -333,9 +319,6 @@ if($_GET['post'] == '1'){
 				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 				$result = curl_exec($ch);
 				curl_close($ch);
-
 				echo $result . "\r\n";
-
-
 	} 
 }
