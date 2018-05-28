@@ -395,7 +395,7 @@ else if ($textIn == 'การกำหนดเส้นทาง') {
 	 send($data, $strUrl, $arrHeader);
 	last();
 }
-else if ($textIn == 'ข้อความไม่จำกัด' || $_GET['action'] == 'buy') {
+else if ($textIn == 'ข้อความไม่จำกัด') {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	
@@ -407,8 +407,9 @@ else if ($textIn == 'ข้อความไม่จำกัด' || $_GET['ac
 	 send($data, $strUrl, $arrHeader);
 	
 	$card = array([
-		'type' => 'text',
-		'text' => 'ข้อความที่ 2'
+		'type' => 'image',
+		'originalContentUrl' => 'https://www.img.in.th/images/851d7832f57a8a3d1b01105f21356583.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/851d7832f57a8a3d1b01105f21356583.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
