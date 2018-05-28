@@ -297,7 +297,7 @@ if($_GET['post'] == '1'){
 						    )
 						],[
 						'type' => 'uri',
-          					"linkUri" => "line://ti/p/%40gkw1117o",
+          					"linkUri" => "line://ti/p/%40giy8621v",
 						 "area" => array(
 						    'x' => 520,
 						    'y' => 520,
