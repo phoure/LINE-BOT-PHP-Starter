@@ -418,8 +418,8 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ออกแ�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/8e5b55a4a21dd75b8a1b631c84bcb5f7.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/8e5b55a4a21dd75b8a1b631c84bcb5f7.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/bdba9eae4cad61ddb3c9e3a086372afe.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/bdba9eae4cad61ddb3c9e3a086372afe.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
@@ -427,8 +427,8 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ออกแ�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/ad84820dba45581aeda842dba759c056.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/ad84820dba45581aeda842dba759c056.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/2f7596e238d5854d51eff9b43d5f3aaf.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/2f7596e238d5854d51eff9b43d5f3aaf.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
