@@ -418,8 +418,8 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ออกแ�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/bdba9eae4cad61ddb3c9e3a086372afe.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/bdba9eae4cad61ddb3c9e3a086372afe.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/8e5b55a4a21dd75b8a1b631c84bcb5f7.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/8e5b55a4a21dd75b8a1b631c84bcb5f7.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
@@ -427,8 +427,8 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ออกแ�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/2f7596e238d5854d51eff9b43d5f3aaf.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/2f7596e238d5854d51eff9b43d5f3aaf.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/ad84820dba45581aeda842dba759c056.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/ad84820dba45581aeda842dba759c056.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
@@ -501,8 +501,8 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ถ่าย�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/ad84820dba45581aeda842dba759c056.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/ad84820dba45581aeda842dba759c056.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/f86e47ba78dcb188600517f8b83d9543.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/f86e47ba78dcb188600517f8b83d9543.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
@@ -512,7 +512,7 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ถ่าย�
 	"altText" => 'ออกแบบภาพโฆษณาคุณภาพ แต่ง-ถ่ายภาพสินค้า ราคาโดน สำหรับธุรกิจของท่าน',
 	"template" => array(
 	    'type' => 'buttons',
-	    'text' => 'ตัวอย่างผลงาน ไดคัตและแต่งภาพสินค้า หากสนใจงานคุณภาพ ราคาถูก สำหรับธุรกิจและร้านค้าของคุณ สามารถสอบถามรายละเอียดเพิ่มเติมได้เลยนะครับ',
+	    'text' => 'ตัวอย่างผลงาน ถ่ายภาพสินค้า หากสนใจงานคุณภาพ ราคาถูก สำหรับธุรกิจและร้านค้าของคุณ สามารถสอบถามรายละเอียดเพิ่มเติมได้เลยนะครับ',
 	    'actions' =>  array([
 		  'type' => 'uri',
 		 'label' => 'สอบถามรายละเอียด',
@@ -558,16 +558,16 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ไดคั�
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/2cd590d5aaf589549c1c739a097e7937.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/2cd590d5aaf589549c1c739a097e7937.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/45cbe13abe41398188813cada210bb2b.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/45cbe13abe41398188813cada210bb2b.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 	
 	$card = array([
 		'type' => 'image',
-		'originalContentUrl' => 'https://www.img.in.th/images/16a00d3f251d9728947d69255e283293.jpg',
-		'previewImageUrl' => 'https://www.img.in.th/images/16a00d3f251d9728947d69255e283293.md.jpg'
+		'originalContentUrl' => 'https://www.img.in.th/images/44f1e95bdfcec6738f5f1fe790a36472.jpg',
+		'previewImageUrl' => 'https://www.img.in.th/images/44f1e95bdfcec6738f5f1fe790a36472.md.jpg'
 	      ]);
 	 $data = array('to' => $arrJson['events'][0]['source']['groupId'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
