@@ -323,7 +323,7 @@ if($_GET['post'] == '1'){
 			    ),
 			  'actions' =>  array([
 						'type' => 'uri',
-          					"linkUri" => "line://ti/p/%40giy8621v",
+          					"linkUri" => "line://ti/p/%40gkw1117o",
 						 "area" => array(
 						    'x' => 0,
 						    'y' => 0,
@@ -340,7 +340,7 @@ if($_GET['post'] == '1'){
 						    'actions' =>  array([
 						  'type' => 'uri',
 						 'label' => 'สอบถามรายละเอียด',
-						 'uri' => 'line://ti/p/%40giy8621v'
+						 'uri' => 'line://ti/p/%40gkw1117o'
 						])
 	  					  )
 	]
