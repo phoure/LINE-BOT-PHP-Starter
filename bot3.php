@@ -740,12 +740,12 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ไดคั�
 	//last();
 }
 
-else if ($textIn == '.') {
+else if ($textIn == '.' || strpos($textIn, 'กลุ่มโพสงาน') !== false ||  strpos($textIn, 'แจกธีม') !== false) {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	$card = array([
 			'type' => 'text',
-			'text' => $arrJson['events'][0]['source']['groupId']
+			'text' => 'โพสงาน '.$arrJson['events'][0]['source']['userId']
 		      ]);
 	
 	 $data = array('to' => 'C5ca58854e5e7ae33964770acadc0211d', 'messages' => $card);
