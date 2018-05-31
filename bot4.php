@@ -2,7 +2,7 @@
 $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
 if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
-	
+		/*
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
 	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
@@ -19,7 +19,7 @@ if($_GET['post'] == '1'){
 	
 	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
 	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
-		/*
+	
 		
 	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
 	*/
@@ -243,7 +243,7 @@ if($_GET['post'] == '1'){
 						])
 			]
 			);
-	*/	
+
 		
 		
 		$card = array(
@@ -309,6 +309,45 @@ if($_GET['post'] == '1'){
 	  					  )
 	]
 			);
+	/*
+	
+	
+	$card = array(
+		     [
+		     'type' => 'imagemap',
+  			"baseUrl"=> "https://www.picz.in.th/images/2018/05/31/zagyW2.jpg",
+			"altText" => 'กลุ่มธุรกิจโพสต์ขายสินค้าได้ฟรี! เพียงกลุ่มละ 1 บาท สำหรับต่อยอดธุรกิจทุกรูปแบบ คนเยอะทุกกลุ่ม รับประกันได้เข้าจริงทุกลิงก์!',
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040
+			    ),
+			  'actions' =>  array([
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40giy8621v",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 1040,
+						    'width' => 1040
+						    )
+						])
+			],[
+     'type' => 'template',
+	"altText" => 'กลุ่มธุรกิจโพสต์ขายสินค้าได้ฟรี! เพียงกลุ่มละ 1 บาท สำหรับต่อยอดธุรกิจทุกรูปแบบ คนเยอะทุกกลุ่ม รับประกันได้เข้าจริงทุกลิงก์!',
+						"template" => array(
+						    'type' => 'buttons',
+	'text' => 'กลุ่มธุรกิจเพียงกลุ่มละ 1 บาท สำหรับต่อยอดธุรกิจทุกรูปแบบ คนเยอะ โพสต์ขายสินค้าฟรี รับประกันได้เข้าจริงทุกกลุ่ม! สนใจสอบถามรายละเอียดได้เลยนะคะ',
+						    'actions' =>  array([
+						  'type' => 'uri',
+						 'label' => 'สอบถามรายละเอียด',
+						 'uri' => 'line://ti/p/%40giy8621v'
+						])
+	  					  )
+	]
+			);
+		
+		
+		
 		
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				// Make a POST Request to Messaging API to reply to sender
