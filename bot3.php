@@ -740,7 +740,7 @@ else if ($textIn == 'ดูตัวอย่างผลงาน ไดคั�
 	//last();
 }
 
-else if ($textIn == '.' || strpos($textIn, 'กลุ่มโพสงาน') !== false ||  strpos($textIn, 'แจกธีม') !== false) {
+else if ($textIn == '.') {
 	
 	 $strUrl = 'https://api.line.me/v2/bot/message/push';
 	$card = array([
