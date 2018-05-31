@@ -745,7 +745,7 @@ else if ($textIn == '.') {
 	$strUrl = 'https://api.line.me/v2/bot/message/push';
 	$card = array([
 			'type' => 'text',
-			'text' => $arrJson['events'][0]['source']['groupId']
+			'text' => $arrJson['events'][0]['source']['userId']
 		      ]);
 	
 	 $data = array('to' => 'C5ca58854e5e7ae33964770acadc0211d', 'messages' => $card);
