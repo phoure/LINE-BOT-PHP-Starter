@@ -18,8 +18,7 @@ if ($textIn == '.') {
 			'text' => 'กลุ่ม ID '.$arrJson['events'][0]['source']['groupId']
 		      ]);
 	
-	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
-	 send($data, $strUrl);
+	 send($data,  $arrJson['events'][0]['replyToken']);
 
 	
 }
