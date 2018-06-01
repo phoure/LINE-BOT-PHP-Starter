@@ -12,13 +12,12 @@ $group = 'Cd3f6dbdec8b434e7a2c6db4997b5769d';
 */
 if ($textIn == '.') {
 	
-	$strUrl = 'https://api.line.me/v2/bot/message/reply';
 	$card = array([
 			'type' => 'text',
 			'text' => 'กลุ่ม ID '.$arrJson['events'][0]['source']['groupId']
 		      ]);
 	
-	 send($data,  $arrJson['events'][0]['replyToken']);
+	 send($card,  $arrJson['events'][0]['replyToken']);
 
 	
 }
