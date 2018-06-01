@@ -2,7 +2,7 @@
 $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
 if($_GET['post'] == '1'){
 //	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
-	$groupid[] = array('Uce60e0a979694f4421e3e0b03c575ca4','test');
+	$groupid[] = array('C7259a14167e54ec5b848c507fb98d73e','test');
 	
 	
 	
