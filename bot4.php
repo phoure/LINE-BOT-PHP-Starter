@@ -1,8 +1,12 @@
 <?php
 $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
 if($_GET['post'] == '1'){
-	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
+//	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
+	$groupid[] = array('Uce60e0a979694f4421e3e0b03c575ca4','test');
 	
+	
+	
+	/*	
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
 	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
@@ -19,7 +23,7 @@ if($_GET['post'] == '1'){
 	
 	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
 	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
-		/*
+	
 		
 	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
 	*/
