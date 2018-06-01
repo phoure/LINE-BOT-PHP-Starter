@@ -314,7 +314,7 @@ if($_GET['post'] == '1'){
 	]
 			);
 	*/
-
+/*
 	
 	$card = array(
 		     [
@@ -351,7 +351,7 @@ if($_GET['post'] == '1'){
 			);
 		
 		
-		
+	*/	
 		
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				// Make a POST Request to Messaging API to reply to sender
