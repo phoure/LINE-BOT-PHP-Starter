@@ -39,7 +39,8 @@ else if ($_GET['action' == 'calc') {
 		
 function send($card,$to){
 	
-	
+	$access_token = 'hfdfyAmqI79pFXL+upQ6LobXR6TRwi9ydmcwYuhgLgyg/1Vx8EckOUbGxo41Bt4oN38CW4hgI82pB2VX3Psttb6X3Kz50/Kq4TPjpJNzfhPMSUrhhr5xRMyhapAbU00orb6TFddfVy2VvbrnBJqEgAdB04t89/1O/w1cDnyilFU=';
+
 	$arrHeader = array();
 	$arrHeader[] = "Content-Type: application/json";
 	$arrHeader[] = "Authorization: Bearer {$access_token}";
