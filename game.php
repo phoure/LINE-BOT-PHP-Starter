@@ -13,6 +13,19 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
 	 send($data, $strUrl, $arrHeader);
 
 
+else if ($textIn == '.') {
+	
+	$strUrl = 'https://api.line.me/v2/bot/message/reply';
+	$card = array([
+			'type' => 'text',
+			'text' => 'กลุ่ม ID '.$arrJson['events'][0]['source']['groupId']
+		      ]);
+	
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+
+	
+}
 
 		
 function send($data, $strUrl, $arrHeader){
