@@ -12,8 +12,7 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
 	 send($data, $strUrl, $arrHeader);
 
-
-else if ($textIn == '.') {
+if ($textIn == '.') {
 	
 	$strUrl = 'https://api.line.me/v2/bot/message/reply';
 	$card = array([
