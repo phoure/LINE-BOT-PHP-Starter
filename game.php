@@ -36,7 +36,7 @@ if ($textIn == '.') {
 
 
 else if ($textIn == 'ดู') {
-	curl_get_contents('http://make.in.th/game/calc.php?action=checkscore&id='.$userId);
+	curl_get_contents('http://make.in.th/game/calc.php?action=checkscore&token='.$replayId.'&id='.$userId);
 }
 
 else if ($textIn == $ans_calc) {
