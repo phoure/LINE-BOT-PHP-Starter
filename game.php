@@ -22,27 +22,6 @@ $userId = $arrJson['events'][0]['source']['userId'];
 $group = 'Cd3f6dbdec8b434e7a2c6db4997b5769d';
 
 
-////////////////////////////////////////// get name //////////////////////////////////////////
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.line.me/v2/bot/group/'.$group.'/member/'.$userId,
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "authorization: Bearer ".$access_token,
-    "cache-control: no-cache"
-  ),
-));
-
-$response_user = curl_exec($curl);
-$response_user = json_decode($response_user, true);
-$userName = $response_user['displayName'];
-
 $ans_calc = curl_get_contents('http://make.in.th/game/calc.txt');
 
 
@@ -57,11 +36,11 @@ if ($textIn == '.') {
 
 
 else if ($textIn == 'ดู') {
-	$call = curl_get_contents('http://make.in.th/game/calc.php?action=checkscore&id='.$userId);
+	curl_get_contents('http://make.in.th/game/calc.php?action=checkscore&id='.$userId);
 }
 
 else if ($textIn == $ans_calc) {
-	$call = curl_get_contents('http://make.in.th/game/calc.php?action=ans&id='.$userId.'&token='.$replayId.'&ans='.$textIn);
+	curl_get_contents('http://make.in.th/game/calc.php?action=ans&id='.$userId.'&token='.$replayId.'&ans='.$textIn);
 }
 
 
