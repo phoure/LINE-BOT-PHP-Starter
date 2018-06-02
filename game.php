@@ -13,15 +13,6 @@ function curl_get_contents($url)
 }
 
 
-
-function emoji($code){
-$bin = hex2bin(str_repeat('0', 8 - strlen($code)) . $code);
-$emoticon =  mb_convert_encoding($bin, 'UTF-8', 'UTF-32BE');
-return $emoticon;
-}
-
-
-
 $access_token = 'hfdfyAmqI79pFXL+upQ6LobXR6TRwi9ydmcwYuhgLgyg/1Vx8EckOUbGxo41Bt4oN38CW4hgI82pB2VX3Psttb6X3Kz50/Kq4TPjpJNzfhPMSUrhhr5xRMyhapAbU00orb6TFddfVy2VvbrnBJqEgAdB04t89/1O/w1cDnyilFU=';
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
@@ -56,47 +47,30 @@ $ans_calc = curl_get_contents('http://make.in.th/game/calc.txt');
 
 
 
-
 if ($textIn == '.') {
 	$card = array([
 			'type' => 'text',
 			'text' => 'User Id '.$userName.' คือ '.$userId
-		      ]);
-	
+		    ]);
 	 send($card, 'reply', $replayId);
 }
 
 
-else if ($_GET['d'] == 'rr') {
-				
-				$card = array([
-				'type' => 'text',
-				'text' => "กระเป๋าของ Phoure\n 13 กdล่อง".emoji('1000B2')
-			      ]);
-				 send($card, 'push', $group);
+else if ($textIn == 'ดู') {
+	$call = curl_get_contents('http://make.in.th/game/calc.php?action=checkscore&id='.$userId);
 }
 
 else if ($textIn == $ans_calc) {
-	$call = curl_get_contents('http://make.in.th/game/calc.php?action=ans&id='.$userId.'&ans='.$textIn);
-	$call = explode('---', $call);
-		if($call[0] == '1'){
-
-				$card = array([
-				'type' => 'text',
-				'text' => $userName.' ตอบถูกต้อง! มีคะนนสะสม '.$call[1].' คะแนน'
-			      ]);
-				 send($card, 'push', $group);
-		 }
+	$call = curl_get_contents('http://make.in.th/game/calc.php?action=ans&id='.$userId.'&token='.$replayId.'&ans='.$textIn);
 }
 
 
-function regis($name, $reply){
-		$card = array([
-		'type' => 'text',
-		'text' => $name.' คุณยังไม่ได้ลงทะเบียน โปรดลงทะเบียนก่อน'
-	      ]);
-		 send($card, 'reply', $reply);
+function emoji($code){
+$bin = hex2bin(str_repeat('0', 8 - strlen($code)) . $code);
+$emoticon =  mb_convert_encoding($bin, 'UTF-8', 'UTF-32BE');
+return $emoticon;
 }
+
 
 function send($card,$target ,$to){
 	
