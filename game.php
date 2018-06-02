@@ -39,6 +39,11 @@ else if ($textIn == 'ดู') {
 	curl_get_contents('http://make.in.th/game/calc.php?action=checkscore&id='.$userId);
 }
 
+
+else if ($_GET['action']='vv') {
+	curl_get_contents('http://make.in.th/game/calc.php?action=checkscore&id=U6608ad87ad51e165318f70a7d0941862');
+}
+
 else if ($textIn == $ans_calc) {
 	curl_get_contents('http://make.in.th/game/calc.php?action=ans&id='.$userId.'&token='.$replayId.'&ans='.$textIn);
 }
