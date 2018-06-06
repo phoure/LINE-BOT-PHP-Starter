@@ -20,6 +20,8 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Ccd448170913d4ed8689385be94a90ddb','test');
 	$groupid[] = array('C03bfbfda7f0be4a557f3896f72ffe581','test');
 	$groupid[] = array('C97f4e0eaca4d229832ce07a611e796c8','test');
+	$groupid[] = array('C2fdd63b2ad24c1dcb8facf7eedecb157','test');
+	$groupid[] = array('C613643aa8d6765f39197fd29e600ea16','test');
 	
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
