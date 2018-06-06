@@ -1,12 +1,26 @@
 <?php
 $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
 if($_GET['post'] == '1'){
-//	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
+	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
+	
+	/*
+	$groupid[] = array('C8900370d1a454dc66aec73dd6e338e2e','test');
+	$groupid[] = array('C7299d5f55789ad1c3289b9349d7f7979','test');
+	$groupid[] = array('C681668425a5bfe078431ddfdb5a05639','test');
+	$groupid[] = array('C820d94f33e6390badda5b7d7f3bfe14e','test');
 	$groupid[] = array('C7259a14167e54ec5b848c507fb98d73e','test');
+	$groupid[] = array('C0f3eda007cb06163bce06bc0c7970890','test');
+	$groupid[] = array('C7c21fdfdb672d564a42e329b86750313','test');
+	$groupid[] = array('Cba1f9c02200bd7676979081a14026f92','test');
+	$groupid[] = array('C7c21fdfdb672d564a42e329b86750313','test');
+	$groupid[] = array('C12896fed940f59e1d5cc2d8e5792c011','test');
+	$groupid[] = array('Cc556ed47c830e4d2ae08517a01110d98','test');
+	$groupid[] = array('Cf7510422684df939758b8b332d6a1ab7','test');
+	$groupid[] = array('C8c9761fb896d7cf8b1427454e5d52af9','test');
+	$groupid[] = array('Ccd448170913d4ed8689385be94a90ddb','test');
+	$groupid[] = array('C03bfbfda7f0be4a557f3896f72ffe581','test');
+	$groupid[] = array('C97f4e0eaca4d229832ce07a611e796c8','test');
 	
-	
-	
-	/*	
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
 	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
@@ -16,14 +30,12 @@ if($_GET['post'] == '1'){
 	
 	$groupid[] = array('C7637dca57b09b0b7a88243ce49895ac6','กลุ่ม sexphone 18+');
 	
-	
 	$groupid[] = array('C024ff6d8bb7414a952bc620da8942384','gsawanrak');
 	$groupid[] = array('C6551e5a95a2f80d6311b296b21676cca','peodklongwao');
 	$groupid[] = array('C44bd3b2fd00f81a47563fa9f8deb3653','mangkonnimitr');
 	
 	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
 	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
-	
 		
 	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
 	*/
@@ -65,7 +77,7 @@ if($_GET['post'] == '1'){
 			]
 			);
 */
-
+/*
 	$card = array([
 		'type' => 'template',
 	    "altText" => 'สอนโปรโมท โพสต์โฆษณาในไลน์อย่างไรให้เด่น สะดุดตา วิธีใหม่ปี 2018',
@@ -181,7 +193,7 @@ if($_GET['post'] == '1'){
 											'imageSize' => 'cover'
 						)
 		]);
-		
+	*/	
 	/*
 		$card = array(
 			     [
@@ -314,7 +326,7 @@ if($_GET['post'] == '1'){
 	]
 			);
 	*/
-/*
+
 	
 	$card = array(
 		     [
@@ -351,7 +363,7 @@ if($_GET['post'] == '1'){
 			);
 		
 		
-	*/	
+		
 		
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				// Make a POST Request to Messaging API to reply to sender
