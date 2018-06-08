@@ -31,15 +31,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cfb706767723304e5d44b91789bed6ac1','eiei');
 
 	$groupid[] = array('C7637dca57b09b0b7a88243ce49895ac6','กลุ่ม sexphone 18+');
-	
-	$groupid[] = array('C024ff6d8bb7414a952bc620da8942384','gsawanrak');
-	$groupid[] = array('C6551e5a95a2f80d6311b296b21676cca','peodklongwao');
-	$groupid[] = array('C44bd3b2fd00f81a47563fa9f8deb3653','mangkonnimitr');
-	
-	$groupid[] = array('C16bffe43b165df3429a722dde84adcfc','konrakphone');
-	$groupid[] = array('C04ae8ed4e3d9f6e8de35cd48639b85c0','peodkkongwao1');
-		
-	$groupid[] = array('Cdcbc1ac3c747ec546fdd194c0fbf7b1f','clipgaysab');
+
 
 	$id[] = 'เทคนิคและวิธีโพสต์สินค้าในไลน์ให้ขายดี 2018'; $title[]= 'สอนโปรโมท โพสต์โฆษณาอย่างไรให้เด่น สะดุดตา แบบมืออาชีพ';  $thumb[] = 'https://www.img.in.th/images/3d4ed988b8d35b0517a01b7a8152db17.jpg';
 	$id[] = 'โพสต์โฆษณาให้เด่นและปังกว่าใคร'; $title[]= 'โพสโฆษณาด้วยรูปแบบต่างๆ ที่ใครเห็นก็ต้องกดดู'; $thumb[] = 'https://www.img.in.th/images/f2de649746267a9556855833d96f357a.jpg';
