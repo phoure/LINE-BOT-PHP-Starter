@@ -391,7 +391,7 @@ if($_GET['post'] == '1'){
 			
 			
 	$imgs = array('https://image.ibb.co/mfHwq8/post1.jpg', 'https://image.ibb.co/bzBBOT/post2.jpg', 'https://image.ibb.co/mOiEco/post3.jpg');
-	$randimg =  $box[array_rand($imgs,1)];
+	$randimg =  $imgs[array_rand($imgs,1)];
 			
 		$card = array(
 		     [
