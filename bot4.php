@@ -372,7 +372,7 @@ if($_GET['post'] == '1'){
 	$card = array(
 		     [
 		     'type' => 'imagemap',
-  			"baseUrl"=> "https://www.picz.in.th/images/2018/06/08/4YqmKQ.jpg",
+  			"baseUrl"=> "https://www.picz.in.th/images/2018/06/08/4YEsIZ.jpg",
 			"altText" => '🎉 ขายดีแน่นอน! โพสโฆษณาลงกว่า 200 กลุ่ม พิเศษ! ออกแบบภาพโฆษณาฟรี',
 			"baseSize" => array(
 			    'height' => 1040,
