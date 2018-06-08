@@ -368,11 +368,11 @@ if($_GET['post'] == '1'){
 		
 		
 		
-	//https://i.imgur.com/U1NQMvE.jpg
+	//https://i.imgur.com/DbJK5lr.jpg
 	$card = array(
 		     [
 		     'type' => 'imagemap',
-  			"baseUrl"=> "https://i.imgur.com/DbJK5lr.jpg",
+  			"baseUrl"=> "https://i.imgur.com/U1NQMvE.jpg",
 			"altText" => '🎉 ขายดีแน่นอน! โพสโฆษณาลงกว่า 200 กลุ่ม พิเศษ! ออกแบบภาพโฆษณาฟรี',
 			"baseSize" => array(
 			    'height' => 1040,
