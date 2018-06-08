@@ -366,7 +366,7 @@ if($_GET['post'] == '1'){
 		$card = array(
 		     [
 		     'type' => 'imagemap',
-  			"baseUrl"=> "https://i.imgur.com/DbJK5lr.jpg",
+  			"baseUrl"=> "https://i.imgur.com/dkDMRKb.jpg",
 			"altText" => 'พลาดแล้วจะเสียใจ โปรโมชั่น แรงสุดๆ อีกครั้ง #พระมองตาม  #ซื้อ 1 แถม 1 เฉพาะในงาน OTOP Midyear 2018 ณ อิมแพ็คเมืองทองธานี',
 			"baseSize" => array(
 			    'height' => 1040,
