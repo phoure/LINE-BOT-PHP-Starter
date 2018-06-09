@@ -24,7 +24,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('C2fdd63b2ad24c1dcb8facf7eedecb157','test');
 	$groupid[] = array('C613643aa8d6765f39197fd29e600ea16','test');
 	
-	*/
+
 	
 	$groupid[] = array('C22f7e03e37cb4aaeeb778ec5178fd29e','test');
 	$groupid[] = array('Cf0dcf148a517bec05c446091363aab0a','test');
@@ -35,7 +35,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cf077205d7ba2847c806ea2554ea681f2','test');
 	$groupid[] = array('C0c1ccc85df9453c44aed540ae617831b','test');
 	
-	/*
+
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
 	$groupid[] = array('C2a59c1358911b2ca9e2648e967113ad6','ช้อปปิ้งออนไลน์0');
