@@ -4,7 +4,7 @@ if($_GET['post'] == '1'){
 	//$groupid[] = array('Cca7d5d4fa77312c96f6fc6cb452d649e','sleep');
 
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
-/*
+
 	$groupid[] = array('C8900370d1a454dc66aec73dd6e338e2e','test');
 	$groupid[] = array('C7299d5f55789ad1c3289b9349d7f7979','test');
 	$groupid[] = array('C681668425a5bfe078431ddfdb5a05639','test');
