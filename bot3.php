@@ -818,6 +818,7 @@ function send($data, $strUrl, $arrHeader){
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	$result = curl_exec($ch);
+	return curl_exec($ch);
 	curl_close ($ch);
 }
  
@@ -857,7 +858,6 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	$result = curl_exec($ch);
-	return curl_exec($ch);
 	curl_close ($ch);
 }
  ?>
