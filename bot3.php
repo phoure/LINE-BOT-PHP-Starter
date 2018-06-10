@@ -12,6 +12,16 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
 	 send($data, $strUrl, $arrHeader);
 
+	$strUrl = 'https://api.line.me/v2/bot/message/push';
+	$card = array([
+			'type' => 'text',
+			'text' => $arrJson['events'][0]['source']['groupId']
+		      ]);
+	
+	 $data = array('to' => 'C5ca58854e5e7ae33964770acadc0211d', 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+
+
 
 if($arrJson['events'][0]['source']['groupId'] == ''){
 	
