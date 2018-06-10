@@ -758,7 +758,7 @@ if($textIn == 'gg'){
 	$strUrl = 'https://api.line.me/v2/bot/message/reply';
 	$card = array([
 			'type' => 'text',
-			'text' => $arrJson['events'][0]['source']['groupId']
+			'text' => 'dsf'.$arrJson['events'][0]['source']['groupId']
 		      ]);
 	
 	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
