@@ -758,17 +758,17 @@ if($arrJson['events'][0]['source']['groupId'] == ''){
 	$strUrl = 'https://api.line.me/v2/bot/message/reply';
 	$card = array([
 					'type' => 'text',
-					'text' => "ขออภัยครับ ไลน์นี้ไม่สามารถตอบกลับได้ โปรดแอดไลน์ line://ti/p/gkw1117o"
+					'text' => "ขออภัยครับ ไลน์นี้ไม่สามารถตอบกลับได้ โปรดแอดไลน์ @gkw1117o"
 				      ],[
      'type' => 'template',
-	"altText" => 'โปรติดต่อเรากลับอีกครั้ง ขออภัยในความไม่สะดวกครับ',
+	"altText" => 'โปรดติดต่อเรากลับอีกครั้ง ขออภัยในความไม่สะดวกครับ',
 						"template" => array(
 						    'type' => 'buttons',
 	'text' => 'หรือกดปุ่ม "ติดต่อเรา" สำหรับการสอบถามรายละเอียดบริการ ขออภัยในความไม่สะดวกครับ',
 						    'actions' =>  array([
 						  'type' => 'uri',
 						 'label' => 'ติดต่อเรา',
-						 'uri' => 'line://ti/p/gkw1117o'
+						 'uri' => 'line://ti/p/%40gkw1117o'
 						])
 	  					  )
 	]
