@@ -755,13 +755,13 @@ else if ($textIn == '.') {
 }
 if($arrJson['events'][0]['source']['groupId'] == ''){
 	
-	$strUrl = 'https://api.line.me/v2/bot/message/push';
+	$strUrl = 'https://api.line.me/v2/bot/message/reply';
 	$card = array([
 			'type' => 'text',
 			'text' => $arrJson['events'][0]['source']['groupId']
 		      ]);
 	
-	 $data = array('to' => $arrJson['events'][0]['source']['userId'], 'messages' => $card);
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
 
 }
