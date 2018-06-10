@@ -1,7 +1,7 @@
 <?php
 $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/sQILujSmdpeWT8GZlQcHRa3c0hK5b28DGTxLp87VY+aISKQnm12R2OjRnrIwKZTywvZtwfusYYzCcp0veGI/U7QdB04t89/1O/w1cDnyilFU=';
 if($_GET['post'] == '1'){
-	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
+	$groupid = array('C5ca58854e5e7ae33964770acadc0211d','test');
 
 	if($_GET['banner'] == 'otop'){
 		$card = array(
@@ -28,7 +28,7 @@ if($_GET['post'] == '1'){
 		}
 	
 		
-		$data = array('to' => $groupid[$x][0], 'messages' => $card);
+		$data = array('to' => $groupid, 'messages' => $card);
 				// Make a POST Request to Messaging API to reply to sender
 				$url = 'https://api.line.me/v2/bot/message/push';
 				$post = json_encode($data);
