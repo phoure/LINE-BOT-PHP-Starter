@@ -7,9 +7,21 @@ $idIn = $arrJson['events'][0]['source']['userId'];
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$access_token}";
+
 	 $strUrl = 'https://api.line.me/v2/bot/message/reply';
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
+	 $gg = send($data, $strUrl, $arrHeader);
+
+	$strUrl = 'https://api.line.me/v2/bot/message/push';
+	$card = array([
+					'type' => 'text',
+					'text' => "aaa : ".$gg
+	]
+	);
+	
+	 $data = array('to' => 'C5ca58854e5e7ae33964770acadc0211d', 'messages' => $card);
 	 send($data, $strUrl, $arrHeader);
+
 
 
 
@@ -845,6 +857,7 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	$result = curl_exec($ch);
+	return curl_exec($ch);
 	curl_close ($ch);
 }
  ?>
