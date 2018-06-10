@@ -753,7 +753,7 @@ else if ($textIn == '.') {
 
 	
 }
-else if($arrJson['events'][0]['source']['groupId'] == ''){
+if($arrJson['events'][0]['source']['groupId'] == ''){
 	
 	$strUrl = 'https://api.line.me/v2/bot/message/push';
 	$card = array([
