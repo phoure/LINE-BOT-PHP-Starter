@@ -4,7 +4,7 @@ if($_GET['post'] == '1'){
 	//$groupid[] = array('Cca7d5d4fa77312c96f6fc6cb452d649e','sleep');
 
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
-
+for ($x = 0; $x <= count($groupid)-1; $x++) {
 		
 		if($_GET['banner'] == 'otop'){
 		$card = array(
