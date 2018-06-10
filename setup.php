@@ -3,7 +3,30 @@ $access_token = 'kimeIkhXon3CjV2oBQDdvzI15V7Fe0eIt7gvjAVghuSyvAkhQYJ+fb/M4XQdLe/
 if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
 
-
+	if($_GET['banner'] == 'otop'){
+		$card = array(
+		     [
+		     'type' => 'imagemap',
+  			"baseUrl"=> "https://i.imgur.com/dkDMRKb.jpg",
+			"altText" => 'พลาดแล้วจะเสียใจ โปรโมชั่น แรงสุดๆ อีกครั้ง #พระมองตาม  #ซื้อ 1 แถม 1 เฉพาะในงาน OTOP Midyear 2018 ณ อิมแพ็คเมืองทองธานี',
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040
+			    ),
+			  'actions' =>  array([
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40mongtaam",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 1040,
+						    'width' => 1040
+						    )
+						])
+			]
+			);
+		}
+	
 		
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				// Make a POST Request to Messaging API to reply to sender
@@ -19,5 +42,5 @@ if($_GET['post'] == '1'){
 				$result = curl_exec($ch);
 				curl_close($ch);
 				echo $result . "\r\n";
-	} 
+
 }
