@@ -446,7 +446,7 @@ if($_GET['post'] == '1'){
 		$card = array(
 		     [
 		     'type' => 'imagemap',
-  			"baseUrl"=> $randimg,
+  			"baseUrl"=> 'https://image.ibb.co/c7ZjCo/post4.jpg',
 			"altText" => '🎉 กำลังโพสต์ในกลุ่มคนเยอะๆ ที่มีแต่คนขายแต่ไม่มีคนซื้อ?',
 			"baseSize" => array(
 			    'height' => 1040,
