@@ -11,7 +11,33 @@ $arrHeader[] = "Authorization: Bearer {$access_token}";
  	 $data = array( 'replyToken' => $arrJson['events'][0]['replyToken'], 'type' => 'join');
 	 send($data, $strUrl, $arrHeader);
 
-if (strpos($textIn, 'twitter.com') !== false) {
+if($arrJson['events'][0]['source']['groupId'] == ''){
+	
+	$strUrl = 'https://api.line.me/v2/bot/message/reply';
+	$card = array([
+					'type' => 'text',
+					'text' => "ขออภัยครับ ไลน์นี้ไม่สามารถตอบกลับได้ โปรดแอดไลน์ https://line.me/R/ti/p/%40gkw1117o"
+				      ],[
+     'type' => 'template',
+	"altText" => 'โปรดติดต่อเรากลับอีกครั้ง ขออภัยในความไม่สะดวกครับ',
+						"template" => array(
+						    'type' => 'buttons',
+	'text' => 'หรือกดปุ่ม "ติดต่อเรา" สำหรับการสอบถามรายละเอียดบริการ ขออภัยในความไม่สะดวกครับ',
+						    'actions' =>  array([
+						  'type' => 'uri',
+						 'label' => 'ติดต่อเรา',
+						 'uri' => 'line://ti/p/%40gkw1117o'
+						])
+	  					  )
+	]
+	);
+	
+	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
+	 send($data, $strUrl, $arrHeader);
+
+}
+
+else if (strpos($textIn, 'twitter.com') !== false) {
  
  require 'app_tokens.php';
  require 'tmhOAuth.php';
@@ -753,31 +779,7 @@ else if ($textIn == '.') {
 
 	
 }
-if($arrJson['events'][0]['source']['groupId'] == ''){
-	
-	$strUrl = 'https://api.line.me/v2/bot/message/reply';
-	$card = array([
-					'type' => 'text',
-					'text' => "ขออภัยครับ ไลน์นี้ไม่สามารถตอบกลับได้ โปรดแอดไลน์ @gkw1117o"
-				      ],[
-     'type' => 'template',
-	"altText" => 'โปรดติดต่อเรากลับอีกครั้ง ขออภัยในความไม่สะดวกครับ',
-						"template" => array(
-						    'type' => 'buttons',
-	'text' => 'หรือกดปุ่ม "ติดต่อเรา" สำหรับการสอบถามรายละเอียดบริการ ขออภัยในความไม่สะดวกครับ',
-						    'actions' =>  array([
-						  'type' => 'uri',
-						 'label' => 'ติดต่อเรา',
-						 'uri' => 'line://ti/p/%40gkw1117o'
-						])
-	  					  )
-	]
-	);
-	
-	 $data = array('replyToken' => $arrJson['events'][0]['replyToken'], 'messages' => $card);
-	 send($data, $strUrl, $arrHeader);
 
-}
 function send($data, $strUrl, $arrHeader){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL,$strUrl);
