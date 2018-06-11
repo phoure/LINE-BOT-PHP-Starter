@@ -6,7 +6,7 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('C5ca58854e5e7ae33964770acadc0211d','test');
 for ($x = 0; $x <= count($groupid)-1; $x++) {
 		
-		if($_GET['banner'] == 'otop'){
+	if($_GET['banner'] == 'otop'){
 		$card = array(
 		     [
 		     'type' => 'imagemap',
@@ -19,29 +19,6 @@ for ($x = 0; $x <= count($groupid)-1; $x++) {
 			  'actions' =>  array([
 						'type' => 'uri',
           					"linkUri" => "line://ti/p/%40mongtaam",
-						 "area" => array(
-						    'x' => 0,
-						    'y' => 0,
-						    'height' => 1040,
-						    'width' => 1040
-						    )
-						])
-			]
-			);
-		}
-	eles if($_GET['banner'] == 'fashion'){
-		$card = array(
-		     [
-		     'type' => 'imagemap',
-  			"baseUrl"=> "https://image.ibb.co/fMNOso/0a41986c_4044_433b_9330_f201d0830414.jpg",
-			"altText" => 'จำหน่ายเสื้อผ้าแฟชั่น ไม่มีค่าสมัคร ไม่ต้องสต็อกของเอง ก็อปรูปโพสต์+กำไรเพิ่มเองได้เลย จัดส่งในนาม สนใจแอดเข้ากลุ่มไลน์ได้เลยค่ะ',
-			"baseSize" => array(
-			    'height' => 1040,
-			    'width' => 1040
-			    ),
-			  'actions' =>  array([
-						'type' => 'uri',
-          					"linkUri" => "line://ti/g/wekpmbCaBO",
 						 "area" => array(
 						    'x' => 0,
 						    'y' => 0,
