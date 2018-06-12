@@ -34,6 +34,18 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Cf077205d7ba2847c806ea2554ea681f2','test');
 	$groupid[] = array('C0c1ccc85df9453c44aed540ae617831b','test');
 	
+	
+	$groupid[] = array('C5cf0cbe2c7619343658038ff36e532f2','test');
+	$groupid[] = array('Cafb5167e081fcbe33f5cde8aa73945c6','test');
+	$groupid[] = array('Ca5e28839c76aa2423932fa09148eb6a7','test');
+	$groupid[] = array('C16bdebfa8b55a66e7f6e907564fc00f1','test');
+	$groupid[] = array('C8112c2e7ce801948cae29310be8a4349','test');
+	$groupid[] = array('C19019c7f1996ea1dd5677298c2ee29a9','test');
+	$groupid[] = array('C0e3a62a4b5d40e899c74e9a33f1f5ae1','test');
+	$groupid[] = array('C2e31f3646eb0058f12911933af5e6e85','test');
+	$groupid[] = array('Cf25f2a2dbe87997507ccd92434e65246','test');
+	$groupid[] = array('C3a1640f6575f4052ea08002b8c3cce7d','test');
+	
 
 	$groupid[] = array('C0f30acaa7ce585a786e0bfb4afc6ba94','ขายของออนไลน์');
 	$groupid[] = array('Cddc9221a10312fc4d4e2bf0abebb537d','กลุ่มขายของ#2');
