@@ -24,7 +24,6 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('C2fdd63b2ad24c1dcb8facf7eedecb157','test');
 	$groupid[] = array('C613643aa8d6765f39197fd29e600ea16','test');
 	
-	
 	$groupid[] = array('C22f7e03e37cb4aaeeb778ec5178fd29e','test');
 	$groupid[] = array('Cf0dcf148a517bec05c446091363aab0a','test');
 	$groupid[] = array('C52ee816ee6606e68d0a640dda443bbfd','test');
@@ -33,7 +32,14 @@ if($_GET['post'] == '1'){
 	$groupid[] = array('Ce9ac0d2772b973feb06e3dbc4e55d3b8','test');
 	$groupid[] = array('Cf077205d7ba2847c806ea2554ea681f2','test');
 	$groupid[] = array('C0c1ccc85df9453c44aed540ae617831b','test');
-
+	
+	$groupid[] = array('Cac494974b4bb2242fd80e860475f921d','test');
+	$groupid[] = array('Cf0e3801b863de2474bf3fe3097e9c56f','test');
+	$groupid[] = array('C6327124c439411e48a2b9472efb2a08f','test');
+	$groupid[] = array('Cd6013af8ba8845c9f1860a089aa6d982','test');
+	$groupid[] = array('C618207712c9fd2e73a1dba9401bd3a3f','test');
+	$groupid[] = array('C62dd18738d456ebbbafce8125c0009af','test');
+	$groupid[] = array('Cf09150cf6ba835dd4bac48bbcd67ca28','test');
 	
 	$groupid[] = array('C5cf0cbe2c7619343658038ff36e532f2','test');
 	$groupid[] = array('Cafb5167e081fcbe33f5cde8aa73945c6','test');
