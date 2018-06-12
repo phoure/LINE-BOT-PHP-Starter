@@ -55,6 +55,32 @@ for ($x = 0; $x <= count($groupid)-1; $x++) {
 			);
 		}
 		
+	
+	
+	else if($_GET['banner'] == '56tps'){
+		$card = array(
+		     [
+		     'type' => 'imagemap',
+  			"baseUrl"=> "https://image.ibb.co/myCwxo/Untitled_6.jpg",
+			"altText" => 'งานสัมนาฟรี ในหัวข้อ "ทางด่วนพิเศษเป็นเศรษฐีอสังหาฯ สู่ความร่ำรวยตลอดกาลด้วยความเร็วแสง" สำรองที่นั่งฟรี! ตอนนี้',
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040
+			    ),
+			  'actions' =>  array([
+						'type' => 'uri',
+          					"linkUri" => "https://goo.gl/forms/ocqC2Q9fcwswHNS83",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 1040,
+						    'width' => 1040
+						    )
+						])
+			]
+			);
+		}
+		
 		
 		$data = array('to' => $groupid[$x][0], 'messages' => $card);
 				// Make a POST Request to Messaging API to reply to sender
