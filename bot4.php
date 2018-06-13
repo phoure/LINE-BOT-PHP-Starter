@@ -88,6 +88,32 @@ if($_GET['post'] == '1'){
 			);
 		}
 		
+		if($_GET['banner'] == 'ball'){
+		$card = array(
+		     [
+		     'type' => 'imagemap',
+  			"baseUrl"=> "https://i.imgur.com/dkDMRKb.jpg",
+			"altText" => '🎉 เสื้อฟุตบอลโลก 2018 เริ่มต้นเพียง 290.- สั่งจองได้แล้ววันนี้',
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040
+			    ),
+			  'actions' =>  array([
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40mongtaam",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 1040,
+						    'width' => 1040
+						    )
+						])
+			]
+			);
+		}
+		
+		
+		
 		else if($_GET['banner'] == 'fashion'){
 		$card = array(
 		     [
