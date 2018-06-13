@@ -56,6 +56,30 @@ for ($x = 0; $x <= count($groupid)-1; $x++) {
 		}
 		
 	
+	else if($_GET['banner'] == 'car'){
+		$card = array(
+		     [
+		     'type' => 'imagemap',
+  			"baseUrl"=> "https://image.ibb.co/bTbs5J/Untitled_12.jpg",
+			"altText" => 'โปร 1 ได้ 5 แค่ 590.- สำหรับคนรักรถ บล็อกสีรถไม่ให้เก่า กันแดด กันน้ำ เคลือบแก้วเองได้ง่ายๆ แค่ 10 นาที',
+			"baseSize" => array(
+			    'height' => 1040,
+			    'width' => 1040
+			    ),
+			  'actions' =>  array([
+						'type' => 'uri',
+          					"linkUri" => "line://ti/p/%40ipb1967m",
+						 "area" => array(
+						    'x' => 0,
+						    'y' => 0,
+						    'height' => 1040,
+						    'width' => 1040
+						    )
+						])
+			]
+			);
+		}
+	
 	
 	else if($_GET['banner'] == '56tps'){
 		$card = array(
