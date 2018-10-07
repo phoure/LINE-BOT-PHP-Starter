@@ -36,7 +36,7 @@ if($textIn == '.'){
 			'type' => 'text',
 			'text' => $arrJson['events'][0]['source']['groupId']
 		      ]);
-	send($card, 'push', 'C5ca58854e5e7ae33964770acadc0211d');
+	send($card, 'reply', $replayId);
 }
 
 if($arrJson['events'][0]['postback']['data'] == 'getcode'){
