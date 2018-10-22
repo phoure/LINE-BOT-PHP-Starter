@@ -39,6 +39,14 @@ if($textIn == '.'){
 	send($card, 'reply', $replayId);
 }
 
+if (strpos($textIn, 'เตะ') !== false) {
+	$card = array([
+	'type' => 'text',
+	'text' => $textIn
+	]);
+	send($card, 'reply', $replayId);
+}
+
 if($arrJson['events'][0]['postback']['data'] == 'getcode'){
 				$card = array([
 						'type' => 'text',
