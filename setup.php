@@ -61,7 +61,7 @@ if($userName == 'Methasit'){
 						    'width' => 1040
 						    )
 						])
-						],[
+						],,[
 			     	 'type' => 'flex',
 			     	 'altText' => '🎉 โพสต์โฆษณาลงกว่า 800+ กลุ่มธุรกิจ โฆษณาแบบเต็มจอ เห็นชัดเจนกว่า เด่นกว่า สามารถแตะที่ภาพได้ ราคาถูก คุ้มค่า เห็นผล ดีต่อธุรกิจ อัตราถูกสุดเพียงวันละ 4 บาท เท่านั้น',
 			     	 'contents' => array(
@@ -75,7 +75,7 @@ if($userName == 'Methasit'){
 																	        'margin' => 'md',
 												  							'contents' =>  array([
 																								'type' => 'image',
-																	          					"url" => 'https://i.imgur.com/5BDnlkI.png',
+																	          					"url" => 'https://i.imgur.com/tqFp8rP.png',
 																					            "aspectRatio" => "1:1",
 																	          					"size" => "sm",
         																						"align" => "center"
@@ -87,22 +87,152 @@ if($userName == 'Methasit'){
 													  							'contents' =>  array([
 																									'type' => 'text',
 																		          					"text" => 'โฆษณาเต็มจอ!',
-																		          					'color' => '#0b8bb0',
+																		          					'color' => '#ffffff',
 																	          						"size" => "xl",
 	        																						"align" => "center",
     																							    "weight" => "bold",
 																			   						'wrap' => true
 																				]),
 																		]
+
+
 																		,[
 																				'type' => 'box',
 																			    'layout' => 'horizontal',
-																			   	'margin' => 'sm',
+																			   	'margin' => 'xl',
 													  							'contents' =>  array([
 																									'type' => 'text',
 																		          					"text" => 'โพสต์โฆษณาบนกลุ่มไลน์ให้เด่น สวย ปัง ขายดีกว่าใคร ไปยัง 800+ กลุ่มไลน์ธุรกิจ คนเห็นหลักแสน',
-																		          					'color' => '#000000',
+																		          					'color' => '#ffffff',
 	        																						"align" => "center",
+																			   						'wrap' => true
+																				]),
+																			]
+
+
+																			,[
+																				'type' => 'box',
+																			    'layout' => 'baseline',
+																			   	'margin' => 'xl',
+													  							'contents' =>  array([
+																									'type' => 'icon',
+																		          					"url" => 'https://i.imgur.com/muVgU3s.png',
+																		          					'size' => 'xs',
+																				],[
+																									'type' => 'text',
+																		          					"text" => 'ภาพโฆษณาเด่น ชัด เต็มจอ!',
+																		          					'color' => '#ffffff',
+																			   						'wrap' => true,
+																			   						'margin' => 'sm',
+																		          					'size' => 'xs'
+																				]),
+																			],[
+																				'type' => 'box',
+																			    'layout' => 'baseline',
+																			   	'margin' => 'xs',
+													  							'contents' =>  array([
+																									'type' => 'icon',
+																		          					"url" => 'https://i.imgur.com/muVgU3s.png',
+																		          					'size' => 'xs'
+																				],[
+																									'type' => 'text',
+																		          					"text" => 'ภาพสามารถแตะให้แอดไลน์ หรือเว็บไซต์',
+																		          					'color' => '#ffffff',
+																			   						'wrap' => true,
+																			   						'margin' => 'sm',
+																		          					'size' => 'xs'
+																				]),
+																			],[
+																				'type' => 'box',
+																			    'layout' => 'baseline',
+																			   	'margin' => 'xs',
+													  							'contents' =>  array([
+																									'type' => 'icon',
+																		          					"url" => 'https://i.imgur.com/muVgU3s.png',
+																		          					'size' => 'xs'
+																				],[
+																									'type' => 'text',
+																		          					"text" => 'มีมากถึง 800+ กลุ่ม ไม่ต้องหากลุ่มเอง',
+																		          					'color' => '#ffffff',
+																			   						'wrap' => true,
+																			   						'margin' => 'sm',
+																		          					'size' => 'xs'
+																				]),
+																			],[
+																				'type' => 'box',
+																			    'layout' => 'baseline',
+																			   	'margin' => 'xs',
+													  							'contents' =>  array([
+																									'type' => 'icon',
+																		          					"url" => 'https://i.imgur.com/muVgU3s.png',
+																		          					'size' => 'xs'
+																				],[
+																									'type' => 'text',
+																		          					"text" => 'ทำงานอัตโนมัติ แม่นยำ ไม่ต้องคอยส่งเอง',
+																		          					'color' => '#ffffff',
+																			   						'wrap' => true,
+																			   						'margin' => 'sm',
+																		          					'size' => 'xs'
+																				]),
+																			],[
+																				'type' => 'box',
+																			    'layout' => 'baseline',
+																			   	'margin' => 'xs',
+													  							'contents' =>  array([
+																									'type' => 'icon',
+																		          					"url" => 'https://i.imgur.com/muVgU3s.png',
+																		          					'size' => 'xs'
+																				],[
+																									'type' => 'text',
+																		          					"text" => 'ดูประวัติการทำงานได้ตลอดเวลา',
+																		          					'color' => '#ffffff',
+																			   						'wrap' => true,
+																			   						'margin' => 'sm',
+																		          					'size' => 'xs'
+																				]),
+																			],[
+																				'type' => 'box',
+																			    'layout' => 'baseline',
+																			   	'margin' => 'xs',
+													  							'contents' =>  array([
+																									'type' => 'icon',
+																		          					"url" => 'https://i.imgur.com/muVgU3s.png',
+																		          					'size' => 'xs'
+																				],[
+																									'type' => 'text',
+																		          					"text" => 'ปรับเปลี่ยนโฆษณาได้ด้วยตัวเองง่ายๆ',
+																		          					'color' => '#ffffff',
+																			   						'wrap' => true,
+																			   						'margin' => 'sm',
+																		          					'size' => 'xs'
+																				]),
+																			],[
+																				'type' => 'box',
+																			    'layout' => 'baseline',
+																			   	'margin' => 'xs',
+													  							'contents' =>  array([
+																									'type' => 'icon',
+																		          					"url" => 'https://i.imgur.com/muVgU3s.png',
+																		          					'size' => 'xs'
+																				],[
+																									'type' => 'text',
+																		          					"text" => 'แพ็คเกจหลากหลาย เลือกตามความเหมาะสม',
+																		          					'color' => '#ffffff',
+																			   						'wrap' => true,
+																			   						'margin' => 'sm',
+																		          					'size' => 'xs'
+																				]),
+																			]
+																		,[
+																				'type' => 'box',
+																			    'layout' => 'horizontal',
+																			   	'margin' => 'xl',
+													  							'contents' =>  array([
+																									'type' => 'text',
+																		          					"text" => 'พิเศษ! วันนี้ รับวันโฆษณาเพิ่ม x2 เท่า สำหรับทุกแพ็คเกจ!',
+																		          					'color' => '#ffffff',
+	        																						"align" => "center",
+    																							    "weight" => "bold",
 																			   						'wrap' => true
 																				]),
 																			])
@@ -118,17 +248,17 @@ if($userName == 'Methasit'){
 																						    'label' => 'สอบถามเพิ่มเติม',
 																						    'uri' => 'line://ti/p/%40gkw1117o'
 																							),
-												          					'style' => 'primary',
-												          					'color' => '#0b8bb0',
+												          					'style' => 'secondary',
+												          					'color' => '#ffffff',
 																	        'margin' => 'xl'
 																		])
 													),
 										
 			     	 									'styles' => array(
 													    'body' => array(
-													    'backgroundColor' => '#ffffff'),
+													    'backgroundColor' => '#24b3e1'),
 													    'footer' => array(
-													    'backgroundColor' => '#ffffff')
+													    'backgroundColor' => '#24b3e1')
 														)
 									    )
 				]);
