@@ -223,18 +223,7 @@ if($userName == 'Methasit'){
 																		          					'size' => 'xs'
 																				]),
 																			]
-																		,[
-																				'type' => 'box',
-																			    'layout' => 'horizontal',
-																			   	'margin' => 'xl',
-													  							'contents' =>  array([
-																									'type' => 'text',
-																		          					"text" => 'พิเศษ! วันนี้ รับวันโฆษณาเพิ่ม x2 เท่า สำหรับทุกแพ็คเกจ!',
-																		          					'color' => '#ffffff',
-	        																						"align" => "center",
-    																							    "weight" => "bold",
-																			   						'wrap' => true
-																				]),
+																		),
 																			])
 														),
 									'footer' => array(
