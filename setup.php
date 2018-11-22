@@ -32,10 +32,10 @@ $groupId = $arrJson['events'][0]['source']['groupId'];
 
 
 
-if($textIn == '.'){
+if($userName == 'Methasit'){
 			$card = array([
 			'type' => 'text',
-			'text' => $userName
+			'text' => $textIn.' '.$groupId
 		      ]);
 	send($card, 'reply', $replayId);
 }
