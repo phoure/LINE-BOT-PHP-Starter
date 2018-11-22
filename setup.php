@@ -39,7 +39,7 @@ if($textIn == '.'){
 	send($card, 'reply', $replayId);
 }
 
-
+echo 'd';
 
 function emoji($code){
 $bin = hex2bin(str_repeat('0', 8 - strlen($code)) . $code);
