@@ -222,7 +222,18 @@ if($userName == 'Methasit'){
 																			   						'margin' => 'sm',
 																		          					'size' => 'xs'
 																				]),
-																			]
+																			],[
+																				'type' => 'box',
+																			    'layout' => 'horizontal',
+																			   	'margin' => 'xl',
+													  							'contents' =>  array([
+																									'type' => 'text',
+																		          					"text" => 'พิเศษ! สำหรับวันนี้ รับโปรโมชั่นโฆษณาสุดคุ้ม',
+																		          					'color' => '#ffffff',
+	        																						"align" => "center",
+    																							    "weight" => "bold",
+																			   						'wrap' => true
+																				]
 																		),
 																			])
 														),
@@ -240,18 +251,7 @@ if($userName == 'Methasit'){
 												          					'style' => 'secondary',
 												          					'color' => '#ffffff',
 																	        'margin' => 'xl'
-																		],[
-																				'type' => 'box',
-																			    'layout' => 'horizontal',
-																			   	'margin' => 'xl',
-													  							'contents' =>  array([
-																									'type' => 'text',
-																		          					"text" => 'พิเศษ! สำหรับวันนี้ รับโปรโมชั่นโฆษณาสุดคุ้ม',
-																		          					'color' => '#ffffff',
-	        																						"align" => "center",
-    																							    "weight" => "bold",
-																			   						'wrap' => true
-																				])
+																		])
 													),
 										
 			     	 									'styles' => array(
