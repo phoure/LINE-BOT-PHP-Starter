@@ -35,7 +35,7 @@ $groupId = $arrJson['events'][0]['source']['groupId'];
 if($userName == 'Methasit'){
 			$card = array([
 			'type' => 'text',
-			'text' => $textIn.' '.$groupId
+			'text' => '$groupid[] = array(\''.$groupId.'\',\''.$textIn.'\');'
 		      ]);
 	send($card, 'reply', $replayId);
 }
