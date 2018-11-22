@@ -152,7 +152,7 @@ if($userName == 'Methasit'){
 																		          					'size' => 'xs'
 																				],[
 																									'type' => 'text',
-																		          					"text" => 'มีมากถึง 800+ กลุ่ม ไม่ต้องหากลุ่มเอง',
+																		          					"text" => 'มีมากถึงหลักพันกลุ่ม ไม่ต้องหากลุ่มเอง',
 																		          					'color' => '#ffffff',
 																			   						'wrap' => true,
 																			   						'margin' => 'sm',
