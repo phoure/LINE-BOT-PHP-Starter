@@ -28,13 +28,14 @@ $response_user = curl_exec($curl);
 $response_user = json_decode($response_user, true);
 $userName = $response_user['displayName'];
 $userPicture = $response_user['pictureUrl'];
+$groupId = $arrJson['events'][0]['source']['groupId'];
 
 
 
 if($textIn == '.'){
 			$card = array([
 			'type' => 'text',
-			'text' => $arrJson['events'][0]['source']['groupId']
+			'text' => $userName
 		      ]);
 	send($card, 'reply', $replayId);
 }
