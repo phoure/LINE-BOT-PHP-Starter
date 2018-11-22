@@ -256,9 +256,9 @@ if($userName == 'Methasit'){
 										
 			     	 									'styles' => array(
 													    'body' => array(
-													    'backgroundColor' => '#24b3e1'),
+													    'backgroundColor' => '#0b8bb0'),
 													    'footer' => array(
-													    'backgroundColor' => '#24b3e1')
+													    'backgroundColor' => '#0b8bb0')
 														)
 									    )
 				]);
