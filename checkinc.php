@@ -1,6 +1,4 @@
 <?php
-session_start();
-require_once('connect_sql.php');
 $access_token = 'YlUnnYzZBLIEMGJ5HhjXxA04tLxENbG/tE0nJbLLGGGyRlL5qMH227KObUrdynmGMxbCGixzweXT63ayRxNTWcEHeTVN4oetMOcUOl2cWVJz9vSf/4Q8nM227TYk0lmi1+PjP4I1vuNXLeGfuDxucgdB04t89/1O/w1cDnyilFU=';
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
