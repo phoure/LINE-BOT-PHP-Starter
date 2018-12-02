@@ -1,5 +1,4 @@
 <?php
-$access_token = 'YlUnnYzZBLIEMGJ5HhjXxA04tLxENbG/tE0nJbLLGGGyRlL5qMH227KObUrdynmGMxbCGixzweXT63ayRxNTWcEHeTVN4oetMOcUOl2cWVJz9vSf/4Q8nM227TYk0lmi1+PjP4I1vuNXLeGfuDxucgdB04t89/1O/w1cDnyilFU=';
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
 $textIn = $arrJson['events'][0]['message']['text'];
@@ -39,7 +38,7 @@ return $emoticon;
 
 function send($card,$target ,$to){
 	
-	$access_token = 'YlUnnYzZBLIEMGJ5HhjXxA04tLxENbG/tE0nJbLLGGGyRlL5qMH227KObUrdynmGMxbCGixzweXT63ayRxNTWcEHeTVN4oetMOcUOl2cWVJz9vSf/4Q8nM227TYk0lmi1+PjP4I1vuNXLeGfuDxucgdB04t89/1O/w1cDnyilFU=';
+	$access_token = 'kkNqfmY+cdW6xWe5Q3tcGLh8gFi15NoJYB+7OipvOA8gkdrGsbY2It88PpOYB8WhMxbCGixzweXT63ayRxNTWcEHeTVN4oetMOcUOl2cWVIY6dtM9wQjqzWTceLS/BvbWm0lqoFPqFa7z6NtRzX+tgdB04t89/1O/w1cDnyilFU=';
 	$arrHeader = array();
 	$arrHeader[] = "Content-Type: application/json";
 	$arrHeader[] = "Authorization: Bearer {$access_token}";
