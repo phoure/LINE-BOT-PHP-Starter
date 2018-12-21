@@ -1,5 +1,5 @@
 <?php
-
+$token = 'BQC5_nD_E8pz_Ayzvv3zizPcOlyH-nQOshUZGbEyVLEVUht-Qt4CXdqVD9doxe1aIzFbVIqyEh6hkaLcysk6NF7sWGw_U_ALQysDN6GQs8an7_yJyf4Y3smhLrL2rHeN9IieY0ThKbOeC8lybZUM-757Nbs3wUB57RwlnlJbQvjfyz_PAbwjcnjJCMHH0S44Liriu6XhM8pUlzQngv_gbtm9GbUN4BiuXc3Lfjo9q6sVBbP19J0S1YT1eC16H4cwN0XEbnHDp1c';
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -11,7 +11,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "authorization: Bearer BQC5_nD_E8pz_Ayzvv3zizPcOlyH-nQOshUZGbEyVLEVUht-Qt4CXdqVD9doxe1aIzFbVIqyEh6hkaLcysk6NF7sWGw_U_ALQysDN6GQs8an7_yJyf4Y3smhLrL2rHeN9IieY0ThKbOeC8lybZUM-757Nbs3wUB57RwlnlJbQvjfyz_PAbwjcnjJCMHH0S44Liriu6XhM8pUlzQngv_gbtm9GbUN4BiuXc3Lfjo9q6sVBbP19J0S1YT1eC16H4cwN0XEbnHDp1c",
+    "authorization: Bearer $token",
     "cache-control: no-cache",
     "content-type: application/json",
     "postman-token: 33061140-458f-d87d-084b-82467074ae2a"
