@@ -1,7 +1,4 @@
 <?php
-$token = 'BQA7l7HvFKj4rsG1mvJywsRVk0QLqh-nNtRTbur41hDI7pQ6ZgxVB3inL36Pb4P8ralY7yy4aBf8JkRWLzV2_JekOdy9YD0DukRbN0y-yQytcKCU3_RAnNy0wF2aPwdTV_srr6vcxu6XZC6IMUVnWsnEJxIJFlg4IOPmmrp7vEO0XpFPwdBbyl0fpq6lX4Hx8DePRLzBz-Y9BO-Vzs-Iy1DDFckhKjGDtAYLstpAzJdgfCNHlni3U9Yg5vO7thqAj0kf7DDVCLw';
-$curl = curl_init();
-
 
 function debug($var){	
      // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
@@ -17,6 +14,10 @@ function debug($var){
 }
 
 function curl($url){
+	
+$token = 'BQA7l7HvFKj4rsG1mvJywsRVk0QLqh-nNtRTbur41hDI7pQ6ZgxVB3inL36Pb4P8ralY7yy4aBf8JkRWLzV2_JekOdy9YD0DukRbN0y-yQytcKCU3_RAnNy0wF2aPwdTV_srr6vcxu6XZC6IMUVnWsnEJxIJFlg4IOPmmrp7vEO0XpFPwdBbyl0fpq6lX4Hx8DePRLzBz-Y9BO-Vzs-Iy1DDFckhKjGDtAYLstpAzJdgfCNHlni3U9Yg5vO7thqAj0kf7DDVCLw';
+
+$curl = curl_init();
 	curl_setopt_array($curl, array(
 	  CURLOPT_URL => $url,
 	  CURLOPT_RETURNTRANSFER => true,
