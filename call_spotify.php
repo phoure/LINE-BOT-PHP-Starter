@@ -1,5 +1,5 @@
 <?php
-$token = 'BQBlc0Suv0G4hEq41UvW6xE4gO-xOLs3M0h5EL_0JpjlEungOcpfQidT8nQL3S9y3HAOUIO1pb1k6TRruqlElaqXFrR_HKKGl1AoP9l4MXp6nIAV8YwmdNgpzjBgGTYxgX-oR8wnThTRB4wcD3L-Y95SkA7oKlNl4RAaJpS9nG5sXswWsZ2j4ts0Sx0prnQvGK9mNiRwO-pZ-43fml8oU4P4VO99A40dyXSPrEz_poQtSpep4MU6d2iBOYw6qdazI_3pIUhy3sY';
+$token = 'BQA7l7HvFKj4rsG1mvJywsRVk0QLqh-nNtRTbur41hDI7pQ6ZgxVB3inL36Pb4P8ralY7yy4aBf8JkRWLzV2_JekOdy9YD0DukRbN0y-yQytcKCU3_RAnNy0wF2aPwdTV_srr6vcxu6XZC6IMUVnWsnEJxIJFlg4IOPmmrp7vEO0XpFPwdBbyl0fpq6lX4Hx8DePRLzBz-Y9BO-Vzs-Iy1DDFckhKjGDtAYLstpAzJdgfCNHlni3U9Yg5vO7thqAj0kf7DDVCLw';
 $curl = curl_init();
 
 
@@ -15,27 +15,36 @@ function debug($var){
      echo "</pre>";
      return $var;	
 }
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?oauth_signature_method=HMAC-SHA1&oauth_timestamp=1545369076&oauth_nonce=bg7JCU&oauth_version=1.0&oauth_signature=D4g1si4f4npcYqeUJTR5YuNB1Cg%3D&market=TH&limit=50&offset=0",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "authorization: Bearer $token",
-    "cache-control: no-cache",
-    "content-type: application/json",
-    "postman-token: 33061140-458f-d87d-084b-82467074ae2a"
-  ),
-));
 
-$response = curl_exec($curl);
-$err = curl_error($curl);
+function curl($url){
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => $url,
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_ENCODING => "",
+	  CURLOPT_MAXREDIRS => 10,
+	  CURLOPT_TIMEOUT => 30,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_CUSTOMREQUEST => "GET",
+	  CURLOPT_HTTPHEADER => array(
+	    "authorization: Bearer $token",
+	    "cache-control: no-cache",
+	    "content-type: application/json",
+	    "postman-token: 33061140-458f-d87d-084b-82467074ae2a"
+	  ),
+	));
 
-curl_close($curl);
+	$response = curl_exec($curl);
+	$err = curl_error($curl);
 
-		$response = json_decode($response, true);
+	curl_close($curl);
+	return json_decode($response, true);
+}
 
-debug($response);
+
+$response = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?oauth_signature_method=HMAC-SHA1&oauth_timestamp=1545369076&oauth_nonce=bg7JCU&oauth_version=1.0&oauth_signature=D4g1si4f4npcYqeUJTR5YuNB1Cg%3D&market=TH&limit=50&offset=0');
+
+echo print_r($response);
+/*
+for ($x = 0; $x <= count($response['items']); $x++) {
+} 
+*/
