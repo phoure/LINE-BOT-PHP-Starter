@@ -1,9 +1,22 @@
 <?php
 
+function debug($var){	
+     // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
+     $trace = reset(debug_backtrace());	
+     $trace['file'] = str_replace(str_replace('/','\\',$_SERVER['DOCUMENT_ROOT']).'\\','',$trace['file']);	
+     echo $trace['file']." (line ".$trace['line'].")<br/>";	
+
+     // แสดงค่าที่เก็บในตัวแปร
+     echo "<pre>";
+     print_r($var);
+     echo "</pre>";
+     return $var;	
+}
+
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.kkbox.com/v1.1/search?q=Mayday&type=track&territory=TW&offset=0&limit=50",
+  CURLOPT_URL => "https://api.kkbox.com/v1.1/search?q=the+toys&type=artist&territory=TH&offset=0&limit=50",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -24,7 +37,7 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response;
+  echo debug($response);
 }
 
 ?>
