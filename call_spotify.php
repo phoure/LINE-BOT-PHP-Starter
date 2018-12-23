@@ -52,8 +52,8 @@ for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 	for ($s = 0; $s <= count($c_album['items'])-1; $s++) {
 
 		for ($g = 0; $g <= count($c_album['items'][$s]['artists'])-1; $g++) {
-			$ar[] = $c_album['items'][$s]['artists'][$g]['id']
-			$ar[] = $c_album['items'][$s]['artists'][$g]['name']
+			$ar[] = $c_album['items'][$s]['artists'][$g]['id'];
+			$ar[] = $c_album['items'][$s]['artists'][$g]['name'];
 		}
 
 		$s[] = $c_album['items'][$s]['id'];
@@ -65,6 +65,7 @@ for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 		$s[] = $c_album['items'][$s]['explicit'];
 
 		$song[] = join('++',$s);
+		unset($ar);
 	}
 	$songs[] = join('///',$song);
 	unset($song);
