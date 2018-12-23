@@ -66,6 +66,7 @@ for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 
 		$song[] = join('++',$so);
 		unset($ar);
+		unset($so);
 	}
 	$songs[] = join('///',$song);
 	unset($song);
