@@ -14,7 +14,7 @@ function debug($var){
 }
 
 function curl($url){
-	
+
 $token = 'BQA7l7HvFKj4rsG1mvJywsRVk0QLqh-nNtRTbur41hDI7pQ6ZgxVB3inL36Pb4P8ralY7yy4aBf8JkRWLzV2_JekOdy9YD0DukRbN0y-yQytcKCU3_RAnNy0wF2aPwdTV_srr6vcxu6XZC6IMUVnWsnEJxIJFlg4IOPmmrp7vEO0XpFPwdBbyl0fpq6lX4Hx8DePRLzBz-Y9BO-Vzs-Iy1DDFckhKjGDtAYLstpAzJdgfCNHlni3U9Yg5vO7thqAj0kf7DDVCLw';
 
 $curl = curl_init();
@@ -42,10 +42,16 @@ $curl = curl_init();
 }
 
 
-$response = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?oauth_signature_method=HMAC-SHA1&oauth_timestamp=1545369076&oauth_nonce=bg7JCU&oauth_version=1.0&oauth_signature=D4g1si4f4npcYqeUJTR5YuNB1Cg%3D&market=TH&limit=50&offset=0');
+$c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?oauth_signature_method=HMAC-SHA1&oauth_timestamp=1545369076&oauth_nonce=bg7JCU&oauth_version=1.0&oauth_signature=D4g1si4f4npcYqeUJTR5YuNB1Cg%3D&market=TH&limit=50&offset=0');
 
-print_r($response);
-/*
-for ($x = 0; $x <= count($response['items']); $x++) {
-} 
-*/
+for ($x = 0; $x <= count($c_artist['items']); $x++) {
+	$c_album = curl('https://api.spotify.com/v1/albums/1hWhflOpUh3IS1UeYHIW8V/tracks?market=TH&limit=50&offset=0');
+	for ($s = 0; $s <= count($c_album['items']); $s++) {
+		$song[] = $c_album['items'][$x]['name'];
+	}
+	$songs[] = join('---',$song);
+}
+
+	$songss[] = join('<br /><br /><br />',$song);
+
+echo $songss;
