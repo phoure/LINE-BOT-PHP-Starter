@@ -49,7 +49,7 @@ for ($x = 0; $x <= count($c_artist['items']); $x++) {
 	for ($s = 0; $s <= count($c_album['items']); $s++) {
 		echo $c_album['items'][$x]['name'].'---';
 	}
-	//$songs[] = join('---',$song);
+	echo $c_artist['items'][$x]['id'];
 }
 
 
