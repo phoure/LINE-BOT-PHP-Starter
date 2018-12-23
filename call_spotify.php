@@ -42,9 +42,9 @@ $curl = curl_init();
 }
 
 
-for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?include_groups=album%2Csingle&market=TH&limit=5&offset=0')['total']/5); $a++) {
-	$aa = $a*5;
-	$c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?include_groups=album%2Csingle&market=TH&limit=5&offset='.$aa);
+for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?include_groups=album%2Csingle&market=TH&limit=5&offset=0')['total']/50); $a++) {
+	$aa = $a*50;
+	$c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?include_groups=album%2Csingle&market=TH&limit=50&offset='.$aa);
 
 	for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 		
