@@ -41,7 +41,7 @@ $curl = curl_init();
 	return json_decode($response, true);
 }
 
-
+/*
 $c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?oauth_signature_method=HMAC-SHA1&oauth_timestamp=1545369076&oauth_nonce=bg7JCU&oauth_version=1.0&oauth_signature=D4g1si4f4npcYqeUJTR5YuNB1Cg%3D&market=TH&limit=50&offset=0');
 
 for ($x = 0; $x <= count($c_artist['items']); $x++) {
@@ -52,6 +52,10 @@ for ($x = 0; $x <= count($c_artist['items']); $x++) {
 	//$songs[] = join('---',$song);
 
 }
+
+*/
+
+debug(curl('https://api.spotify.com/v1/albums/1hWhflOpUh3IS1UeYHIW8V/tracks?market=TH&limit=50&offset=0'));
 
 	//$songss = join('<br /><br /><br />',$songs);
 
