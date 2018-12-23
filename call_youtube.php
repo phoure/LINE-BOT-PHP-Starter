@@ -36,7 +36,7 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
 
-  $response =  json_decode($data, true);
+  $response =  json_decode($response, true);
   debug($response);
 }
 
