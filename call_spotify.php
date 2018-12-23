@@ -42,7 +42,7 @@ $curl = curl_init();
 }
 
 
-$c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8&market=TH&limit=50&offset=0');
+$c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?include_groups=album%2Csingle&market=TH&limit=50&offset=0');
 
 for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 	$c_album = curl('https://api.spotify.com/v1/albums/'.$c_artist['items'][$x]['id'].'/tracks?market=TH&limit=50&offset=0');
