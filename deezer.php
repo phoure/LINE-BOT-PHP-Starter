@@ -1,8 +1,8 @@
 <?php
  
-$app_id     = "YOUR_APP_ID";
-$app_secret = "YOUR_APP_SECRET";
-$my_url     = "YOUR_CALLBACK_URL";
+$app_id     = "318822";
+$app_secret = "0b7803a462953f06d8cc46142986eca3";
+$my_url     = "https://installgroup.herokuapp.com/deezer.php";
  
 session_start();
 $code = $_REQUEST["code"];
