@@ -47,7 +47,7 @@ $c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albu
 for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 	$c_album = curl('https://api.spotify.com/v1/albums/'.$c_artist['items'][$x]['id'].'/tracks?market=TH&limit=50&offset=0');
 	for ($s = 0; $s <= count($c_album['items'])-1; $s++) {
-		$song[] = $c_album['items'][$s]['name'];
+		$song[] = $c_album['items'][$s]['name'].'//'.$c_album['items'][$s]['uri'];
 	}
 	$songs[] = join('---',$song);
 	unset($song);
