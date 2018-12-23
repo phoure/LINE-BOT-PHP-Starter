@@ -45,7 +45,7 @@ $curl = curl_init();
 $c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?oauth_signature_method=HMAC-SHA1&oauth_timestamp=1545369076&oauth_nonce=bg7JCU&oauth_version=1.0&oauth_signature=D4g1si4f4npcYqeUJTR5YuNB1Cg%3D&market=TH&limit=50&offset=0');
 
 for ($x = 0; $x <= count($c_artist['items']); $x++) {
-	$c_album = curl('https://api.spotify.com/v1/albums/'.$c_artist['items'][$x]['1ZanPS4zG0fXMKcMN3Rknl'].'/tracks?market=TH&limit=50&offset=0');
+	$c_album = curl('https://api.spotify.com/v1/albums/'.$c_artist['items'][$x]['id'].'/tracks?market=TH&limit=50&offset=0');
 	for ($s = 0; $s <= count($c_album['items']); $s++) {
 		$song[] = $c_album['items'][$x]['name'];
 	}
