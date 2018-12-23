@@ -51,14 +51,20 @@ for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 	$c_album = curl('https://api.spotify.com/v1/albums/'.$c_artist['items'][$x]['id'].'/tracks?market=TH&limit=50&offset=0');
 	for ($s = 0; $s <= count($c_album['items'])-1; $s++) {
 
-		$s[] = $c_album['items'][$s]['id'];
-		$s[] = $c_album['items'][$s]['name'];
-		$s[] = $c_album['items'][$s]['track_number'];
-		$s[] = $c_album['items'][$s]['duration_ms'];
-		$s[] = $c_album['items'][$s]['preview_url'];
-		$s[] = $c_album['items'][$s]['explicit'];
+		for ($g = 0; $g <= count($c_album['items'][$s]['artists'])-1; $g++) {
+			$ar[] = $c_album['items'][$s]['artists'][$g]['id'];
+			$ar[] = $c_album['items'][$s]['artists'][$g]['name'];
+		}
 
-		$song[] = join('++',$s);
+		$so[] = $c_album['items'][$s]['id'];
+		$so[] = $c_album['items'][$s]['name'];
+		$so[] = $c_album['items'][$s]['track_number'];
+		$so[] = join('+', $ar);
+		$so[] = $c_album['items'][$s]['duration_ms'];
+		$so[] = $c_album['items'][$s]['preview_url'];
+		$so[] = $c_album['items'][$s]['explicit'];
+
+		$song[] = join('++',$so);
 		unset($ar);
 	}
 	$songs[] = join('///',$song);
