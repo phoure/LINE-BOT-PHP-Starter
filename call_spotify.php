@@ -50,7 +50,7 @@ for ($x = 0; $x <= count($c_artist['items']); $x++) {
 		$song[] = $c_album['items'][$s]['name'];
 	}
 	$songs[] = join('---',$song);
-	unset($song);
+	$song = 'dsfas';
 }
 
 	$songss = join('<br /><br /><br />',$songs);
