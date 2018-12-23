@@ -1,3 +1,4 @@
+<?php
 function debug($var){	
      // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
      $trace = reset(debug_backtrace());	
@@ -75,3 +76,5 @@ for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 	$all = join(';;',$album).'---'.join(';;',$songs);
 
 echo $all;
+
+?>
