@@ -52,6 +52,6 @@ for ($x = 0; $x <= count($c_artist['items']); $x++) {
 	$songs[] = join('---',$song);
 }
 
-	$songss[] = join('<br /><br /><br />',$song);
+	$songss = join('<br /><br /><br />',$songs);
 
 echo $songss;
