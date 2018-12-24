@@ -114,6 +114,5 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/
 echo $all;
 
 
-debug(curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8')['name']);
 
 
