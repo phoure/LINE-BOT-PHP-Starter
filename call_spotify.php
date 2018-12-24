@@ -1,4 +1,4 @@
-
+<?php
 function debug($var){	
      // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
      $trace = reset(debug_backtrace());	
