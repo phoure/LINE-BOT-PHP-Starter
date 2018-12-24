@@ -1,4 +1,3 @@
-<?php
 
 function debug($var){	
      // หาที่มาและบรรทัดของไฟล์ที่เรียกใช้ฟังก์ชัน debug 
@@ -94,7 +93,7 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/
 			$song[] = $c_album['items'][$x]['name'];
 			$song[] = $c_song['items'][$s]['id'];
 			$song[] = $c_song['items'][$s]['name'];
-			$song[] = $al_type;
+			$song[] = $c_album['items'][$x]['album_type'];
 			$song[] = $c_song['items'][$s]['track_number'];
 			$song[] = $c_song['items'][$s]['duration_ms'];
 			$song[] = $c_song['items'][$s]['preview_url'];
@@ -112,7 +111,3 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/
 	$all = join('////',$artist).'---'.join(';;',$albums).'---'.join(';;',$songss);
 
 echo $all;
-
-
-
-
