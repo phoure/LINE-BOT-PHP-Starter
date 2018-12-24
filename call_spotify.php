@@ -41,16 +41,16 @@ $curl = curl_init();
 	return json_decode($response, true);
 }
 
-
-for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?include_groups=album%2Csingle&market=TH&limit=5&offset=0')['total']/50); $a++) {
-	$aa = $a*50;
-	$c_artist = curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8/albums?include_groups=album%2Csingle&market=TH&limit=50&offset='.$aa);
+$aritst_id = '5pokGZ1K9Hr6etaKPDxSG8';
+for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/albums?include_groups=album%2Csingle&market=TH&limit=5&offset=0')['total']/5); $a++) {
+	 $aa = $a*5;
+	 $c_artist = curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/albums?include_groups=album%2Csingle&market=TH&limit=5&offset='.$aa);
 
 	for ($x = 0; $x <= count($c_artist['items'])-1; $x++) {
 		
 		$al_name = $c_artist['items'][$x]['name'];
 		$al_type = $c_artist['items'][$x]['album_type'];
-		$album[] = $c_artist['items'][$x]['id'].'///'.$al_name.'///'.$al_type.'///'.$c_artist['items'][$x]['images'][0]['url'].'++'.$c_artist['items'][$x]['images'][1]['url'].'++'.$c_artist['items'][$x]['images'][2]['url'].'///'.$c_artist['items'][$x]['release_date'];
+		$album[] = $c_artist['items'][$x]['id'].'///'.$al_name.'///'.$c_artist['items'][$x]['images'][0]['url'].'++++'.$c_artist['items'][$x]['images'][1]['url'].'++++'.$c_artist['items'][$x]['images'][2]['url'].'///'.$al_type.'///'.$c_artist['items'][$x]['release_date'];
 
 		$c_album = curl('https://api.spotify.com/v1/albums/'.$c_artist['items'][$x]['id'].'/tracks?market=TH&limit=50&offset=0');
 		for ($s = 0; $s <= count($c_album['items'])-1; $s++) {
@@ -70,7 +70,7 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6eta
 			$so[] = $c_album['items'][$s]['preview_url'];
 			$so[] = $c_album['items'][$s]['explicit'];
 
-			$song[] = join('++',$so);
+			$song[] = join('++++',$so);
 			unset($ar);
 			unset($so);
 		}
@@ -79,7 +79,6 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6eta
 	}
 }
 
-	$all = join(';;',$album).'---'.join(';;',$songs);
+	$all = $aritst_id.'---'.join(';;',$album).'---'.join(';;',$songs);
 
 echo $all;
-?>
