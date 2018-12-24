@@ -92,7 +92,7 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/
 			$song[] = $c_song['items'][$s]['preview_url'];
 			$song[] = $c_song['items'][$s]['explicit'];
 
-			$song[] = join('++++',$song);
+			$songs[] = join('++++',$song);
 			unset($artist_list);
 			unset($song);
 		}
