@@ -63,12 +63,12 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/
 		
 
 		for ($w = 0; $w <= count($c_album['items'][$x]['artists'])-1; $w++) {
-		   $c_artist_list_id[] = $c_album['items'][$x]['artists'][$w]['id'];
-		   $c_artist_list_name[] = $c_album['items'][$x]['artists'][$w]['name'];
+		   $artist_list_id[] = $c_album['items'][$x]['artists'][$w]['id'];
+		   $artist_list_name[] = $c_album['items'][$x]['artists'][$w]['name'];
 		}
-		$album[] = join('++++',$c_artist_list_id);
-		$album[] = join('++++',$c_artist_list_name);
-		unset($c_artist_list_id); unset($c_artist_list_name);
+		$album[] = join('**',$artist_list_id);
+		$album[] = join('**',$artist_list_name);
+		unset($artist_list_id); unset($artist_list_name);
 		$album[] = $c_album['items'][$x]['id'];
 		$album[] = $c_album['items'][$x]['name'];
 		$album[] = $c_album['items'][$x]['images'][0]['url'].'++++'.$c_album['items'][$x]['images'][1]['url'].'++++'.$c_album['items'][$x]['images'][2]['url'];
@@ -81,13 +81,13 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/
 		for ($s = 0; $s <= count($c_song['items'])-1; $s++) {
 
 			for ($g = 0; $g <= count($c_song['items'][$s]['artists'])-1; $g++) {
-				$artist_list_id[] = $c_song['items'][$s]['artists'][$g]['id'];
-				$artist_list_name[] = $c_song['items'][$s]['artists'][$g]['name'];
+				$artist_song_id[] = $c_song['items'][$s]['artists'][$g]['id'];
+				$artist_song_name[] = $c_song['items'][$s]['artists'][$g]['name'];
 			}
 
-			$song[] = join('**', $artist_list_id);
-			$song[] = join('**', $artist_list_name);
-	  		unset($artist_list_id);  unset($artist_list_name);
+			$song[] = join('**', $artist_song_id);
+			$song[] = join('**', $artist_song_name);
+	  		unset($artist_song_id);  unset($artist_song_name);
 			$song[] = $c_album['items'][$x]['id'];
 			$song[] = $c_album['items'][$x]['name'];
 			$song[] = $c_song['items'][$s]['id'];
