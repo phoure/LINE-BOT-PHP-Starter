@@ -79,8 +79,8 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/
 				$artist_list_name[] = $c_song['items'][$s]['artists'][$g]['name'];
 			}
 
-			$song[] = join('++++', $artist_list_id);
-			$song[] = join('++++', $artist_list_name);
+			$song[] = join('**', $artist_list_id);
+			$song[] = join('**', $artist_list_name);
 	  		unset($artist_list_id);  unset($artist_list_name);
 			$song[] = $c_album['items'][$x]['id'];
 			$song[] = $c_album['items'][$x]['name'];
