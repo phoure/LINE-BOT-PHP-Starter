@@ -40,7 +40,7 @@ $curl = curl_init();
 	curl_close($curl);
 	return json_decode($response, true);
 }
-/*
+
 $aritst_id = '5pokGZ1K9Hr6etaKPDxSG8';
 $c_artist = curl('https://api.spotify.com/v1/artists/'.$aritst_id);
 
@@ -48,7 +48,7 @@ $c_artist = curl('https://api.spotify.com/v1/artists/'.$aritst_id);
 	 $artist[] = $c_artist['name'];
 	 $artist[] = $c_artist['images'][0]['url'].'++++'.$c_artist['images'][1]['url'].'++++'.$c_artist['images'][2]['url'];
 	 $artist[] = $c_artist['popularity'];
-	 $artist[] = $c_artist['followers']['200822'];
+	 $artist[] = $c_artist['followers']['total'];
 
 	  for ($r = 0; $r <= count($c_artist['genres'])-1; $r++) {
 	    $c_artist_genres[] = $c_artist['genres'][$r];
@@ -112,8 +112,8 @@ for ($a = 0; $a <= ceil(curl('https://api.spotify.com/v1/artists/'.$aritst_id.'/
 	$all = join('////',$artist).'---'.join(';;',$albums).'---'.join(';;',$songss);
 
 echo $all;
-*/
 
-debug(curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8'));
+
+debug(curl('https://api.spotify.com/v1/artists/5pokGZ1K9Hr6etaKPDxSG8')['name']);
 
 
