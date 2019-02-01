@@ -25,7 +25,7 @@ function curl($url){
 			]);
 
 
-	send($card, 'reply', $replayId);
+	send($card, 'push', 'Cd449b5e6097ad58e529477a6ed316cff');
 
 
 
