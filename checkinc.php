@@ -38,7 +38,7 @@ return $emoticon;
 
 function send($card,$target ,$to){
 	
-	$access_token = 'kkNqfmY+cdW6xWe5Q3tcGLh8gFi15NoJYB+7OipvOA8gkdrGsbY2It88PpOYB8WhMxbCGixzweXT63ayRxNTWcEHeTVN4oetMOcUOl2cWVIY6dtM9wQjqzWTceLS/BvbWm0lqoFPqFa7z6NtRzX+tgdB04t89/1O/w1cDnyilFU=';
+	$access_token = 'eoO1ij5VV9GXkhNaFrUmMLQOeYmRYyUbSVPkxp0OTtth5xB9WdSMeEuJno2PVD6SMxbCGixzweXT63ayRxNTWcEHeTVN4oetMOcUOl2cWVKh+ZcgH9bX7ZwMgAozs3Q8CUMUTegFoOC8Xc+sKHn1jgdB04t89/1O/w1cDnyilFU=';
 	$arrHeader = array();
 	$arrHeader[] = "Content-Type: application/json";
 	$arrHeader[] = "Authorization: Bearer {$access_token}";
