@@ -25,7 +25,7 @@ function curl($url){
 			]);
 
 
-	send($card, 'push', 'Cdbfad81c39a92969b293c3fb6b5ed053');
+	send($card, 'push', $groupId);
 
 
 
